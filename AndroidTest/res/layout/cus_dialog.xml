@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent" >
+
+    <RelativeLayout
+        android:id="@+id/top_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/chat_voice_back_top"
+        android:padding="10dp" >
+
+        <LinearLayout
+            android:id="@+id/main_lay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/dialog_icon_info" />
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="退出"
+                    android:textColor="@color/content_text_color"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="确定退出该应用吗？"
+                android:textColor="@color/content_text_color"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_lay"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_lay"
+        android:background="@drawable/chat_voice_center_btn_back"
+        android:orientation="horizontal" >
+        
+        <Button android:id="@+id/ont_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:background="@drawable/a_shape_corners"
+            android:gravity="center"
+            android:text="中间按钮"/>
+
+        <Button
+            android:id="@+id/add_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/chat_voice_send_btn_back"
+            android:padding="10dp"
+            android:text="确定"
+            android:visibility="gone"
+            android:textColor="#626262" />
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="fill_parent"
+            android:visibility="gone"
+            android:background="#cececf" />
+
+        <Button
+            android:id="@+id/center_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/chat_voice_center_btn_back"
+            android:padding="10dp"
+            android:text="中间按钮"
+            android:visibility="gone"
+            android:textColor="#626262" />
+
+        <Button
+            android:id="@+id/cancle_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/chat_voice_cancle_btn_back"
+            android:padding="10dp"
+            android:text="取消"
+            android:visibility="gone"
+            android:textColor="#626262" />
+    </LinearLayout>
+
+</RelativeLayout>

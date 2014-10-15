@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:shrinkColumns="2,4" >
+
+        <TableRow android:background="@drawable/shape_top_corner_no_bottom_line" >
+
+            <TextView
+                android:id="@+id/zfcg_user_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/table_row_padding"
+                android:text="种类"
+                android:textStyle="bold" />
+
+            <View style="@style/table_shu_seperator_gray_line" />
+
+            <TextView
+                android:id="@+id/zfcg_user_unit_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_span="3"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:padding="@dimen/table_row_padding"
+                android:textColor="@color/content_text_color" />
+        </TableRow>
+
+        <TableRow android:background="@drawable/shape_no_corner_without_bottom" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/table_row_padding"
+                android:text="品目名称"
+                android:textStyle="bold" />
+
+            <View style="@style/table_shu_seperator_gray_line" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_span="3"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:padding="@dimen/table_row_padding"
+                android:textColor="@color/content_text_color" />
+        </TableRow>
+
+        <TableRow android:background="@drawable/shape_no_corner_without_bottom" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/table_row_padding"
+                android:text="数量"
+                android:textStyle="bold" />
+
+            <View style="@style/table_shu_seperator_gray_line" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_span="3"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:padding="@dimen/table_row_padding"
+                android:textColor="@color/content_text_color" />
+        </TableRow>
+
+        <TableRow android:background="@drawable/shape_no_corner_without_bottom" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/table_row_padding"
+                android:text="单价"
+                android:textStyle="bold" />
+
+            <View style="@style/table_shu_seperator_gray_line" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="15dp"
+                android:layout_span="3"
+                android:ellipsize="end"
+                android:padding="@dimen/table_row_padding"
+                android:textColor="@color/content_text_color" />
+
+            <View style="@style/table_shu_seperator_gray_line" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/table_row_padding"
+                android:text="总价"
+                android:textStyle="bold" />
+
+            <View style="@style/table_shu_seperator_gray_line" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_span="3"
+                android:ellipsize="end"
+                android:padding="@dimen/table_row_padding"
+                android:textColor="@color/content_text_color" />
+        </TableRow>
+
+        <TableRow android:background="@drawable/shape_no_corner_without_bottom" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/table_row_padding"
+                android:text="具体指标"
+                android:textStyle="bold" />
+
+            <View style="@style/table_shu_seperator_gray_line" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_span="3"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:padding="@dimen/table_row_padding"
+                android:textColor="@color/content_text_color" />
+        </TableRow>
+
+        <TableRow android:background="@drawable/shape_no_corner_without_bottom" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/table_row_padding"
+                android:text="交货要求"
+                android:textStyle="bold" />
+
+            <View style="@style/table_shu_seperator_gray_line" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_span="3"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:padding="@dimen/table_row_padding"
+                android:textColor="@color/content_text_color" />
+        </TableRow>
+
+        <TableRow android:background="@drawable/shape_bottom_corner_no_top_line" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/table_row_padding"
+                android:text="备注"
+                android:textStyle="bold" />
+
+            <View style="@style/table_shu_seperator_gray_line" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_span="3"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:padding="@dimen/table_row_padding"
+                android:textColor="@color/content_text_color" />
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/action_self"
+        android:actionProviderClass="com.example.androidtest.actionbar_android.MyActionBarProvider"
+        android:icon="@drawable/ic_launcher_02"
+        android:showAsAction="ifRoom"
+        android:title="action_self"/>
+    <item
+        android:id="@+id/action_setting_01"
+        android:actionProviderClass="android.provider.Settings"
+        android:icon="@android:drawable/ic_menu_set_as"
+        android:showAsAction="always|collapseActionView"
+        android:title="action_setting_01"/>
+    <item
+        android:id="@+id/action_share"
+        android:actionProviderClass="android.widget.ShareActionProvider"
+        android:icon="@android:drawable/ic_menu_share"
+        android:showAsAction="always|collapseActionView"
+        android:title="action_share"/>
+</menu>

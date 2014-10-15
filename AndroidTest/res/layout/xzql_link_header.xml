@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+    
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow android:id="@+id/xzql_list_header_row"
+            android:background="@color/gray" >
+
+            <TextView
+                android:id="@+id/head_link_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingTop="@dimen/taxper_list_textview_padding"
+                android:paddingBottom="@dimen/taxper_list_textview_padding"
+                android:text="@string/link_name"
+                android:textColor="@color/white" />
+
+            <View style="@style/table_shu_seperator_gray_line" />
+
+            <TextView
+                android:id="@+id/head_approvel_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingTop="@dimen/taxper_list_textview_padding"
+                android:paddingBottom="@dimen/taxper_list_textview_padding"
+                android:text="@string/approvel_unit"
+                android:textColor="@color/white" />
+
+            <View style="@style/table_shu_seperator_gray_line" />
+
+            <TextView
+                android:id="@+id/head_approvel_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingTop="@dimen/taxper_list_textview_padding"
+                android:paddingBottom="@dimen/taxper_list_textview_padding"
+                android:text="@string/approvel_name"
+                android:textColor="@color/white" />
+
+            <View style="@style/table_shu_seperator_gray_line" />
+
+            <TextView
+                android:id="@+id/head_approvel_views"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingTop="@dimen/taxper_list_textview_padding"
+                android:paddingBottom="@dimen/taxper_list_textview_padding"
+                android:text="@string/approvel_views"
+                android:textColor="@color/white" />
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>

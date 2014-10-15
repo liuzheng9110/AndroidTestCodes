@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">AndroidTest</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+
+    <string name="undo_list">待办事项</string>
+    <string name="endo_list">已办事项</string>
+    <string name="executive_list">行政事项</string>
+    <string name="todo_list_detail">待办事项详情</string>
+    <string name="endo_list_detail">已办事项详情</string>
+    <string name="executive_list_detail">行政事项详情</string>
+    <string name="event_type">事项类型</string>
+    <string name="event_name">事项名称</string>
+    <string name="event_time">受理时间</string>
+    <string name="item_input_name">填报人</string>
+    <string name="item_input_mobile">联系电话</string>
+    <string name="info_tech_pro_header">信息化建设立项</string>
+    <string name="info_tech_pro_unit">立项单位</string>
+    <string name="info_tech_pro_content">项目内容</string>
+    <string name="info_tech_pro_fee">投资概算(含需增添设备的费用)</string>
+    <string name="info_tech_pro_endtime">截止时间</string>
+    <string name="net_center_accept">审核/审批\n意见信息</string>
+    <string name="link_info_header">环节信息</string>
+    <string name="link_name">环节名称</string>
+    <string name="approvel_unit">办理单位</string>
+    <string name="approvel_name">办理人</string>
+    <string name="approvel_views">处理意见</string>
+    <string name="approvel_date">处理时间</string>
+    <string name="spinner_agree">同意</string>
+    <string name="spinner_disagree">不同意</string>
+    <string name="spinner_quasiagree">拟同意</string>
+    <string name="attachment_info">附件信息</string>
+    <string name="approvel_views_detail">审批意见详细信息</string>
+    <string name="approvel_views_is_null">审批意见为空!</string>
+    <string name="no_link_data">暂无环节信息</string>
+    <string name="item_statu">办件状态</string>
+    <string name="item_statu_all">全部</string>
+    <string name="item_statu_indo">在办</string>
+    <string name="item_statu_todo">已办</string>
+    <string name="item_accept">受理</string>
+    <string name="item_back">退回</string>
+    <string name="item_accept_date">受理日期</string>
+    <string name="time_item_week">本周</string>
+    <string name="time_item_month">本月</string>
+    <string name="time_item_three_month">近三月</string>
+    <string name="time_item_customer">自定义</string>
+    <string name="please_input_specific_event">请输入具体事项</string>
+    
+    <string name="long_text_1">通过上述分析，问题转化为如何让多个控件同时处于焦点状态，这就需要重写TextView的部分方法，达到“欺骗”Android系统的目的，这样每个控件requestFocus()之后，均让自己处于焦点状态，并且不可被剥夺焦点，就可以达到多个控件同时“持有”焦点了</string>
+    <string name="long_text_2">【初创企业都使用什么技术？ 】每天都会有很多新语言、数据库等的炒作。但是究竟实际在使用的技术有哪些？好的初创企业使用的技术会不会跟不那么好的那些所使用的技术有所不同呢？</string>
+    
+    <string name="button_left">Button Left</string>
+    
+    <!-- cus edittext -->
+    <string name="scrollbar_text">Android Open Tutorials. Android Programming. Android Tutorials.
+        Android Examples. Android SQLite. Android Layouts, Menus, Action Bar, ViewPager. Image Gallery.
+        Data Storage. SharedPreferences, Internal and External Storage. ListView, GridView, RelativeLayout,
+        LinearLayout, Scrollbar, Spinner, Dialog, CAB, Styling, ImageView blink, TextSwitcher, Library Projects,
+        How to import Android Library Projects, Progress Bar, Animation, Android Tools and many more.Android Open Tutorials. Android Programming. Android Tutorials.
+        Android Examples. Android SQLite. Android Layouts, Menus, Action Bar, ViewPager. Image Gallery.
+        Data Storage. SharedPreferences, Internal and External Storage. ListView, GridView, RelativeLayout,
+        LinearLayout, Scrollbar, Spinner, Dialog, CAB, Styling, ImageView blink, TextSwitcher, Library Projects,
+        How to import Android Library Projects, Progress Bar, Animation, Android Tools and many more.</string>
+    
+
+</resources>

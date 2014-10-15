@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/zfcg_list_header_row"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/gray" >
+
+    <TextView
+        android:id="@+id/zfcg_item_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingBottom="@dimen/taxper_list_textview_padding"
+        android:paddingTop="@dimen/taxper_list_textview_padding"
+        android:text="种类"
+        android:textColor="@color/white" />
+
+    <View style="@style/table_shu_seperator_gray_line" />
+
+    <TextView
+        android:id="@+id/zfcg_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingBottom="@dimen/taxper_list_textview_padding"
+        android:paddingTop="@dimen/taxper_list_textview_padding"
+        android:text="品目名称"
+        android:textColor="@color/white" />
+
+    <View style="@style/table_shu_seperator_gray_line" />
+
+    <TextView
+        android:id="@+id/zfcg_item_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingBottom="@dimen/taxper_list_textview_padding"
+        android:paddingTop="@dimen/taxper_list_textview_padding"
+        android:text="数量"
+        android:textColor="@color/white" />
+
+    <View style="@style/table_shu_seperator_gray_line" />
+
+    <TextView
+        android:id="@+id/zfcg_item_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingBottom="@dimen/taxper_list_textview_padding"
+        android:paddingTop="@dimen/taxper_list_textview_padding"
+        android:text="单价"
+        android:textColor="@color/white" />
+    <View style="@style/table_shu_seperator_gray_line" />
+    <TextView
+        android:id="@+id/zfcg_item_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingBottom="@dimen/taxper_list_textview_padding"
+        android:paddingTop="@dimen/taxper_list_textview_padding"
+        android:text="总价"
+        android:textColor="@color/white" />
+
+</TableRow>

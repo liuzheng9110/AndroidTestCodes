@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:myacb="http://schemas.android.com/apk/res-auto" >
+
+    <item
+        android:id="@+id/aa"
+        android:icon="@drawable/ic_launcher_00"
+        android:title="@string/action_settings"
+        myacb:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/bb"
+        android:icon="@drawable/ic_launcher_01"
+        android:title="@string/action_settings"
+        myacb:showAsAction="ifRoom"/>
+
+</menu>

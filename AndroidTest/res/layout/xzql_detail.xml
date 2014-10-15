@@ -1,0 +1,249 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="5dp"
+        android:fillViewport="true" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/table_lay1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TableLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp"
+                    android:shrinkColumns="2,4" >
+
+                    <TableRow android:background="@drawable/shape_top_corner_no_bottom_line" >
+
+                        <TextView
+                            android:id="@+id/event_type_hint"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/table_row_padding"
+                            android:text="@string/event_type"
+                            android:textStyle="bold" />
+
+                        <View style="@style/table_shu_seperator_gray_line" />
+
+                        <TextView
+                            android:id="@+id/event_type_show"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_span="3"
+                            android:layout_weight="1"
+                            android:padding="@dimen/table_row_padding"
+                            android:textColor="@color/content_text_color" />
+                    </TableRow>
+
+                    <TableRow android:background="@drawable/shape_no_corner_without_bottom" >
+
+                        <TextView
+                            android:id="@+id/event_name_hint"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/table_row_padding"
+                            android:text="@string/event_name"
+                            android:textStyle="bold" />
+
+                        <View style="@style/table_shu_seperator_gray_line" />
+
+                        <TextView
+                            android:id="@+id/event_name_show"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_span="3"
+                            android:layout_weight="1"
+                            android:padding="@dimen/table_row_padding"
+                            android:textColor="@color/content_text_color" />
+                    </TableRow>
+
+                    <TableRow android:background="@drawable/shape_no_corner_without_bottom" >
+
+                        <TextView
+                            android:id="@+id/event_time_hint"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/table_row_padding"
+                            android:text="@string/event_time"
+                            android:textStyle="bold" />
+
+                        <View style="@style/table_shu_seperator_gray_line" />
+
+                        <TextView
+                            android:id="@+id/event_time_show"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_span="3"
+                            android:layout_weight="1"
+                            android:padding="@dimen/table_row_padding"
+                            android:textColor="@color/content_text_color" />
+                    </TableRow>
+
+                    <TableRow android:background="@drawable/shape_no_corner_without_bottom" >
+
+                        <TextView
+                            android:id="@+id/item_input_name_hint"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/table_row_padding"
+                            android:text="@string/item_input_name"
+                            android:textStyle="bold" />
+
+                        <View style="@style/table_shu_seperator_gray_line" />
+
+                        <TextView
+                            android:id="@+id/item_input_name_show"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/table_row_padding"
+                            android:textColor="@color/content_text_color" />
+
+                        <View style="@style/table_shu_seperator_gray_line" />
+
+                        <TextView
+                            android:id="@+id/item_input_mobile_hint"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/table_row_padding"
+                            android:text="@string/item_input_mobile"
+                            android:textStyle="bold" />
+
+                        <View style="@style/table_shu_seperator_gray_line" />
+
+                        <TextView
+                            android:id="@+id/item_input_mobile_show"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/table_row_padding"
+                            android:textColor="@color/content_text_color" />
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/table_lay2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+            </LinearLayout>
+            
+            <LinearLayout
+                android:id="@+id/table_lay3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TableLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:shrinkColumns="2,4" >
+
+                    <TableRow android:background="@drawable/shape_no_corner_without_bottom" >
+
+                        <TextView
+                            android:id="@+id/link_info_header"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_span="4"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:padding="@dimen/table_row_padding"
+                            android:text="@string/link_info_header"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow android:background="@drawable/shape_no_corner_without_bottom" >
+
+                        <LinearLayout
+                            android:id="@+id/xzql_link_lay"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_marginBottom="6dp"
+                            android:layout_marginLeft="4dp"
+                            android:layout_marginRight="4dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_span="4"
+                            android:layout_weight="1"
+                            android:orientation="vertical" >
+
+                            <include
+                                android:id="@+id/xzql_link_header_lay"
+                                layout="@layout/xzql_link_header" />
+
+                            <ListView
+                                android:id="@+id/xzql_link_listview"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:descendantFocusability="blocksDescendants"
+                                android:divider="@color/transparent"
+                                android:listSelector="@drawable/spinner_item_bg" >
+                            </ListView>
+
+                            <View style="@style/table_heng_seperator_gray_line" />
+                        </LinearLayout>
+                    </TableRow>
+
+                    <TableRow android:background="@drawable/shape_no_corner_without_bottom" >
+
+                        <TextView
+                            android:id="@+id/attachment_hint"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_span="4"
+                            android:layout_weight="1"
+                            android:padding="@dimen/table_row_padding"
+                            android:text="@string/attachment_info"
+                            android:textColor="@color/content_text_color"
+                            android:textStyle="bold" />
+                    </TableRow>
+
+                    <TableRow android:background="@drawable/shape_bottom_corner_no_top_line" >
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_span="4"
+                            android:layout_weight="1"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="@dimen/table_row_padding"
+                                android:text="1、立项申请" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="@dimen/table_row_padding"
+                                android:text="2、项目可行性研究报告" />
+                        </LinearLayout>
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,13 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="table_layout_padding">0dip</dimen>
+    <dimen name="table_row_padding">4dip</dimen>
+    <dimen name="table_row_tv_margin">4dip</dimen>
+    <dimen name="taxper_list_margin_left_and_right">6dip</dimen>
+    <dimen name="taxper_list_textview_padding">4dip</dimen>
+    <dimen name="detail_font">16sp</dimen>
+
+</resources>

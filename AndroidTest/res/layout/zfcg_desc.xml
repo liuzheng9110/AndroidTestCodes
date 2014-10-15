@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/zfcg_lay"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:shrinkColumns="2,4" >
+
+        <TableRow android:background="@drawable/shape_no_corner_without_bottom" >
+
+            <TextView
+                android:id="@+id/zfcg_header_tv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_span="4"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/table_row_padding"
+                android:text="系统政府采购计划申购审批明细表"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow android:background="@drawable/shape_no_corner_without_bottom" >
+
+            <TextView
+                android:id="@+id/zfcg_user_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/table_row_padding"
+                android:text="使用部门"
+                android:textStyle="bold" />
+
+            <View style="@style/table_shu_seperator_gray_line" />
+
+            <TextView
+                android:id="@+id/zfcg_user_unit_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_span="3"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:padding="@dimen/table_row_padding"
+                android:textColor="@color/content_text_color" />
+        </TableRow>
+
+        <TableRow android:background="@drawable/shape_no_corner_without_bottom" >
+
+            <TextView
+                android:id="@+id/zfcg_by_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/table_row_padding"
+                android:text="所属年度"
+                android:textStyle="bold" />
+
+            <View style="@style/table_shu_seperator_gray_line" />
+
+            <TextView
+                android:id="@+id/zfcg_by_year_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:padding="@dimen/table_row_padding"
+                android:textColor="@color/content_text_color" />
+
+            <View style="@style/table_shu_seperator_gray_line" />
+
+            <TextView
+                android:id="@+id/zfcg_fee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/table_row_padding"
+                android:text="金额"
+                android:textStyle="bold" />
+
+            <View style="@style/table_shu_seperator_gray_line" />
+
+            <TextView
+                android:id="@+id/zfcg_fee_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/table_row_padding"
+                android:textColor="@color/content_text_color" />
+        </TableRow>
+
+        <TableRow android:background="@drawable/shape_no_corner_without_bottom" >
+
+            <LinearLayout
+                android:id="@+id/zfcg_list_lay"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="6dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginTop="6dp"
+                android:layout_span="4"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <include layout="@layout/zfcg_list_header" />
+
+                <ListView
+                    android:id="@+id/zfcg_item_listview"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:descendantFocusability="blocksDescendants"
+                    android:divider="@color/transparent"
+                    android:listSelector="@drawable/spinner_item_bg" >
+                </ListView>
+            </LinearLayout>
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>

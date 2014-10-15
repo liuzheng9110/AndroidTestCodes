@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/dialog_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="请选择日期"
+        android:textColor="@color/title_text_color"
+        android:textSize="20sp" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/title_text_color" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/year_lay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/year_add"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/a_add_btn_corner_shape"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:text="  +  " />
+
+            <TextView
+                android:id="@+id/year_tv"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:background="#e1e1e1"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:text="2014" />
+
+            <Button
+                android:id="@+id/year_sub"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/a_sub_btn_corner_shape"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:text="  -  " />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/month_lay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/month_add"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:background="#e1e1e1"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:text="  +  " />
+
+            <TextView
+                android:id="@+id/month_tv"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:background="#e1e1e1"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:text="07" />
+
+            <Button
+                android:id="@+id/month_sub"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:background="#e1e1e1"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:text="  -  " />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/day_lay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="visible" >
+
+            <Button
+                android:id="@+id/day_add"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:background="#e1e1e1"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:text="  +  " />
+
+            <TextView
+                android:id="@+id/day_tv"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:background="#e1e1e1"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:text="31" />
+
+            <Button
+                android:id="@+id/day_sub"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:background="#e1e1e1"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:text="  -  " />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/gray" />
+
+    <LinearLayout
+        android:id="@+id/btn_lay"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/confirm_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/chat_voice_cancle_btn_back"
+            android:padding="10dp"
+            android:text="确定" />
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="fill_parent"
+            android:background="@color/gray" />
+
+        <Button
+            android:id="@+id/cancle_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/chat_voice_cancle_btn_back"
+            android:padding="10dp"
+            android:text="取消" />
+    </LinearLayout>
+
+</LinearLayout>

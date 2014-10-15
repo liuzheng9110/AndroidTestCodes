@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+	<TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:shrinkColumns="2,4" >
+
+        <TableRow android:background="@drawable/shape_no_corner_without_bottom" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_span="4"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/table_row_padding"
+                android:text="会议管理流程(非办公室发起)"
+                android:textStyle="bold" />
+        </TableRow>
+        <TableRow android:background="@drawable/shape_no_corner_without_bottom" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/table_row_padding"
+                android:text="受理部门"
+                android:textStyle="bold" />
+
+            <View style="@style/table_shu_seperator_gray_line" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:padding="@dimen/table_row_padding"
+                android:textColor="@color/content_text_color" />
+        </TableRow>
+        <TableRow android:background="@drawable/shape_no_corner_without_bottom" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/table_row_padding"
+                android:text="发起人"
+                android:textStyle="bold" />
+
+            <View style="@style/table_shu_seperator_gray_line" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:padding="@dimen/table_row_padding"
+                android:textColor="@color/content_text_color" />
+        </TableRow>
+        <TableRow android:background="@drawable/shape_no_corner_without_bottom" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/table_row_padding"
+                android:text="主要内容"
+                android:textStyle="bold" />
+
+            <View style="@style/table_shu_seperator_gray_line" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:padding="@dimen/table_row_padding"
+                android:textColor="@color/content_text_color" />
+        </TableRow>
+    </TableLayout>
+    
+</LinearLayout>

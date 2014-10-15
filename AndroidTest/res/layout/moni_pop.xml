@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffffff"
+    android:padding="5dp" >
+
+    <TextView
+        android:id="@+id/moni_pop_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="模拟popupview" />
+
+    <Button
+        android:id="@+id/moni_pop_btn"
+		android:layout_below="@id/moni_pop_tv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+		android:layout_marginTop="5dp"
+        android:text="close" />
+
+</RelativeLayout>

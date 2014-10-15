@@ -1,0 +1,1 @@
+DIR *.png /ON/B >emotion.txt

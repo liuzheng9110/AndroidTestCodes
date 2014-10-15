@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:shrinkColumns="2,4" >
+
+        <TableRow android:background="@drawable/shape_no_corner_without_bottom" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_span="4"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/table_row_padding"
+                android:text="公务接待流程(非后勤发起)"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow android:background="@drawable/shape_no_corner_without_bottom" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/table_row_padding"
+                android:text="来宾单位名称"
+                android:textStyle="bold" />
+
+            <View style="@style/table_shu_seperator_gray_line" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:padding="@dimen/table_row_padding"
+                android:textColor="@color/content_text_color" />
+        </TableRow>
+
+        <TableRow android:background="@drawable/shape_no_corner_without_bottom" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/table_row_padding"
+                android:text="来访事由"
+                android:textStyle="bold" />
+
+            <View style="@style/table_shu_seperator_gray_line" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:padding="@dimen/table_row_padding"
+                android:textColor="@color/content_text_color" />
+        </TableRow>
+
+        <TableRow android:background="@drawable/shape_no_corner_without_bottom" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/table_row_padding"
+                android:text="来访时间"
+                android:textStyle="bold" />
+
+            <View style="@style/table_shu_seperator_gray_line" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:padding="@dimen/table_row_padding"
+                android:textColor="@color/content_text_color" />
+        </TableRow>
+
+        <TableRow android:background="@drawable/shape_no_corner_without_bottom" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/table_row_padding"
+                android:text="行程安排"
+                android:textStyle="bold" />
+
+            <View style="@style/table_shu_seperator_gray_line" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:padding="@dimen/table_row_padding"
+                android:textColor="@color/content_text_color" />
+        </TableRow>
+
+        <TableRow android:background="@drawable/shape_no_corner_without_bottom" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/table_row_padding"
+                android:text="拟定接待地点"
+                android:textStyle="bold" />
+
+            <View style="@style/table_shu_seperator_gray_line" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:padding="@dimen/table_row_padding"
+                android:textColor="@color/content_text_color" />
+        </TableRow>
+
+        <!-- 来宾情况start -->
+
+        <TableRow android:background="@drawable/shape_no_corner_without_bottom" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_span="4"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/table_row_padding"
+                android:text="来访情况"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow android:background="@drawable/shape_no_corner_without_bottom" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/table_row_padding"
+                android:text="带队人姓名"
+                android:textStyle="bold" />
+
+            <View style="@style/table_shu_seperator_gray_line" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:padding="@dimen/table_row_padding"
+                android:textColor="@color/content_text_color" />
+        </TableRow>
+
+        <TableRow android:background="@drawable/shape_no_corner_without_bottom" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/table_row_padding"
+                android:text="职务"
+                android:textStyle="bold" />
+
+            <View style="@style/table_shu_seperator_gray_line" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:padding="@dimen/table_row_padding"
+                android:textColor="@color/content_text_color" />
+        </TableRow>
+        <TableRow android:background="@drawable/shape_no_corner_without_bottom" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/table_row_padding"
+                android:text="联系人"
+                android:textStyle="bold" />
+
+            <View style="@style/table_shu_seperator_gray_line" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_span="3"
+                android:ellipsize="end"
+                android:padding="@dimen/table_row_padding"
+                android:textColor="@color/content_text_color" />
+
+            <View style="@style/table_shu_seperator_gray_line" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/table_row_padding"
+                android:text="联络电话"
+                android:textStyle="bold" />
+
+            <View style="@style/table_shu_seperator_gray_line" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_span="3"
+                android:ellipsize="end"
+                android:padding="@dimen/table_row_padding"
+                android:textColor="@color/content_text_color" />
+        </TableRow>
+        <TableRow android:background="@drawable/shape_no_corner_without_bottom" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/table_row_padding"
+                android:text="随行人数"
+                android:textStyle="bold" />
+
+            <View style="@style/table_shu_seperator_gray_line" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_span="3"
+                android:ellipsize="end"
+                android:padding="@dimen/table_row_padding"
+                android:textColor="@color/content_text_color" />
+
+            <View style="@style/table_shu_seperator_gray_line" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/table_row_padding"
+                android:text="预计返程时间"
+                android:textStyle="bold" />
+
+            <View style="@style/table_shu_seperator_gray_line" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_span="3"
+                android:ellipsize="end"
+                android:padding="@dimen/table_row_padding"
+                android:textColor="@color/content_text_color" />
+        </TableRow>
+
+        <!-- 来宾情况end -->
+    </TableLayout>
+
+</LinearLayout>
