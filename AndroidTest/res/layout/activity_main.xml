@@ -251,6 +251,12 @@
             android:layout_height="wrap_content"
             android:onClick="click_listener"
             android:text="Android CusToast Time" />
+		<Button
+            android:id="@+id/btn38"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:onClick="click_listener"
+            android:text="WebView" />
     </LinearLayout>
 
 </ScrollView>

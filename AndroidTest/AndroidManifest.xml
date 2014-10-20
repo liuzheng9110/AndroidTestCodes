@@ -72,6 +72,7 @@
         <activity android:name="PhoneInfoAct"></activity>
         <activity android:name="DrawerLayoutAct"></activity>
         <activity android:name="NineGridViewAct"></activity>
+		<activity android:name="WebViewAct"></activity>
         <activity android:name="AndroidNotificationAct"></activity>
         <!-- android custom toast -->
         <activity android:name=".toast.CusToastAct"></activity>

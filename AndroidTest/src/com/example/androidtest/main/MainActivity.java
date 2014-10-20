@@ -172,6 +172,9 @@ public class MainActivity extends Activity {
 		case R.id.btn37:
 			startActivity(new Intent(MainActivity.this, CusToastAct.class));
 			break;
+		case R.id.btn38:
+			startActivity(new Intent(MainActivity.this, WebViewAct.class));
+			break;
 		default:
 			break;
 		}
