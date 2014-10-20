@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.HorizontalScrollView;
 
+import com.example.androidtest.AndroidNotificationAct;
 import com.example.androidtest.CusDatePickerAct;
 import com.example.androidtest.CusDialogAct;
 import com.example.androidtest.CusEditTextAct;
@@ -38,6 +39,8 @@ import com.example.androidtest.fragment.FragmentDemoAct;
 import com.example.androidtest.http.HttpMainAct;
 import com.example.androidtest.service.MyServiceAct;
 import com.example.androidtest.sliding.SlidingAct;
+import com.example.androidtest.toast.CusToastAct;
+import com.example.androidtest.update.AndroidUpdateAct;
 import com.example.androidtest.viewpager.VerticalViewpagerAct;
 import com.example.androidtest.voice.LongClickVoiceAct;
 import com.example.androidtest.volley.AndroidVolleyAct;
@@ -49,7 +52,7 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
-		((Button)findViewById(R.id.btn34)).performClick();
+		((Button)findViewById(R.id.btn37)).performClick();
 		
 	}
 
@@ -136,9 +139,6 @@ public class MainActivity extends Activity {
 		case R.id.btn26:
 			startActivity(new Intent(MainActivity.this, ActionBarSupportAct.class));
 			break;
-		case R.id.btn34:
-			startActivity(new Intent(MainActivity.this, ActionBarAndroidAct.class));
-			break;
 		case R.id.btn27:
 			startActivity(new Intent(MainActivity.this, AndroidVolleyAct.class));
 			break;
@@ -159,6 +159,18 @@ public class MainActivity extends Activity {
 			break;
 		case R.id.btn33:
 			startActivity(new Intent(MainActivity.this, NineGridViewAct.class));
+			break;
+		case R.id.btn34:
+			startActivity(new Intent(MainActivity.this, ActionBarAndroidAct.class));
+			break;
+		case R.id.btn35:
+			startActivity(new Intent(MainActivity.this, AndroidUpdateAct.class));
+			break;
+		case R.id.btn36:
+			startActivity(new Intent(MainActivity.this, AndroidNotificationAct.class));
+			break;
+		case R.id.btn37:
+			startActivity(new Intent(MainActivity.this, CusToastAct.class));
 			break;
 		default:
 			break;

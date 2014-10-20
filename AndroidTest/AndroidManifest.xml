@@ -22,9 +22,11 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
     
 
     <application
+        android:name="com.example.androidtest.main.MyApplication"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
@@ -70,6 +72,9 @@
         <activity android:name="PhoneInfoAct"></activity>
         <activity android:name="DrawerLayoutAct"></activity>
         <activity android:name="NineGridViewAct"></activity>
+        <activity android:name="AndroidNotificationAct"></activity>
+        <!-- android custom toast -->
+        <activity android:name=".toast.CusToastAct"></activity>
         <activity android:name="CusEditTextAct" 
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:windowSoftInputMode="adjustResize"
@@ -106,6 +111,10 @@
         
         <!-- viewpager -->
         <activity android:name=".viewpager.VerticalViewpagerAct" ></activity>
+    	<!-- android update -->    
+        <activity android:name=".update.AndroidUpdateAct" ></activity>
         
-    </application>
+        <service android:name="com.example.androidtest.update.AndroidUpdateService"></service>
+
+	</application>
 </manifest>

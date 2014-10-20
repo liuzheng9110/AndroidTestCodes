@@ -4,7 +4,6 @@
     <string name="app_name">AndroidTest</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
-
     <string name="undo_list">待办事项</string>
     <string name="endo_list">已办事项</string>
     <string name="executive_list">行政事项</string>
@@ -47,12 +46,10 @@
     <string name="time_item_three_month">近三月</string>
     <string name="time_item_customer">自定义</string>
     <string name="please_input_specific_event">请输入具体事项</string>
-    
     <string name="long_text_1">通过上述分析，问题转化为如何让多个控件同时处于焦点状态，这就需要重写TextView的部分方法，达到“欺骗”Android系统的目的，这样每个控件requestFocus()之后，均让自己处于焦点状态，并且不可被剥夺焦点，就可以达到多个控件同时“持有”焦点了</string>
     <string name="long_text_2">【初创企业都使用什么技术？ 】每天都会有很多新语言、数据库等的炒作。但是究竟实际在使用的技术有哪些？好的初创企业使用的技术会不会跟不那么好的那些所使用的技术有所不同呢？</string>
-    
     <string name="button_left">Button Left</string>
-    
+
     <!-- cus edittext -->
     <string name="scrollbar_text">Android Open Tutorials. Android Programming. Android Tutorials.
         Android Examples. Android SQLite. Android Layouts, Menus, Action Bar, ViewPager. Image Gallery.
@@ -63,6 +60,19 @@
         Data Storage. SharedPreferences, Internal and External Storage. ListView, GridView, RelativeLayout,
         LinearLayout, Scrollbar, Spinner, Dialog, CAB, Styling, ImageView blink, TextSwitcher, Library Projects,
         How to import Android Library Projects, Progress Bar, Animation, Android Tools and many more.</string>
-    
+    <string name="app_update_msg">系统升级消息</string>
+    <string name="app_update_date">更新日期：</string>
+    <string name="app_update_version">版本信息：</string>
+    <string name="app_update_content">更新内容：</string>
+    <string name="updateNoticeTitle">客户端更新通知:</string>
+    <string name="updateNoticeContent">发现新版本“地税智能办公系统”客户端，点击下载更新</string>
+    <string name="update">更新</string>
+    <string name="update_content">更新内容：</string>
+    <string name="update_now">立即更新</string>
+    <string name="update_next_notice">下次状态栏提示</string>
+    <string name="update_time">更新日期：</string>
+    <string name="update_version">版本信息：</string>
+    <string name="explain">说明：</string>
+    <string name="forceupdate_info">服务器更新，客户端需要立即升级才能使用。</string>
 
 </resources>

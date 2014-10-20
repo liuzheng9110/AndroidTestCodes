@@ -28,15 +28,15 @@ public class NineGridViewAct extends Activity {
 		setContentView(R.layout.nine_gridview);
 		
 		itemList = new ArrayList<String>();
-		itemList.add("æˆ‘çš„å¾…åŠ");
-		itemList.add("å…¬æ–‡ç®¡ç†");
-		itemList.add("æ”¶å…¥è®¡åˆ’");
-		itemList.add("äººäº‹ç®¡ç†");
-		itemList.add("æ³•å¾‹æ³•è§„");
-		itemList.add("ç™»è®°æˆ·æŸ¥è¯¢");
-		itemList.add("å‘ç¥¨æŸ¥è¯¢");
-		itemList.add("å·¥ä½œä»»åŠ¡");
-		itemList.add("12366çŸ­ä¿¡");
+		itemList.add("ÎÒµÄ´ı°ì");
+		itemList.add("¹«ÎÄ¹ÜÀí");
+		itemList.add("ÊÕÈë¼Æ»®");
+		itemList.add("ÈËÊÂ¹ÜÀí");
+		itemList.add("·¨ÂÉ·¨¹æ");
+		itemList.add("µÇ¼Ç»§²éÑ¯");
+		itemList.add("·¢Æ±²éÑ¯");
+		itemList.add("¹¤×÷ÈÎÎñ");
+		itemList.add("12366¶ÌĞÅ");
 		
 		gridView = (GridView) findViewById(R.id.gridview);
 		gridView.setAdapter(new MyGridViewAdapter(this, itemList));

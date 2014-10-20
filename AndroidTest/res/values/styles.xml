@@ -2,12 +2,14 @@
 
     <!--
         Base application theme, dependent on API level. This theme is replaced
-        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.    -->
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
     <style name="AppBaseTheme" parent="android:Theme.Light">
         <!--
             Theme customizations available in newer API levels can go in
             res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.        -->
+            backward-compatibility can go here.
+        -->
     </style>
 
     <!-- Application theme. -->
@@ -24,12 +26,11 @@
         <item name="android:checkMark">@drawable/a_fenzu_list_radio_selector</item>
     </style>
 
-    
     <style name="Cus_Theme_Dialog" parent="android:Theme.Dialog">
         <item name="android:windowBackground">@null</item>
         <item name="android:windowNoTitle">true</item>
     </style>
-    
+
     <style name="CustomWindowTitleBackground">
         <item name="android:background">@drawable/title_bg</item>
         <!-- <item name="android:background">#137DD8</item> -->
@@ -59,7 +60,6 @@
         <item name="android:background">@color/white</item>
     </style>
 
-    
     <!-- voice -->
     <style name="chat_text_date_style">
         <item name="android:padding">2dp</item>
@@ -84,9 +84,9 @@
         <item name="android:textSize">15sp</item>
         <item name="android:gravity">center</item>
     </style>
-    
+
     <!-- cus edittext -->
-     <style name="scrollbar_shape_style">
+    <style name="scrollbar_shape_style">
         <item name="android:scrollbarAlwaysDrawVerticalTrack">true</item>
         <item name="android:scrollbarStyle">outsideOverlay</item>
         <item name="android:scrollbars">vertical</item>
@@ -97,7 +97,8 @@
         <item name="android:scrollbarFadeDuration">2000</item>
         <item name="android:scrollbarDefaultDelayBeforeFade">1000</item>
     </style>
-     <style name="scrollbar_shape_style_2">
+
+    <style name="scrollbar_shape_style_2">
         <item name="android:scrollbarAlwaysDrawVerticalTrack">true</item>
         <item name="android:scrollbarStyle">outsideOverlay</item>
         <item name="android:scrollbars">vertical</item>
@@ -107,6 +108,11 @@
         <item name="android:scrollbarSize">12dp</item>
         <item name="android:scrollbarFadeDuration">2000</item>
         <item name="android:scrollbarDefaultDelayBeforeFade">1000</item>
+    </style>
+
+    <style name="dialog_theme" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@drawable/transparent</item>
+        <item name="android:windowNoTitle">@null</item>
     </style>
 
 </resources>

@@ -5,7 +5,9 @@ import java.util.Calendar;
 import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
@@ -39,11 +41,11 @@ public class Android_DateActivity extends Activity implements OnClickListener {
 	@Override
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
-		showDialog(0);// ÈÕÆÚµ¯³ö¿ò
-		int SDKVersion = Android_DateActivity.this.getSDKVersionNumber();// »ñÈ¡ÏµÍ³°æ±¾
+		showDialog(0);// ï¿½ï¿½ï¿½Úµï¿½ï¿½ï¿½ï¿½
+		int SDKVersion = Android_DateActivity.this.getSDKVersionNumber();// ï¿½ï¿½È¡ÏµÍ³ï¿½æ±¾
 		System.out.println("SDKVersion = " + SDKVersion);
 		DatePicker dp = findDatePicker((ViewGroup) mdialog.getWindow()
-				.getDecorView());// ÉèÖÃµ¯³öÄêÔÂÈÕ
+				.getDecorView());// ï¿½ï¿½ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		if (dp != null) {
 			if (SDKVersion < 11) {
 				((ViewGroup) dp.getChildAt(0)).getChildAt(1).setVisibility(
@@ -57,7 +59,7 @@ public class Android_DateActivity extends Activity implements OnClickListener {
 	}
 
 	@Override
-	protected Dialog onCreateDialog(int id) { // ¶ÔÓ¦ÉÏÃæµÄshowDialog(0);//ÈÕÆÚµ¯³ö¿ò
+	protected Dialog onCreateDialog(int id) { // ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½ï¿½showDialog(0);//ï¿½ï¿½ï¿½Úµï¿½ï¿½ï¿½ï¿½
 		mdialog = null;
 		switch (id) {
 		case 0:
@@ -78,7 +80,7 @@ public class Android_DateActivity extends Activity implements OnClickListener {
 	}
 
 	/**
-	 * ´Óµ±Ç°DialogÖÐ²éÕÒDatePicker×Ó¿Ø¼þ
+	 * ï¿½Óµï¿½Ç°Dialogï¿½Ð²ï¿½ï¿½ï¿½DatePickerï¿½Ó¿Ø¼ï¿½
 	 * 
 	 * @param group
 	 * @return
@@ -100,7 +102,7 @@ public class Android_DateActivity extends Activity implements OnClickListener {
 	}
 
 	/**
-	 * »ñÈ¡ÏµÍ³SDK°æ±¾
+	 * ï¿½ï¿½È¡ÏµÍ³SDKï¿½æ±¾
 	 * 
 	 * @return
 	 */

@@ -24,7 +24,7 @@ public class PhoneInfoAct extends Activity {
 	private TextView textView;
 	private String phoneInfo="";
 	
-	// -1ï¼šæ²¡æœ‰ç½‘ç»œ 1ï¼šWIFIç½‘ç»œ 2ï¼šwapç½‘ç»œ 3ï¼šnetç½‘ç»œ   
+	// -1£ºÃ»ÓĞÍøÂç 1£ºWIFIÍøÂç 2£ºwapÍøÂç 3£ºnetÍøÂç   
 	private final static int WIFI = -1;
 	private final static int CMWAP = 2;
 	private final static int CMNET = 3;
@@ -36,7 +36,7 @@ public class PhoneInfoAct extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		setTitle("æ‰‹æœºä¿¡æ¯");
+		setTitle("ÊÖ»úĞÅÏ¢");
 		setContentView(R.layout.phone_infos);
 		
         WifiManager wifiManager = (WifiManager) getSystemService(Context.WIFI_SERVICE);    
@@ -48,18 +48,18 @@ public class PhoneInfoAct extends Activity {
 		
 		getPhoneInfo();
 		
-		textView.setText("æ‰‹æœºä¿¡æ¯ï¼š\n" + phoneInfo);
+		textView.setText("ÊÖ»úĞÅÏ¢£º\n" + phoneInfo);
 	}
 	
 	private void getPhoneInfo() {
 
-		 //è¿™ç§æ–¹å¼åœ¨serviceä¸­æ— æ³•ä½¿ç”¨ï¼Œ    
+		 //ÕâÖÖ·½Ê½ÔÚserviceÖĞÎŞ·¨Ê¹ÓÃ£¬    
         DisplayMetrics dm = new DisplayMetrics();    
         getWindowManager().getDefaultDisplay().getMetrics(dm);    
-        int width = dm.widthPixels;              //å®½    
-        int height = dm.heightPixels;           //é«˜    
+        int width = dm.widthPixels;              //¿í    
+        int height = dm.heightPixels;           //¸ß    
      
-//        //åœ¨serviceä¸­ä¹Ÿèƒ½å¾—åˆ°é«˜å’Œå®½    
+//        //ÔÚserviceÖĞÒ²ÄÜµÃµ½¸ßºÍ¿í    
 //        WindowManager mWindowManager = (WindowManager) getSystemService(Context.WINDOW_SERVICE);    
 //        width = mWindowManager.getDefaultDisplay().getWidth();    
 //        height = mWindowManager.getDefaultDisplay().getHeight();    
@@ -68,55 +68,55 @@ public class PhoneInfoAct extends Activity {
         
         int apnType = getNetStatus(this);
         
-		phoneInfo += " imeiï¼š" + tm.getDeviceId();
-		phoneInfo += ",\n imsiï¼š" + tm.getSubscriberId();
-		phoneInfo += ",\n mTypeï¼š" + android.os.Build.MODEL;
-		phoneInfo += ",\n mMobileNumï¼š" + tm.getLine1Number();
-		phoneInfo += ",\n mSimOperatorï¼š" + simOperator + "/"+ tm.getSimOperatorName();
+		phoneInfo += " imei£º" + tm.getDeviceId();
+		phoneInfo += ",\n imsi£º" + tm.getSubscriberId();
+		phoneInfo += ",\n mType£º" + android.os.Build.MODEL;
+		phoneInfo += ",\n mMobileNum£º" + tm.getLine1Number();
+		phoneInfo += ",\n mSimOperator£º" + simOperator + "/"+ tm.getSimOperatorName();
 
-		phoneInfo += ",\n widthï¼š" + width;
-		phoneInfo += ",\n heightï¼š" + height;
+		phoneInfo += ",\n width£º" + width;
+		phoneInfo += ",\n height£º" + height;
 		
-		phoneInfo += ",\n networkidï¼š" + wifiInfo.getNetworkId();
-		phoneInfo += ",\n ssidï¼š" + wifiInfo.getSSID();
-		phoneInfo += ",\n ip addressï¼š" + wifiInfo.getIpAddress();
-		phoneInfo += ",\n mac addressï¼š" + wifiInfo.getMacAddress();
-		phoneInfo += ",\n apnTypeï¼š" + apnType;
+		phoneInfo += ",\n networkid£º" + wifiInfo.getNetworkId();
+		phoneInfo += ",\n ssid£º" + wifiInfo.getSSID();
+		phoneInfo += ",\n ip address£º" + wifiInfo.getIpAddress();
+		phoneInfo += ",\n mac address£º" + wifiInfo.getMacAddress();
+		phoneInfo += ",\n apnType£º" + apnType;
 		
 		
 	    phoneInfo += "\n\n BOARD: " + android.os.Build.BOARD;  
 	    phoneInfo += ",\n BOOTLOADER: " + android.os.Build.BOOTLOADER;  
-	    //BRAND è¿è¥å•†  
+	    //BRAND ÔËÓªÉÌ  
 	    phoneInfo += ",\n BRAND: " + android.os.Build.BRAND;  
 	    phoneInfo += ",\n CPU_ABI: " + android.os.Build.CPU_ABI;  
 	    phoneInfo += ",\n CPU_ABI2: " + android.os.Build.CPU_ABI2;  
-	    //DEVICE é©±åŠ¨  
+	    //DEVICE Çı¶¯  
 	    phoneInfo += ",\n DEVICE: " + android.os.Build.DEVICE;  
-	    //DISPLAY æ˜¾ç¤º  
+	    //DISPLAY ÏÔÊ¾  
 	    phoneInfo += ",\n DISPLAY: " + android.os.Build.DISPLAY;  
-	    //æŒ‡çº¹  
+	    //Ö¸ÎÆ  
 	    phoneInfo += ",\n FINGERPRINT: " + android.os.Build.FINGERPRINT;  
-	    //HARDWARE ç¡¬ä»¶  
+	    //HARDWARE Ó²¼ş  
 	    phoneInfo += ",\n HARDWARE: " + android.os.Build.HARDWARE;  
 	    phoneInfo += ",\n HOST: " + android.os.Build.HOST;  
 	    phoneInfo += ",\n ID: " + android.os.Build.ID;  
-	    //MANUFACTURER ç”Ÿäº§å‚å®¶  
+	    //MANUFACTURER Éú²ú³§¼Ò  
 	    phoneInfo += ",\n MANUFACTURER: " + android.os.Build.MANUFACTURER;  
-	    //MODEL æœºå‹  
+	    //MODEL »úĞÍ  
 	    phoneInfo += ",\n MODEL: " + android.os.Build.MODEL;  
-	    //PRODUCT äº§å“
+	    //PRODUCT ²úÆ·
 	    phoneInfo += ",\n PRODUCT: " + android.os.Build.PRODUCT;  
 	    phoneInfo += ",\n RADIO: " + android.os.Build.RADIO;  
 	    phoneInfo += ",\n RADITAGSO: " + android.os.Build.TAGS;  
 	    phoneInfo += ",\n TIME: " + android.os.Build.TIME;  
 	    phoneInfo += ",\n TYPE: " + android.os.Build.TYPE;  
 	    phoneInfo += ",\n USER: " + android.os.Build.USER;  
-	    //VERSION.RELEASE å›ºä»¶ç‰ˆæœ¬  
+	    //VERSION.RELEASE ¹Ì¼ş°æ±¾  
 	    phoneInfo += ",\n VERSION.RELEASE: " + android.os.Build.VERSION.RELEASE;  
 	    phoneInfo += ",\n VERSION.CODENAME: " + android.os.Build.VERSION.CODENAME;  
-	    //VERSION.INCREMENTAL åŸºå¸¦ç‰ˆæœ¬  
+	    //VERSION.INCREMENTAL »ù´ø°æ±¾  
 	    phoneInfo += ",\n VERSION.INCREMENTAL: " + android.os.Build.VERSION.INCREMENTAL;  
-	    //VERSION.SDK SDKç‰ˆæœ¬  
+	    //VERSION.SDK SDK°æ±¾  
 	    phoneInfo += ",\n VERSION.SDK: " + android.os.Build.VERSION.SDK;  
 	    phoneInfo += ",\n VERSION.SDK_INT: " + android.os.Build.VERSION.SDK_INT;  
 	}
@@ -126,28 +126,28 @@ public class PhoneInfoAct extends Activity {
 		simOperNameStr.append(i);
 		switch (i) {
 		case 46000:
-			simOperNameStr.append("/ä¸­å›½ç§»åŠ¨");
+			simOperNameStr.append("/ÖĞ¹úÒÆ¶¯");
 			return simOperNameStr.toString();
 		case 46001:
-			simOperNameStr.append("/ä¸­å›½è”é€š");
+			simOperNameStr.append("/ÖĞ¹úÁªÍ¨");
 			return simOperNameStr.toString();
 		case 46002:
-			simOperNameStr.append("/ä¸­å›½ç§»åŠ¨");
+			simOperNameStr.append("/ÖĞ¹úÒÆ¶¯");
 			return simOperNameStr.toString();
 		case 46003:
-			simOperNameStr.append("/ä¸­å›½ç”µä¿¡");
+			simOperNameStr.append("/ÖĞ¹úµçĞÅ");
 			return simOperNameStr.toString();
 		case 46005:
-			simOperNameStr.append("/ä¸­å›½ç§»åŠ¨");
+			simOperNameStr.append("/ÖĞ¹úÒÆ¶¯");
 			return simOperNameStr.toString();
 		case 46006:
-			simOperNameStr.append("/ä¸­å›½è”é€š");
+			simOperNameStr.append("/ÖĞ¹úÁªÍ¨");
 			return simOperNameStr.toString();
 		case 46007:
-			simOperNameStr.append("/ä¸­å›½ç§»åŠ¨");
+			simOperNameStr.append("/ÖĞ¹úÒÆ¶¯");
 			return simOperNameStr.toString();
 		case 46020:
-			simOperNameStr.append("/ä¸­å›½é“é€š");
+			simOperNameStr.append("/ÖĞ¹úÌúÍ¨");
 			return simOperNameStr.toString();
 		default:
 			return simOperNameStr.toString();
@@ -155,7 +155,7 @@ public class PhoneInfoAct extends Activity {
 	}
 	
 	/**   
-     * è·å–å½“å‰çš„ç½‘ç»œçŠ¶æ€ 
+     * »ñÈ¡µ±Ç°µÄÍøÂç×´Ì¬ 
      *    
      * @param context   
      * @return   
@@ -172,9 +172,9 @@ public class PhoneInfoAct extends Activity {
         int nStatus = networkInfo.getType();
         if (nStatus == ConnectivityManager.TYPE_MOBILE) {
             if (networkInfo.getExtraInfo().toLowerCase().equals("cmnet")) {
-                netStatus = CMNET;// ç”µä¿¡
+                netStatus = CMNET;// µçĞÅ
             } else {
-                netStatus = CMWAP;// ç§»åŠ¨ã€è”é€š
+                netStatus = CMWAP;// ÒÆ¶¯¡¢ÁªÍ¨
             }
         } else if (nStatus == ConnectivityManager.TYPE_WIFI) {
             netStatus = WIFI;

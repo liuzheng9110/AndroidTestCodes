@@ -1,0 +1,223 @@
+//package com.example.androidtest.update;
+//
+//import java.io.File;
+//import java.io.UnsupportedEncodingException;
+//import java.net.HttpURLConnection;
+//import java.net.URL;
+//import java.net.URLEncoder;
+//import java.util.Timer;
+//import java.util.TimerTask;
+//
+//import android.app.Activity;
+//import android.app.Dialog;
+//import android.app.DownloadManager;
+//import android.content.Context;
+//import android.content.Intent;
+//import android.database.Cursor;
+//import android.net.Uri;
+//import android.os.Bundle;
+//import android.os.Handler;
+//import android.os.Message;
+//import android.util.Log;
+//import android.view.LayoutInflater;
+//import android.view.View;
+//import android.view.View.OnClickListener;
+//import android.widget.Button;
+//
+//import com.example.androidtest.R;
+//import com.example.androidtest.util.FileUtils;
+//import com.example.androidtest.util.Utils;
+//
+//public class AndroidUpdateAct extends Activity {
+//	
+//	private Context mContext;
+//	private LayoutInflater inflater;
+//	private Button updBtn;
+//	
+//	private static long downloadId = -1;
+//	private static DownloadManager downloadManager;
+//	private String saveName, filePath;
+//	
+//	private String cachePath = FileUtils.getFilePath(mContext); 
+//	private File appFile;
+//	
+//	private final String fileUrl = "http://dldir1.qq.com/qqfile/QQIntl/QQi_wireless/Android/qqi_5.0.10.6043_android_office.apk";
+//	
+//	private Timer mTimer;
+//	private MyTimerTask mTimerTask;
+//	private boolean isStartDownload = false;
+//	
+//	public static DownloadManager getDownloadManager() {
+//		return downloadManager;
+//	}
+//	
+//	private Handler handler = new Handler(){
+//		@Override
+//		public void handleMessage(Message msg) {
+//			openFile();
+//			mTimer.cancel();
+//		}
+//	};
+//	
+//	@Override
+//	protected void onCreate(Bundle savedInstanceState) {
+//		// TODO Auto-generated method stub
+//		super.onCreate(savedInstanceState);
+//		setContentView(R.layout.update_layout);
+//		mContext = this;
+//		inflater = LayoutInflater.from(mContext);
+//		
+//		saveName = FileUtils.getFileName(fileUrl);
+//		filePath = cachePath + "app/"+saveName;
+//		appFile = new File(filePath);
+//		
+//		mTimer = new Timer(true);
+//		updBtn = (Button) findViewById(R.id.upd_btn);
+//		updBtn.setOnClickListener(new OnClickListener() {
+//			@Override
+//			public void onClick(View v) {
+//				Log.i("liuz", "isDownload..." + isStartDownload);
+//				if (!isStartDownload && appFile.exists()) {// 已经下载完成
+//					openFile();
+//				}else {// 
+//					showUpdInfoDialog();
+//				}
+//			}
+//		});
+//	}
+//
+//	protected void showUpdInfoDialog() {
+//		final Dialog dialog = new Dialog(mContext, R.style.dialog_theme);
+//		
+//		View v = inflater.inflate(R.layout.update_dialog_layout, null);
+//		Button button1 = (Button) v.findViewById(R.id.update_now_btn);
+//		Button button2 = (Button) v.findViewById(R.id.next_statu_btn);
+//		button1.setOnClickListener(new OnClickListener() {
+//			@Override
+//			public void onClick(View v) {
+//				// 开始下载
+//				isStartDownload = !isStartDownload;
+//				
+//				dialog.dismiss();
+//				Utils.showShortToast(mContext, "正在下载中...");
+//				Log.i("liuz", "正在下载中..." + isStartDownload);
+//				
+//				if (!isStartDownload) {
+//					downloadId = startDownload(fileUrl, "app/", saveName);
+//					
+//					if (mTimer != null) {
+//						if (mTimerTask != null) {
+//							mTimerTask.cancel();  
+//						}
+//						mTimerTask = new MyTimerTask(); 
+//						mTimer.scheduleAtFixedRate(mTimerTask, 0, 1000);
+//					}
+//				}else {
+//					Utils.showShortToast(mContext, "正在下载中..." + isStartDownload);
+//				}
+//			}
+//		});
+//		button2.setOnClickListener(new OnClickListener() {
+//			@Override
+//			public void onClick(View v) {
+//				dialog.dismiss();
+//			}
+//		});
+//		
+//		dialog.setCanceledOnTouchOutside(false);
+//		dialog.setContentView(v);
+//		dialog.show();
+//	}
+//
+//	
+//	protected long startDownload(String fileUrl, String saveFolder, String saveName) {
+//		try {
+//			int index = fileUrl.lastIndexOf("/") + 1;
+//			String filePath01 = fileUrl.substring(0, index);
+//			// 文件名中文编码 文件路径拼接 处理中文、空格、特殊字符
+//			fileUrl = filePath01
+//					+ URLEncoder.encode(saveName, "utf-8")
+//							.replaceAll("\\+", "%20").replaceAll("%3A", ":")
+//							.replaceAll("%2F", "/");
+//			// 获取文件存储位置 并检测文件夹是否存在
+//			// File fileFolder = new File(cachePath + saveFolder);
+//			File fileFolder = new File(cachePath + saveFolder);
+//			if (!fileFolder.exists()) {
+//				fileFolder.mkdirs();
+//			}
+//			downloadManager = (DownloadManager) mContext
+//					.getSystemService(Context.DOWNLOAD_SERVICE);
+//			DownloadManager.Request request = new DownloadManager.Request(
+//					Uri.parse(fileUrl));
+//			// 设置通知栏显示文件名
+//			request.setTitle(saveName);
+//			// 设置下载位置和文件名
+//			saveFolder = FileUtils.CACHE + saveFolder;
+//			// request.setDestinationInExternalPublicDir(saveFolder,
+//			// saveName+".cache");
+//			request.setDestinationInExternalPublicDir(saveFolder, saveName);
+//			// 下载显示通知栏信息 (开始下载 | 下载完成)
+//			request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE
+//					| DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+//			// 设置下载允许的网络类型 (wifi | 移动网络) 默认任何网络
+//			request.setAllowedNetworkTypes(DownloadManager.Request.NETWORK_WIFI
+//					| DownloadManager.Request.NETWORK_MOBILE);
+//			request.setVisibleInDownloadsUi(true);
+//			// 添加请求到队列 等待下载
+//			downloadId = downloadManager.enqueue(request);
+//		} catch (UnsupportedEncodingException e) {
+//			e.printStackTrace();
+//		}
+//		return downloadId;
+//	}
+//	
+//	/**
+//	 * 
+//	 *  Function:
+//	 *  @author liuzheng
+//	 *  @created 2014-10-15  10:51:46 
+//	 *  @param downloadId
+//	 */
+//	private void queryDownloadStatus(long downloadId) {
+//		DownloadManager.Query query = new DownloadManager.Query();
+//		query.setFilterById(downloadId);
+//		Cursor c = downloadManager.query(query);
+//		if (c.moveToFirst()) {
+//			int status = c.getInt(c.getColumnIndex(DownloadManager.COLUMN_STATUS));
+//			switch (status) {
+//			case DownloadManager.STATUS_PAUSED:
+//				Log.i("liuz", "STATUS_PAUSED");
+//			case DownloadManager.STATUS_PENDING:
+//				Log.i("liuz", "STATUS_PENDING");
+//			case DownloadManager.STATUS_RUNNING:
+//				Log.i("liuz", "STATUS_RUNNING");
+//				break;
+//			case DownloadManager.STATUS_SUCCESSFUL:
+//				Log.i("liuz", "STATUS_SUCCESSFUL");
+//				isStartDownload = false;
+//				handler.sendEmptyMessage(0);
+//				break;
+//			case DownloadManager.STATUS_FAILED:
+//				Log.i("liuz", "STATUS_FAILED");
+//				break;
+//			}
+//		}
+//		c.close();
+//	}
+//	
+//	private void openFile() {
+//		Intent intent = new Intent();
+//		intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//		intent.setAction(android.content.Intent.ACTION_VIEW);
+//		intent.setDataAndType(Uri.fromFile(appFile), FileUtils.getMIMEType(appFile)); 
+//		startActivity(intent);
+//	}
+//
+//	class MyTimerTask extends TimerTask{
+//		@Override
+//		public void run() {
+//			queryDownloadStatus(downloadId);
+//		}
+//	}
+//	
+//}

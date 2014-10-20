@@ -233,6 +233,24 @@
             android:layout_height="wrap_content"
             android:onClick="click_listener"
             android:text="Nine GridView" />
+        <Button
+            android:id="@+id/btn35"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:onClick="click_listener"
+            android:text="Android Update" />
+        <Button
+            android:id="@+id/btn36"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:onClick="click_listener"
+            android:text="Android Notification" />
+        <Button
+            android:id="@+id/btn37"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:onClick="click_listener"
+            android:text="Android CusToast Time" />
     </LinearLayout>
 
 </ScrollView>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/send_btn_01"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="click_listener"
+        android:text="send android simple notification" />
+    <Button
+        android:id="@+id/send_btn_02"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="click_listener"
+        android:text="send v4 simple notification" />
+    <Button
+        android:id="@+id/send_btn_03"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="click_listener"
+        android:text="send change notification" />
+    <Button
+        android:id="@+id/send_btn_04"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="click_listener"
+        android:text="send progress notification" />
+    <Button
+        android:id="@+id/send_btn_05"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="click_listener"
+        android:text="send view style notification" />
+
+    <Button
+        android:id="@+id/cancle_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="click_listener"
+        android:text="cancle " />
+
+</LinearLayout>
