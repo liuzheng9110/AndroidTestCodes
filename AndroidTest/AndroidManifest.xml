@@ -116,6 +116,9 @@
         <activity android:name=".update.AndroidUpdateAct" ></activity>
         
         <service android:name="com.example.androidtest.update.AndroidUpdateService"></service>
+        
+        <!-- multi app install -->
+        <activity android:name="MultiAppInstallAct" ></activity>
 
 	</application>
 </manifest>

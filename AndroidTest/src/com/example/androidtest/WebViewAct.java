@@ -1,18 +1,13 @@
 package com.example.androidtest;
 
-import org.w3c.dom.Text;
-
-import com.example.androidtest.utils.Utils;
-
 import android.app.Activity;
 import android.os.Bundle;
-import android.view.ViewGroup.LayoutParams;
-import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ArrayAdapter;
-import android.widget.TextView;
 import android.widget.ListView;
+
+import com.example.androidtest.util.Utils;
 
 public class WebViewAct extends Activity {
 	

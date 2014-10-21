@@ -21,6 +21,7 @@ import com.example.androidtest.LongClickSelCopyAct;
 import com.example.androidtest.MoniPop;
 import com.example.androidtest.MultAnimateAct;
 import com.example.androidtest.MultMarqueeTextViewAct;
+import com.example.androidtest.MultiAppInstallAct;
 import com.example.androidtest.MyDatePickerDialogAct;
 import com.example.androidtest.MyShapeAct;
 import com.example.androidtest.MySpinnerAct;
@@ -30,6 +31,7 @@ import com.example.androidtest.R;
 import com.example.androidtest.ShowDialogAct;
 import com.example.androidtest.SingleChoiceAct;
 import com.example.androidtest.TimerTaskAct;
+import com.example.androidtest.WebViewAct;
 import com.example.androidtest.XZQLDetail;
 import com.example.androidtest.actionbar_android.ActionBarAndroidAct;
 import com.example.androidtest.actionbar_support.ActionBarSupportAct;
@@ -52,7 +54,7 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
-		((Button)findViewById(R.id.btn37)).performClick();
+		((Button)findViewById(R.id.btn39)).performClick();
 		
 	}
 
@@ -69,15 +71,13 @@ public class MainActivity extends Activity {
 			startActivity(new Intent(MainActivity.this, DynamicAddView.class));
 			break;
 		case R.id.btn04:
-			startActivity(new Intent(MainActivity.this,
-					MyDatePickerDialogAct.class));
+			startActivity(new Intent(MainActivity.this, MyDatePickerDialogAct.class));
 			break;
 		case R.id.btn05:
 			startActivity(new Intent(MainActivity.this, MySpinnerAct.class));
 			break;
 		case R.id.btn06:
-			startActivity(new Intent(MainActivity.this,
-					LongClickSelCopyAct.class));
+			startActivity(new Intent(MainActivity.this, LongClickSelCopyAct.class));
 			break;
 		case R.id.btn07:
 			startActivity(new Intent(MainActivity.this, LongClickVoiceAct.class));
@@ -174,6 +174,9 @@ public class MainActivity extends Activity {
 			break;
 		case R.id.btn38:
 			startActivity(new Intent(MainActivity.this, WebViewAct.class));
+			break;
+		case R.id.btn39:
+			startActivity(new Intent(MainActivity.this, MultiAppInstallAct.class));
 			break;
 		default:
 			break;

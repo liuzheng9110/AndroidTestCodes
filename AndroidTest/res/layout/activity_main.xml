@@ -257,6 +257,12 @@
             android:layout_height="wrap_content"
             android:onClick="click_listener"
             android:text="WebView" />
+		<Button
+            android:id="@+id/btn39"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:onClick="click_listener"
+            android:text="Multi App Install" />
     </LinearLayout>
 
 </ScrollView>
