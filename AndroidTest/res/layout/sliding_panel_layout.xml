@@ -8,6 +8,19 @@
         android:id="@+id/sliding_pane_lay"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" >
+        <fragment
+            android:id="@+id/left_panelayout"
+            android:name="com.example.androidtest.sliding.SlidingPaneLayoutLeftFragment"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left" />
+        <fragment
+            android:id="@+id/right_panelayout"
+            android:name="com.example.androidtest.sliding.SlidingPaneLayoutRightFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_gravity="right" />
     </android.support.v4.widget.SlidingPaneLayout>
 
 </LinearLayout>

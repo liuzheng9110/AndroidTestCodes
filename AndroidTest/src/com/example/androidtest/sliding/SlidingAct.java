@@ -83,7 +83,7 @@ public class SlidingAct extends Activity implements OnClickListener {
 			startAct(SlidingDrawerAct.class);
 			break;
 		case 3:
-			startAct(SlidingMenuAct.class);
+			startAct(SlidingPaneLayoutAct.class);
 			break;
 		case 4:
 			startAct(SlidingMenuAct.class);

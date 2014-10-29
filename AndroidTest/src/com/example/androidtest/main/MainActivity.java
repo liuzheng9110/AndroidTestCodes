@@ -17,6 +17,7 @@ import com.example.androidtest.FixTextViewAct;
 import com.example.androidtest.HtmlTextViewAct;
 import com.example.androidtest.InputFaceAct;
 import com.example.androidtest.JsonParseAct;
+import com.example.androidtest.LastOnTouchTimeAct;
 import com.example.androidtest.LongClickSelCopyAct;
 import com.example.androidtest.MoniPop;
 import com.example.androidtest.MultAnimateAct;
@@ -39,6 +40,7 @@ import com.example.androidtest.alertwindow.FirstActivity;
 import com.example.androidtest.editlist.EditListAct;
 import com.example.androidtest.fragment.FragmentDemoAct;
 import com.example.androidtest.http.HttpMainAct;
+import com.example.androidtest.screenonoff.ScreenOnOffAct;
 import com.example.androidtest.service.MyServiceAct;
 import com.example.androidtest.sliding.SlidingAct;
 import com.example.androidtest.toast.CusToastAct;
@@ -49,15 +51,7 @@ import com.example.androidtest.volley.AndroidVolleyAct;
 
 
 public class MainActivity extends Activity {
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
-		
-		((Button)findViewById(R.id.btn39)).performClick();
-		
-	}
-
+	
 	public void click_listener(View v) {
 		// TODO Auto-generated method stub
 		switch (v.getId()) {
@@ -178,8 +172,22 @@ public class MainActivity extends Activity {
 		case R.id.btn39:
 			startActivity(new Intent(MainActivity.this, MultiAppInstallAct.class));
 			break;
+		case R.id.btn40:
+			startActivity(new Intent(MainActivity.this, LastOnTouchTimeAct.class));
+			break;
+		case R.id.btn41:
+			startActivity(new Intent(MainActivity.this, ScreenOnOffAct.class));
+			break;
 		default:
 			break;
 		}
+	}
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		
+		((Button)findViewById(R.id.btn41)).performClick();
 	}
 }

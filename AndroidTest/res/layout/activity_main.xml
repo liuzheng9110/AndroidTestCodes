@@ -263,6 +263,18 @@
             android:layout_height="wrap_content"
             android:onClick="click_listener"
             android:text="Multi App Install" />
+		<Button
+            android:id="@+id/btn40"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:onClick="click_listener"
+            android:text="Last OnTouch Time" />
+		<Button
+            android:id="@+id/btn41"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:onClick="click_listener"
+            android:text="Screen On Off" />
     </LinearLayout>
 
 </ScrollView>

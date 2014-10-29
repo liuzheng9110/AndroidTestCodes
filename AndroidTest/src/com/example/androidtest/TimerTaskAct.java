@@ -8,13 +8,11 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
-import android.view.MotionEvent;
 import android.widget.TextView;
 
 public class TimerTaskAct extends Activity {
 
 	private final String TAG = "TimerTask";
-	private final int EVENT_LOCK_WINDOW = 0x100;
 
 	private TextView textView;
 	private Handler mHandler;
