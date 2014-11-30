@@ -23,7 +23,6 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
     <uses-permission android:name="android.permission.VIBRATE"/>
-    <uses-permission android:name="android.permission."/>
 
     <application
         android:name="com.example.androidtest.main.MyApplication"
@@ -121,11 +120,30 @@
         <activity android:name="MultiAppInstallAct" ></activity>
 
         <activity android:name="LastOnTouchTimeAct" ></activity>
+        
+        <activity android:name="SimpleBroadcastReceiverAct" ></activity>
+        
         <activity android:name=".screenonoff.ScreenOnOffAct" ></activity>
         <activity
             android:name=".screenonoff.ScreenPwdAct"
             android:launchMode="singleTask"
-            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
+            android:theme="@style/MyAlertDialog" >
         </activity>
+        
+        
+        <!--  -->
+        <activity android:name=".AndroidJs2JavaAct"></activity>
+        <!--  -->
+        <activity android:name=".ImageTextAct"></activity>
+        <!--  -->
+        <activity android:name=".TextScaleAct"></activity>
+        <!--  -->
+        <activity android:name=".CusAnimationAct"></activity>
+        <!--  -->
+        <activity android:name=".autofit.AutoFitTextViewAct"></activity>
+        <!--  -->
+        <activity android:name=".htmlparse.HtmlParstAct"></activity>
+        <!--  -->
+        <activity android:name=".ActivityInLayoutAct"></activity>
 </application>
 </manifest>

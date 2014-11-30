@@ -1,11 +1,12 @@
 package com.example.androidtest.main;
 
 import android.app.Activity;
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
-import android.provider.Settings;
-import android.provider.Settings.SettingNotFoundException;
 import android.util.Log;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
@@ -22,10 +23,12 @@ public class BaseActivity extends Activity {
 	private int time = 0;
 	private int period = 5 * 1000;
 	
+	private SimpleBroadcastReceiver mReceiver;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		mReceiver = new SimpleBroadcastReceiver();
 	}
 	
 	protected void showShortToast(String msg){
@@ -45,28 +48,27 @@ public class BaseActivity extends Activity {
 		mToast.show();
 	}
 
-	@Override
-	public boolean onTouchEvent(MotionEvent event) {
-		switch (event.getAction()) {
-		case MotionEvent.ACTION_DOWN:
-			Log.i("liuz", "onTouchEvent...ACTION_DOWN");
-			break;
-		case MotionEvent.ACTION_MOVE:
-			Log.i("liuz", "onTouchEvent...ACTION_MOVE");
-			break;
-		case MotionEvent.ACTION_UP:
-			Log.i("liuz", "onTouchEvent...ACTION_UP");
-			
-			MyApplication.getInstance().stopTimer();
-			MyApplication.getInstance().startTimer();
-			
-			break;
-		default:
-			break;
-		}
-		
-		return true;
-	}
+//	public boolean onTouchEvent(MotionEvent event) {
+//		switch (event.getAction()) {
+//		case MotionEvent.ACTION_DOWN:
+//			Log.i("liuz", "onTouchEvent...ACTION_DOWN");
+//			break;
+//		case MotionEvent.ACTION_MOVE:
+//			Log.i("liuz", "onTouchEvent...ACTION_MOVE");
+//			break;
+//		case MotionEvent.ACTION_UP:
+//			Log.i("liuz", "onTouchEvent...ACTION_UP");
+//			
+//			MyApplication.getInstance().stopTimer();
+//			MyApplication.getInstance().startTimer();
+//			
+//			break;
+//		default:
+//			break;
+//		}
+//		
+//		return true;
+//	}
 	
 	/**
 	 * 自定义标题栏
@@ -101,24 +103,73 @@ public class BaseActivity extends Activity {
 	@Override
 	protected void onResume() {
 		Log.i("liuz", "onResume...");
+		
+//		if (!MyApplication.getInstance().isStart()) {
+//			MyApplication.getInstance().startTimer();
+//		}
+		registerScreenBroadcastReceiver();
 		super.onResume();
 	}
 	
 	@Override
 	protected void onStart() {
 		Log.i("liuz", "onStart...");
-		MyApplication.getInstance().startTimer();
 		
-		try {
-			time = Settings.System.getInt(getContentResolver(), Settings.System.SCREEN_OFF_TIMEOUT);
-			Log.i("liuz", "time...." + time + "...period...." + period);
-			
-			if (time > period) {
-				MyApplication.getInstance().startTimer();
-			}
-		} catch (SettingNotFoundException e) {
-			e.printStackTrace();
-		}
+//		if (!MyApplication.getInstance().isLock()) {
+////			MyApplication.getInstance().startTimer();
+//			try {
+//				time = Settings.System.getInt(getContentResolver(), Settings.System.SCREEN_OFF_TIMEOUT);
+//				Log.i("liuz", "time...." + time + "...period...." + period);
+//				
+//				if (time > period) {
+//					MyApplication.getInstance().startTimer();
+//				}
+//			} catch (SettingNotFoundException e) {
+//				e.printStackTrace();
+//			}
+//			
+//		}
 		super.onStart();
 	}
+	
+	
+	///////////////////////////////////
+	@Override
+	protected void onPause() {
+		// TODO Auto-generated method stub
+		super.onPause();
+		Log.i("liuz", "screenBroadcastReceiver反注册了");
+	}
+	
+	
+	@Override
+	protected void onDestroy() {
+		// TODO Auto-generated method stub
+		unregisterReceiver(mReceiver);
+		super.onDestroy();
+	}
+	
+	private void registerScreenBroadcastReceiver() {
+		IntentFilter intentFilter = new IntentFilter();
+		intentFilter.addAction(Intent.ACTION_SCREEN_OFF);// 当屏幕锁屏的时候触发
+		intentFilter.addAction(Intent.ACTION_SCREEN_ON);// 当屏幕解锁的时候触发
+//		intentFilter.addAction(Intent.ACTION_USER_PRESENT);// 当用户重新唤醒手持设备时触发
+		registerReceiver(mReceiver, intentFilter);
+		Log.i("liuz", "screenBroadcastReceiver注册了");
+	}
+	
+	class SimpleBroadcastReceiver extends BroadcastReceiver{
+		String action = null;
+		@Override
+		public void onReceive(Context context, Intent intent) {
+			action = intent.getAction();
+			Log.i("liuz", "action.........." + action);
+			if (Intent.ACTION_SCREEN_ON.equals(action)) {
+				Log.i("liuz", "ACTION_SCREEN_ON..........");
+			}else if (Intent.ACTION_SCREEN_OFF.equals(action)) {
+				Log.i("liuz", "ACTION_SCREEN_OFF..........");
+			}
+		}
+	}
+	
 }

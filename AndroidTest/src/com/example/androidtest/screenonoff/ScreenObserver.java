@@ -2,6 +2,8 @@ package com.example.androidtest.screenonoff;
 
 import java.lang.reflect.Method;
 
+import com.example.androidtest.main.MyApplication;
+
 import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -38,10 +40,14 @@ public class ScreenObserver{
     	public void onReceive(Context context, Intent intent) {
     		action = intent.getAction();
     		if(Intent.ACTION_SCREEN_ON.equals(action)){
+    			MyApplication.getInstance().setLock(true);
     			mScreenStateListener.onScreenOn();
     			mContext.startActivity(new Intent(mContext, ScreenPwdAct.class));
     		}else if(Intent.ACTION_SCREEN_OFF.equals(action)){
     			mScreenStateListener.onScreenOff();
+    			MyApplication.getInstance().setLock(false);
+    			// ËøÆÁ 
+    			MyApplication.getInstance().stopTimer();
     		}
     	}
     }

@@ -5,17 +5,39 @@
     android:gravity="center"
     android:orientation="vertical" >
 
-    <EditText
-        android:id="@+id/screen_pwd_edittext"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="请输入密码" >
-    </EditText>
-
     <LinearLayout
+        android:id="@+id/top_lay"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/chat_voice_back_top"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="#626262"
+            android:paddingLeft="0dp"
+            android:paddingTop="0dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:text="请输入密码解锁" />
+
+        <EditText
+            android:id="@+id/screen_pwd_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="请输入密码" >
+        </EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_lay"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
         android:orientation="horizontal" >
 
         <Button
@@ -23,14 +45,20 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Cancle" />
+            android:background="@drawable/chat_voice_send_btn_back"
+            android:padding="10dp"
+            android:text="Cancle"
+            android:textSize="16sp" />
 
         <Button
             android:id="@+id/screen_pwd_button_ok"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Ok" />
+            android:background="@drawable/chat_voice_cancle_btn_back"
+            android:padding="10dp"
+            android:text="Ok"
+            android:textSize="16sp" />
     </LinearLayout>
 
 </LinearLayout>

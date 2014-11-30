@@ -275,6 +275,60 @@
             android:layout_height="wrap_content"
             android:onClick="click_listener"
             android:text="Screen On Off" />
+		<Button
+            android:id="@+id/btn42"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:onClick="click_listener"
+            android:text="Simple BroadcastReceiver " />
+		<Button
+            android:id="@+id/btn43"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:onClick="click_listener"
+            android:text="Android Js2Java" />
+		<Button
+            android:id="@+id/btn44"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:onClick="click_listener"
+            android:text="ImageTextAct" />
+		<Button
+            android:id="@+id/btn45"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:onClick="click_listener"
+            android:text="TextScaleAct" />
+		<Button
+            android:id="@+id/btn46"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:onClick="click_listener"
+            android:text="GestureDetectorAct" />
+		<Button
+            android:id="@+id/btn47"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:onClick="click_listener"
+            android:text="AutoFitTextViewAct" />
+		<Button
+            android:id="@+id/btn48"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:onClick="click_listener"
+            android:text="CusAnimationAct" />
+		<Button
+            android:id="@+id/btn49"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:onClick="click_listener"
+            android:text="HtmlParseAct" />
+		<Button
+            android:id="@+id/btn50"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:onClick="click_listener"
+            android:text="ActivityInLayoutAct" />
     </LinearLayout>
 
 </ScrollView>

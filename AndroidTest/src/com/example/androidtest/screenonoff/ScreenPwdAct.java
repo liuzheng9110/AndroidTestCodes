@@ -34,15 +34,19 @@ public class ScreenPwdAct extends Activity {
 			@Override
 			public void onClick(View v) {
 				Toast.makeText(ScreenPwdAct.this, "退出", Toast.LENGTH_SHORT).show();
-				MyApplication.getInstance().exitApplication();
+				ScreenPwdAct.this.finish();
+				System.exit(0);
 			}
-		});
+		});;
 		okBtn.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				okListener();
 			}
 		});
+		
+		setFinishOnTouchOutside(false);// 点击外部灰色区域无效
+		
 	}
 	
 	private void okListener() {

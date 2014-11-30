@@ -1,20 +1,23 @@
 package com.example.androidtest.main;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.HorizontalScrollView;
 
+import com.example.androidtest.ActivityInLayoutAct;
+import com.example.androidtest.AndroidJs2JavaAct;
 import com.example.androidtest.AndroidNotificationAct;
+import com.example.androidtest.CusAnimationAct;
 import com.example.androidtest.CusDatePickerAct;
 import com.example.androidtest.CusDialogAct;
 import com.example.androidtest.CusEditTextAct;
 import com.example.androidtest.DrawerLayoutAct;
 import com.example.androidtest.DynamicAddView;
 import com.example.androidtest.FixTextViewAct;
+import com.example.androidtest.GestureDetectorAct;
 import com.example.androidtest.HtmlTextViewAct;
+import com.example.androidtest.ImageTextAct;
 import com.example.androidtest.InputFaceAct;
 import com.example.androidtest.JsonParseAct;
 import com.example.androidtest.LastOnTouchTimeAct;
@@ -30,15 +33,19 @@ import com.example.androidtest.NineGridViewAct;
 import com.example.androidtest.PhoneInfoAct;
 import com.example.androidtest.R;
 import com.example.androidtest.ShowDialogAct;
+import com.example.androidtest.SimpleBroadcastReceiverAct;
 import com.example.androidtest.SingleChoiceAct;
+import com.example.androidtest.TextScaleAct;
 import com.example.androidtest.TimerTaskAct;
 import com.example.androidtest.WebViewAct;
 import com.example.androidtest.XZQLDetail;
 import com.example.androidtest.actionbar_android.ActionBarAndroidAct;
 import com.example.androidtest.actionbar_support.ActionBarSupportAct;
 import com.example.androidtest.alertwindow.FirstActivity;
+import com.example.androidtest.autofit.AutoFitTextViewAct;
 import com.example.androidtest.editlist.EditListAct;
 import com.example.androidtest.fragment.FragmentDemoAct;
+import com.example.androidtest.htmlparse.HtmlParstAct;
 import com.example.androidtest.http.HttpMainAct;
 import com.example.androidtest.screenonoff.ScreenOnOffAct;
 import com.example.androidtest.service.MyServiceAct;
@@ -50,7 +57,7 @@ import com.example.androidtest.voice.LongClickVoiceAct;
 import com.example.androidtest.volley.AndroidVolleyAct;
 
 
-public class MainActivity extends Activity {
+public class MainActivity extends BaseActivity {
 	
 	public void click_listener(View v) {
 		// TODO Auto-generated method stub
@@ -178,6 +185,33 @@ public class MainActivity extends Activity {
 		case R.id.btn41:
 			startActivity(new Intent(MainActivity.this, ScreenOnOffAct.class));
 			break;
+		case R.id.btn42:
+			startActivity(new Intent(MainActivity.this, SimpleBroadcastReceiverAct.class));
+			break;
+		case R.id.btn43:
+			startActivity(new Intent(MainActivity.this, AndroidJs2JavaAct.class));
+			break;
+		case R.id.btn44:
+			startActivity(new Intent(MainActivity.this, ImageTextAct.class));
+			break;
+		case R.id.btn45:
+			startActivity(new Intent(MainActivity.this, TextScaleAct.class));
+			break;
+		case R.id.btn46:
+			startActivity(new Intent(MainActivity.this, GestureDetectorAct.class));
+			break;
+		case R.id.btn47:
+			startActivity(new Intent(MainActivity.this, AutoFitTextViewAct.class));
+			break;
+		case R.id.btn48:
+			startActivity(new Intent(MainActivity.this, CusAnimationAct.class));
+			break;
+		case R.id.btn49:
+			startActivity(new Intent(MainActivity.this, HtmlParstAct.class));
+			break;
+		case R.id.btn50:
+			startActivity(new Intent(MainActivity.this, ActivityInLayoutAct.class));
+			break;
 		default:
 			break;
 		}
@@ -188,6 +222,6 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
-		((Button)findViewById(R.id.btn41)).performClick();
+//		((Button)findViewById(R.id.btn42)).performClick();
 	}
 }

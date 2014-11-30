@@ -27,7 +27,7 @@
     </style>
 
     <style name="Cus_Theme_Dialog" parent="android:Theme.Dialog">
-        <item name="android:windowBackground">@null</item>
+         <item name="android:windowBackground">@drawable/notice_search_dialog_bg</item>
         <item name="android:windowNoTitle">true</item>
     </style>
 
@@ -112,7 +112,20 @@
 
     <style name="dialog_theme" parent="@android:style/Theme.Dialog">
         <item name="android:windowBackground">@drawable/transparent</item>
-        <item name="android:windowNoTitle">@null</item>
+        <!-- <item name="android:windowNoTitle">true</item> -->
     </style>
 
+        <style name="MyAlertDialog" parent="android:Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:colorForeground">@color/transparent</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:editTextStyle">@style/MyAlertDialog.EditText</item>
+    </style>
+
+    <style name="MyAlertDialog.EditText" parent="@android:style/Widget.EditText">
+        <item name="android:background">@drawable/edit_text_input_back</item>
+    </style>
+    
 </resources>

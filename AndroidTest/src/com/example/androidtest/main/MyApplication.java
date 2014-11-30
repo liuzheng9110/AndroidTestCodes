@@ -22,6 +22,8 @@ public class MyApplication extends Application {
 	public static int touchTime = 0;
 	private int time = 0;
 	private int period = 5 * 1000;
+	private boolean isLock = false;
+	private boolean isStart = false;
 //	public static int period = 20 * 60 * 1000;
 	
 	public MyApplication() {
@@ -34,6 +36,22 @@ public class MyApplication extends Application {
 		return instance;
 	}
 	
+	public void setLock(boolean isLock) {
+		this.isLock = isLock;
+	}
+	
+	public boolean isLock() {
+		return isLock;
+	}
+	
+	public void setStart(boolean isStart) {
+		this.isStart = isStart;
+	}
+	
+	public boolean isStart() {
+		return isStart;
+	}
+
 	@Override
 	public void onCreate() {
 		super.onCreate();
@@ -75,6 +93,9 @@ public class MyApplication extends Application {
 			mTimerTask = new MyTimerTask(); // 新建一个任务
 			mTimer.scheduleAtFixedRate(mTimerTask, 0, period);
 		}
+		
+		isStart = true;
+		
 	}
 	
 	public void stopTimer(){
@@ -89,6 +110,7 @@ public class MyApplication extends Application {
 		}
 		
 		touchTime = 0;
+		isStart = false;
 	}
 	
 	class MyTimerTask extends TimerTask {
