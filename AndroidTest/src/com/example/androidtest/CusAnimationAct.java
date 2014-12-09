@@ -16,7 +16,7 @@ import android.widget.TextView;
  *  @author liuzheng
  *  @version 1.0 
  *  @created 2014-11-24 下午5:13:55
- *  @Copyright 方欣科技湖南分公司
+ *  @Copyright http://liuz.me
  */
 public class CusAnimationAct extends Activity {
 	

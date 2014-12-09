@@ -20,7 +20,7 @@ import com.example.androidtest.R;
  *  @author liuzheng
  *  @version 1.0 
  *  @created 2014-11-24 下午2:30:27
- *  @Copyright 方欣科技湖南分公司
+ *  @Copyright http://liuz.me
  *  @Via  https://github.com/grantland/android-autofittextview
  */
 public class AutoFitTextViewAct extends Activity {

@@ -53,6 +53,7 @@ import com.example.androidtest.sliding.SlidingAct;
 import com.example.androidtest.toast.CusToastAct;
 import com.example.androidtest.update.AndroidUpdateAct;
 import com.example.androidtest.viewpager.VerticalViewpagerAct;
+import com.example.androidtest.viewpager.ViewPagerOnlineAct;
 import com.example.androidtest.voice.LongClickVoiceAct;
 import com.example.androidtest.volley.AndroidVolleyAct;
 
@@ -212,6 +213,9 @@ public class MainActivity extends BaseActivity {
 		case R.id.btn50:
 			startActivity(new Intent(MainActivity.this, ActivityInLayoutAct.class));
 			break;
+		case R.id.btn51:
+			startActivity(new Intent(MainActivity.this, ViewPagerOnlineAct.class));
+			break;
 		default:
 			break;
 		}
@@ -221,6 +225,9 @@ public class MainActivity extends BaseActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		
+		
+		
 		
 //		((Button)findViewById(R.id.btn42)).performClick();
 	}

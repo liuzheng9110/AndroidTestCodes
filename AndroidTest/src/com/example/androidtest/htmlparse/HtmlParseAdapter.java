@@ -49,8 +49,8 @@ public class HtmlParseAdapter extends BaseAdapter {
 			
 			holder.htmlTitle = (TextView) convertView.findViewById(R.id.html_title);
 			holder.htmlDesc = (TextView) convertView.findViewById(R.id.html_desc);
-			holder.htmlType = (TextView) convertView.findViewById(R.id.html_type);
 			holder.htmlTime = (TextView) convertView.findViewById(R.id.html_time);
+			holder.htmlType = (TextView) convertView.findViewById(R.id.html_type);
 			
 			convertView.setTag(holder);
 		}else {
@@ -61,8 +61,8 @@ public class HtmlParseAdapter extends BaseAdapter {
 		HtmlParseBean htmlParseBean = mHtmlParseBeans.get(position);
 		holder.htmlTitle.setText(htmlParseBean.getHtmlTitle());
 		holder.htmlDesc.setText(htmlParseBean.getHtmlDesc());
-		holder.htmlType.setText(htmlParseBean.getHtmlType());
 		holder.htmlTime.setText(htmlParseBean.getHtmlTime());
+		holder.htmlType.setText(htmlParseBean.getHtmlType());
 		
 		return convertView;
 	}
@@ -70,8 +70,8 @@ public class HtmlParseAdapter extends BaseAdapter {
 	class HtmlParstHolder {
 		private TextView htmlTitle;// 标题
 		private TextView htmlDesc; // 描述
-		private TextView htmlType; // 类型
 		private TextView htmlTime; // 时间
+		private TextView htmlType; // 类型
 	}
 	
 }

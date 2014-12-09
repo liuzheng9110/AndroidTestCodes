@@ -329,6 +329,12 @@
             android:layout_height="wrap_content"
             android:onClick="click_listener"
             android:text="ActivityInLayoutAct" />
+		<Button
+            android:id="@+id/btn51"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:onClick="click_listener"
+            android:text="ViewPagerOnlineAct" />
     </LinearLayout>
 
 </ScrollView>

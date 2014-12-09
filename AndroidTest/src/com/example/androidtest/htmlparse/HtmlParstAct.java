@@ -2,12 +2,9 @@ package com.example.androidtest.htmlparse;
 
 import java.util.ArrayList;
 
-import android.database.DataSetObserver;
+import android.content.Context;
 import android.os.Bundle;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.ListAdapter;
+import android.os.Handler;
 import android.widget.ListView;
 
 import com.example.androidtest.R;
@@ -21,7 +18,6 @@ import com.example.androidtest.main.BaseActivity;
  *  @author liuzheng
  *  @version 1.0 
  *  @created 2014-11-25 上午11:16:46
- *  @Copyright 方欣科技湖南分公司
  */
 public class HtmlParstAct extends BaseActivity {
 	
@@ -33,22 +29,43 @@ public class HtmlParstAct extends BaseActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.html_parse_layout);
 		
-		setData();
-
 		htmlListView = (ListView) findViewById(R.id.html_listView);
-		for (int i = 0; i < titles.length; i++) {
-			HtmlParseBean htmlParseBean = new HtmlParseBean();
-			htmlParseBean.setHtmlId(""+(i+1));
-			htmlParseBean.setHtmlTitle(titles[i]);
-			htmlParseBean.setHtmlDesc(descs[0]);
-			htmlParseBean.setHtmlType(types[i]);
-			htmlParseBean.setHtmlTime(times[i]);
-			
-			htmlParseBeans.add(htmlParseBean);
-		}
 		
-		htmlListView.setAdapter(new HtmlParseAdapter(this, htmlParseBeans));
+//		setData();
+//
+//		for (int i = 0; i < titles.length; i++) {
+//			HtmlParseBean htmlParseBean = new HtmlParseBean();
+//			htmlParseBean.setHtmlId(""+(i+1));
+//			htmlParseBean.setHtmlTitle(titles[i]);
+//			htmlParseBean.setHtmlDesc(descs[0]);
+//			htmlParseBean.setHtmlType(types[i]);
+//			htmlParseBean.setHtmlTime(times[i]);
+//			
+//			htmlParseBeans.add(htmlParseBean);
+//		}
+//		htmlListView.setAdapter(new HtmlParseAdapter(this, htmlParseBeans));
+		///////////////////////////////////////////////////////////////////
+		
+		showProgressDialog();
+		
+		new Thread(){
+			public void run() {
+				
+				KanZhiHuParse.getContentHtml();
+				htmlParseBeans = KanZhiHuParse.getHtmlParseBeans();
+				
+				handler.sendEmptyMessage(0);
+			};
+		}.start();
+		
 	}
+	
+	Handler handler = new Handler(){
+		public void handleMessage(android.os.Message msg) {
+			htmlListView.setAdapter(new HtmlParseAdapter(HtmlParstAct.this, htmlParseBeans));
+			dismissProgressDialog();
+		};
+	};
 	
 	
 	private String[] titles, descs, types, times;

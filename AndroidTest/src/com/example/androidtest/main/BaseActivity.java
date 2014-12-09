@@ -1,6 +1,9 @@
 package com.example.androidtest.main;
 
+import android.R.anim;
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -17,6 +20,8 @@ import android.widget.Toast;
 import com.example.androidtest.R;
 
 public class BaseActivity extends Activity {
+	
+	private ProgressDialog progressDialog;
 	
 	private Toast mToast;
 
@@ -46,6 +51,19 @@ public class BaseActivity extends Activity {
 			mToast.setDuration(duration);
 		}
 		mToast.show();
+	}
+	
+	protected void showProgressDialog(){
+		progressDialog = new ProgressDialog(this, android.R.style.Widget_Holo_ProgressBar);
+		progressDialog.setTitle("title");
+		progressDialog.setMessage("正在加载中...");
+		progressDialog.show();
+	}
+	
+	protected void  dismissProgressDialog() {
+		if (progressDialog != null && progressDialog.isShowing()) {
+			progressDialog.dismiss();
+		}
 	}
 
 //	public boolean onTouchEvent(MotionEvent event) {
