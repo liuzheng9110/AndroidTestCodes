@@ -5,9 +5,14 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 import com.example.androidtest.screenonoff.ScreenPwdAct;
+import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
+import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
 
 import android.app.Activity;
 import android.app.Application;
+import android.content.Context;
 import android.content.Intent;
 import android.provider.Settings;
 import android.provider.Settings.SettingNotFoundException;
@@ -16,6 +21,7 @@ import android.util.Log;
 public class MyApplication extends Application {
 	private static MyApplication instance;
 	private List<Activity> activityList;
+	private Context context;
 	
 	private Timer mTimer;
 	private MyTimerTask mTimerTask;
@@ -61,6 +67,19 @@ public class MyApplication extends Application {
 //		getScreenTime();
 		
 		instance = this;
+		
+		// TODO 获取全局的上下文
+		context = getApplicationContext();
+		// 初始化ImageLoader
+		ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(context)
+				.threadPriority(Thread.NORM_PRIORITY - 2)
+				.denyCacheImageMultipleSizesInMemory()
+				.diskCacheFileNameGenerator(new Md5FileNameGenerator())
+				.diskCacheSize(50 * 1024 * 1024)
+				.tasksProcessingOrder(QueueProcessingType.LIFO)
+				.writeDebugLogs().build();
+		ImageLoader.getInstance().init(config);
+	
 	}
 	
 	private void getScreenTime() {

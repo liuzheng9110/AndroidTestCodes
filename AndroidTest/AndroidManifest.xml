@@ -145,7 +145,5 @@
         <activity android:name=".htmlparse.HtmlParstAct"></activity>
         <!--  -->
         <activity android:name=".ActivityInLayoutAct"></activity>
-        <!--  -->
-        <activity android:name=".viewpager.ViewPagerOnlineAct"></activity>
 </application>
 </manifest>

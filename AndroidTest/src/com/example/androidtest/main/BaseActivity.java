@@ -125,7 +125,7 @@ public class BaseActivity extends Activity {
 //		if (!MyApplication.getInstance().isStart()) {
 //			MyApplication.getInstance().startTimer();
 //		}
-		registerScreenBroadcastReceiver();
+//		registerScreenBroadcastReceiver();
 		super.onResume();
 	}
 	
@@ -163,7 +163,7 @@ public class BaseActivity extends Activity {
 	@Override
 	protected void onDestroy() {
 		// TODO Auto-generated method stub
-		unregisterReceiver(mReceiver);
+//		unregisterReceiver(mReceiver);
 		super.onDestroy();
 	}
 	
