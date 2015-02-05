@@ -329,6 +329,7 @@
             android:layout_height="wrap_content"
             android:onClick="click_listener"
             android:text="ActivityInLayoutAct" />
+<<<<<<< HEAD
 		<Button
             android:id="@+id/btn51"
             android:layout_width="fill_parent"
@@ -383,6 +384,8 @@
             android:layout_height="wrap_content"
             android:onClick="click_listener"
             android:text="XListViewActivity" />
+=======
+>>>>>>> e5cd185b03948bca73f0c3620744fe14e64ef5a1
     </LinearLayout>
 
 </ScrollView>

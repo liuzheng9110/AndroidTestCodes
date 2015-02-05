@@ -80,6 +80,7 @@ public class MyApplication extends Application {
 				.tasksProcessingOrder(QueueProcessingType.LIFO)
 				.writeDebugLogs().build();
 		ImageLoader.getInstance().init(config);
+<<<<<<< HEAD
 		
 		
 		getDensity();
@@ -103,6 +104,9 @@ public class MyApplication extends Application {
 		density = dm.density;
 		densityDpi = dm.densityDpi;
 		
+=======
+	
+>>>>>>> e5cd185b03948bca73f0c3620744fe14e64ef5a1
 	}
 	
 	private void getScreenTime() {
