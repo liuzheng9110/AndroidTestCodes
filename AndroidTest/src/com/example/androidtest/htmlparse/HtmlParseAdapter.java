@@ -2,25 +2,29 @@ package com.example.androidtest.htmlparse;
 
 import java.util.ArrayList;
 
-import com.example.androidtest.R;
-
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.androidtest.R;
+import com.example.androidtest.util.Constants;
 
 public class HtmlParseAdapter extends BaseAdapter {
 	
 	private Context mContext;
-	private ArrayList<HtmlParseBean> mHtmlParseBeans;
+	private ArrayList<?> mHtmlParseBeans;
 	private LayoutInflater mInflater;
+	private int mType = 0;
 	
-	public HtmlParseAdapter(Context context, ArrayList<HtmlParseBean> htmlParseBeans) {
+	public HtmlParseAdapter(Context context, ArrayList<?> htmlParseBeans, int type) {
 		this.mContext = context;
 		this.mHtmlParseBeans = htmlParseBeans;
 		this.mInflater = LayoutInflater.from(mContext);
+		this.mType = type;
 		
 	}
 
@@ -41,11 +45,44 @@ public class HtmlParseAdapter extends BaseAdapter {
 
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
-		HtmlParstHolder holder;
+		if (mType == Constants.KANZHIHU_LIST) {
+			getContentListView(convertView, position);
+		}else if (mType == Constants.KANZHIHU_CONTENT) {
+			getContentView(convertView, position);
+		}
+		return convertView;
+	}
+
+	//////////////////////////////////////////////////
+	void getContentView(View convertView, int position) {
+		HtmlParseContentHolder holder;
+		if (convertView == null) {
+			convertView = mInflater.inflate(R.layout.html_parse_list_item, null);
+			holder = new HtmlParseContentHolder();
+			
+			
+			
+			convertView.setTag(holder);
+		}else {
+			holder = (HtmlParseContentHolder) convertView.getTag();
+		}
+	}
+	
+	class HtmlParseContentHolder{
+		TextView htmlTitle;
+		ImageView htmlAvatar;
+		TextView htmlSummary;
+		TextView htmlAgreeText;
+		TextView htmlDesc;
+	}
+	
+	//////////////////////////////////////////////////
+	void getContentListView(View convertView, int position){
+		HtmlParseListHolder holder;
 		
 		if (convertView == null) {
 			convertView = mInflater.inflate(R.layout.html_parse_list_item, null);
-			holder = new HtmlParstHolder();
+			holder = new HtmlParseListHolder();
 			
 			holder.htmlTitle = (TextView) convertView.findViewById(R.id.html_title);
 			holder.htmlDesc = (TextView) convertView.findViewById(R.id.html_desc);
@@ -54,24 +91,23 @@ public class HtmlParseAdapter extends BaseAdapter {
 			
 			convertView.setTag(holder);
 		}else {
-			holder = (HtmlParstHolder) convertView.getTag();
+			holder = (HtmlParseListHolder) convertView.getTag();
 		}
 		
 		// 设置内容
-		HtmlParseBean htmlParseBean = mHtmlParseBeans.get(position);
+		HtmlParseListBean htmlParseBean = (HtmlParseListBean) mHtmlParseBeans.get(position);
 		holder.htmlTitle.setText(htmlParseBean.getHtmlTitle());
 		holder.htmlDesc.setText(htmlParseBean.getHtmlDesc());
 		holder.htmlTime.setText(htmlParseBean.getHtmlTime());
 		holder.htmlType.setText(htmlParseBean.getHtmlType());
-		
-		return convertView;
-	}
 
-	class HtmlParstHolder {
-		private TextView htmlTitle;// 标题
-		private TextView htmlDesc; // 描述
-		private TextView htmlTime; // 时间
-		private TextView htmlType; // 类型
+	}
+	
+	class HtmlParseListHolder {
+		TextView htmlTitle;// 标题
+		TextView htmlDesc; // 描述
+		TextView htmlTime; // 时间
+		TextView htmlType; // 类型
 	}
 	
 }

@@ -57,7 +57,7 @@ public class InputFaceListAdapter extends BaseAdapter {
 		if (convertView==null) {
 			textView = new TextView(mContext);
 			// 设置宽高
-			textView.setLayoutParams(new ListView.LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT));
+			textView.setLayoutParams(new ListView.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT));
 			// 垂直居中显示
 			textView.setGravity(Gravity.CENTER_VERTICAL);
 		}else {
@@ -67,7 +67,7 @@ public class InputFaceListAdapter extends BaseAdapter {
 		String itemStr = mdataList.get(position);
 		
 		// 正则表达式，用来判断消息内是否有表情
-		String zhengze = "f_static_[0-9]{3}|f0[0-9]{2}|f1[0-9]{2}"; 
+		String zhengze = "f_static_[0-9]{3}|f0[0-9]{2}|f1[0-9]{2}|\\[\\w+\\]";
 		try {
 			SpannableString spannableString = InputFaceUtil.getExpressionString(mContext, itemStr, zhengze);
 			textView.setText(spannableString);

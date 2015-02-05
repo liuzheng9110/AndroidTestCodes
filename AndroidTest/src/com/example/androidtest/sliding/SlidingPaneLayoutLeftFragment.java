@@ -54,7 +54,7 @@ public class SlidingPaneLayoutLeftFragment extends Fragment {
 			public void onItemClick(AdapterView<?> arg0, View arg1, int position, long arg3) {
 				switch (position) {
 				case 0:
-					slidingPaneLayoutAct.onItemClick("http://wen.lu");
+					slidingPaneLayoutAct.onItemClick("http://www.gfsoso.com");
 					break;
 				case 1:
 					slidingPaneLayoutAct.onItemClick("http://www.baidu.com");

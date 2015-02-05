@@ -4,6 +4,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
+	<include layout="@layout/title_layout"/>
+    
     <WebView
         android:id="@+id/sliding_pane_lay_content"
         android:layout_width="match_parent"

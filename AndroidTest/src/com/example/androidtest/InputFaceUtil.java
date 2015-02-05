@@ -50,7 +50,7 @@ public class InputFaceUtil {
 			String str, String zhengze) {
     	SpannableString spannableString = new SpannableString(str);
     	//通过传入的正则表达式来生成一个pattern
-        Pattern sinaPatten = Pattern.compile(zhengze, Pattern.CASE_INSENSITIVE);		
+        Pattern sinaPatten = Pattern.compile(zhengze, Pattern.UNIX_LINES);		
         try {
             dealExpression(context,spannableString, sinaPatten, 0);
         } catch (Exception e) {

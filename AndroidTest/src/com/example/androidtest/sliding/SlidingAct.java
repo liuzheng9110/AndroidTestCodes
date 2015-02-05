@@ -1,18 +1,19 @@
 package com.example.androidtest.sliding;
 
+import com.example.androidtest.main.BaseActivity;
+import com.example.androidtest.sliding.residemenu.SlidingResideMenuAct;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.widget.SlidingPaneLayout;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
-import android.widget.SlidingDrawer;
 import android.widget.Toast;
 
-public class SlidingAct extends Activity implements OnClickListener {
+public class SlidingAct extends BaseActivity implements OnClickListener {
 	
 	public final static int TYPE_SLIDING_MENU = 1;
 	public final static int TYPE_SLIDING_DRAWER = 2;
@@ -86,25 +87,25 @@ public class SlidingAct extends Activity implements OnClickListener {
 			startAct(SlidingPaneLayoutAct.class);
 			break;
 		case 4:
-			startAct(SlidingMenuAct.class);
+			startAct(SlidingViewDragHelperAct.class);
 			break;
 		case 5:
-			startAct(SlidingMenuAct.class);
+			startAct(SlidingResideMenuAct.class);
 			break;
 		default:
 			break;
 		}
 	}
 	
-	private void showShortToast(String msg){
-		if (mToast==null) {
-			mToast = Toast.makeText(this, msg, Toast.LENGTH_SHORT);
-		}else {
-			mToast.setText(msg);
-			mToast.setDuration(Toast.LENGTH_SHORT);
-		}
-		mToast.show();
-	}
+//	private void showShortToast(String msg){
+//		if (mToast==null) {
+//			mToast = Toast.makeText(this, msg, Toast.LENGTH_SHORT);
+//		}else {
+//			mToast.setText(msg);
+//			mToast.setDuration(Toast.LENGTH_SHORT);
+//		}
+//		mToast.show();
+//	}
 	
 	private void startAct(Class<?> cls){
 		startActivity(new Intent(this, cls));

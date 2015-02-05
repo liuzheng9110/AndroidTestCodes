@@ -33,6 +33,8 @@ public class AndroidVolleyAct extends Activity implements OnClickListener {
 	private String REQ_URL_IMAGE = "http://avatar.csdn.net/6/6/D/1_lfdfhl.jpg";
 	private String REQ_URL_NET_IMAGE = "http://image227-c.poco.cn/mypoco/myphoto/20140716/20/6524982620140716202956046_640.jpg";
 	
+	private String REQ_URL_WEBSERVICE = "http://www.baidu.com";
+	
 	private Button buttonString, buttonJson, buttonImage, buttonNetImage;
 	private TextView resultTextView;
 	private ImageView imageView;

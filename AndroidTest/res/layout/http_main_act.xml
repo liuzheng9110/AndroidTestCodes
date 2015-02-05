@@ -11,11 +11,22 @@
         android:onClick="clickListener"
         android:text="http post" />
 
+    <Button
+        android:id="@+id/http_webservice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="clickListener"
+        android:text="http webservice" />
+
     <ListView
         android:id="@+id/listView"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-         >
+        android:layout_height="wrap_content" >
     </ListView>
+
+    <TextView
+        android:id="@+id/webservice_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

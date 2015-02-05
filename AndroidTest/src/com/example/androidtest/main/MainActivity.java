@@ -3,7 +3,6 @@ package com.example.androidtest.main;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.HorizontalScrollView;
 
 import com.example.androidtest.ActivityInLayoutAct;
 import com.example.androidtest.AndroidJs2JavaAct;
@@ -16,12 +15,14 @@ import com.example.androidtest.DrawerLayoutAct;
 import com.example.androidtest.DynamicAddView;
 import com.example.androidtest.FixTextViewAct;
 import com.example.androidtest.GestureDetectorAct;
+import com.example.androidtest.HorizontalScrollViewAct;
 import com.example.androidtest.HtmlTextViewAct;
 import com.example.androidtest.ImageTextAct;
 import com.example.androidtest.InputFaceAct;
 import com.example.androidtest.JsonParseAct;
 import com.example.androidtest.LastOnTouchTimeAct;
 import com.example.androidtest.LongClickSelCopyAct;
+import com.example.androidtest.MenuAct;
 import com.example.androidtest.MoniPop;
 import com.example.androidtest.MultAnimateAct;
 import com.example.androidtest.MultMarqueeTextViewAct;
@@ -32,13 +33,17 @@ import com.example.androidtest.MySpinnerAct;
 import com.example.androidtest.NineGridViewAct;
 import com.example.androidtest.PhoneInfoAct;
 import com.example.androidtest.R;
+import com.example.androidtest.RadioButtonActivity;
 import com.example.androidtest.ShowDialogAct;
 import com.example.androidtest.SimpleBroadcastReceiverAct;
 import com.example.androidtest.SingleChoiceAct;
+import com.example.androidtest.SpannableActivity;
 import com.example.androidtest.TextScaleAct;
 import com.example.androidtest.TimerTaskAct;
 import com.example.androidtest.WebViewAct;
 import com.example.androidtest.XZQLDetail;
+import com.example.androidtest.a_foresee.gridview.TaxperGridActivity;
+import com.example.androidtest.a_foresee.gridview.TaxperTableRowActivity;
 import com.example.androidtest.actionbar_android.ActionBarAndroidAct;
 import com.example.androidtest.actionbar_support.ActionBarSupportAct;
 import com.example.androidtest.alertwindow.FirstActivity;
@@ -47,13 +52,16 @@ import com.example.androidtest.editlist.EditListAct;
 import com.example.androidtest.fragment.FragmentDemoAct;
 import com.example.androidtest.htmlparse.HtmlParstAct;
 import com.example.androidtest.http.HttpMainAct;
+import com.example.androidtest.preference.MyPreferenceActivity;
+import com.example.androidtest.preference.MyPreferenceFragmentActivity;
+import com.example.androidtest.pullrefresh.PullRefreshActivity;
 import com.example.androidtest.screenonoff.ScreenOnOffAct;
 import com.example.androidtest.service.MyServiceAct;
 import com.example.androidtest.sliding.SlidingAct;
+import com.example.androidtest.textview.MyTextViewAct;
 import com.example.androidtest.toast.CusToastAct;
 import com.example.androidtest.update.AndroidUpdateAct;
 import com.example.androidtest.viewpager.VerticalViewpagerAct;
-import com.example.androidtest.viewpager.ViewPagerOnlineAct;
 import com.example.androidtest.voice.LongClickVoiceAct;
 import com.example.androidtest.volley.AndroidVolleyAct;
 
@@ -94,7 +102,7 @@ public class MainActivity extends BaseActivity {
 			startActivity(new Intent(MainActivity.this, EditListAct.class));
 			break;
 		case R.id.btn11:
-			startActivity(new Intent(MainActivity.this, HorizontalScrollView.class));
+			startActivity(new Intent(MainActivity.this, HorizontalScrollViewAct.class));
 			break;
 		case R.id.btn12:
 			startActivity(new Intent(MainActivity.this, CusDialogAct.class));
@@ -214,7 +222,32 @@ public class MainActivity extends BaseActivity {
 			startActivity(new Intent(MainActivity.this, ActivityInLayoutAct.class));
 			break;
 		case R.id.btn51:
-			startActivity(new Intent(MainActivity.this, ViewPagerOnlineAct.class));
+			startActivity(new Intent(MainActivity.this, MenuAct.class));
+			break;
+		case R.id.btn52:
+			startActivity(new Intent(MainActivity.this, MyTextViewAct.class));
+			break;
+		case R.id.btn53:
+			startActivity(new Intent(MainActivity.this, PullRefreshActivity.class));
+			break;
+		case R.id.btn54:
+			startActivity(new Intent(MainActivity.this, MyPreferenceActivity.class));
+			break;
+		case R.id.btn55:
+			startActivity(new Intent(MainActivity.this, MyPreferenceFragmentActivity.class));
+			break;
+		case R.id.btn56:
+			startActivity(new Intent(MainActivity.this, TaxperGridActivity.class));
+			break;
+		case R.id.btn57:
+			startActivity(new Intent(MainActivity.this, TaxperTableRowActivity.class));
+			break;
+		case R.id.btn58:
+			startActivity(new Intent(MainActivity.this, RadioButtonActivity.class));
+			break;
+		case R.id.btn59:
+			
+			startActivity(new Intent(MainActivity.this, SpannableActivity.class));
 			break;
 		default:
 			break;
@@ -225,8 +258,6 @@ public class MainActivity extends BaseActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		
-		
 		
 		
 //		((Button)findViewById(R.id.btn42)).performClick();

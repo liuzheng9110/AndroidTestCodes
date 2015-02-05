@@ -31,7 +31,7 @@ public class InputFaceAct extends Activity {
 	
 	private ListView listView;
 	private InputFaceListAdapter adapter;
-	private ArrayAdapter<String> arrayAdapter;
+//	private ArrayAdapter<String> arrayAdapter;
 	
 	private InputMethodManager imm;
 	
@@ -49,7 +49,7 @@ public class InputFaceAct extends Activity {
 		}
 		
 		adapter = new InputFaceListAdapter(this, dataList);
-		arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, dataList);
+//		arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, dataList);
 		
 		listView = (ListView) findViewById(R.id.listView);
 		listView.setAdapter(adapter);

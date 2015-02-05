@@ -6,7 +6,7 @@
 
     <uses-sdk
         android:minSdkVersion="14"
-        android:targetSdkVersion="14" />
+        android:targetSdkVersion="21" />
 
     <supports-screens
         android:anyDensity="true"
@@ -29,10 +29,11 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/myTheme"
+        android:theme="@style/Theme.AppCompat"
         android:exported="false" >
         <activity
             android:name="com.example.androidtest.main.MainActivity"
+        android:theme="@style/Theme.AppCompat"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -55,7 +56,7 @@
         <activity android:name="InputFaceAct"></activity>
         <activity android:name="TimerTaskAct"></activity>
         <activity android:name=".editlist.EditListAct"></activity>
-        <activity android:name="HorizontalScrollView"></activity>
+        <activity android:name="HorizontalScrollViewAct"></activity>
         <activity android:name="CusDialogAct"></activity>
         <activity android:name="SingleChoiceAct"></activity>
         <activity android:name="CusDatePickerAct"></activity>
@@ -93,9 +94,9 @@
         <activity android:name=".sliding.SlidingAct"></activity>
         <activity android:name=".sliding.SlidingMenuAct"></activity>
         <activity android:name=".sliding.SlidingDrawerAct"></activity>
-        <activity android:name=".sliding.SlidingPaneLayoutAct"></activity>
-        <activity android:name=".sliding.ViewDragHelperAct"></activity>
-        <activity android:name=".sliding.ResideMenuAct"></activity>
+        <activity android:name=".sliding.SlidingPaneLayoutAct" android:theme="@style/android:Theme.Light" ></activity>
+        <activity android:name=".sliding.SlidingViewDragHelperAct"></activity>
+        <activity android:name=".sliding.residemenu.SlidingResideMenuAct"></activity>
         <!-- sliding end -->
         
         <activity android:name=".fragment.FragmentDemoAct"></activity>
@@ -132,6 +133,10 @@
         
         
         <!--  -->
+        <activity android:name=".SpannableActivity"></activity>
+        <!--  -->
+        <activity android:name=".RadioButtonActivity"></activity>
+        <!--  -->
         <activity android:name=".AndroidJs2JavaAct"></activity>
         <!--  -->
         <activity android:name=".ImageTextAct"></activity>
@@ -146,6 +151,19 @@
         <!--  -->
         <activity android:name=".ActivityInLayoutAct"></activity>
         <!--  -->
-        <activity android:name=".viewpager.ViewPagerOnlineAct"></activity>
+        <activity android:name=".MenuAct" android:theme="@style/AppBaseTheme"></activity>
+        <!--  -->
+        <activity android:name=".textview.MyTextViewAct"></activity>
+        <!--  -->
+        <activity android:name=".pullrefresh.PullRefreshActivity"></activity>
+        <!--  -->
+        <activity android:name=".preference.MyPreferenceActivity"></activity>
+        <!--  -->
+        <activity android:name=".preference.MyPreferenceFragmentActivity"></activity>
+        <!-- some forsee demo -->
+        <!--  -->
+        <activity android:name=".a_foresee.gridview.TaxperGridActivity"></activity>
+        <!--  -->
+        <activity android:name=".a_foresee.gridview.TaxperTableRowActivity"  android:screenOrientation="landscape" ></activity>
 </application>
 </manifest>

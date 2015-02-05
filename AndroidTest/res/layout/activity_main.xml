@@ -334,7 +334,55 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:onClick="click_listener"
-            android:text="ViewPagerOnlineAct" />
+            android:text="MenuAct" />
+		<Button
+            android:id="@+id/btn52"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:onClick="click_listener"
+            android:text="MyTextViewAct" />
+		<Button
+            android:id="@+id/btn53"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:onClick="click_listener"
+            android:text="PullRefreshAct" />
+		<Button
+            android:id="@+id/btn54"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:onClick="click_listener"
+            android:text="MyPreferenceActivity" />
+		<Button
+            android:id="@+id/btn55"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:onClick="click_listener"
+            android:text="MyPreferenceFragmentActivity" />
+		<Button
+            android:id="@+id/btn56"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:onClick="click_listener"
+            android:text="forsee_TaxperGridActivity" />
+		<Button
+            android:id="@+id/btn57"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:onClick="click_listener"
+            android:text="forsee_TaxperTableRowActivity" />
+		<Button
+            android:id="@+id/btn58"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:onClick="click_listener"
+            android:text="RadioButtonActivity" />
+		<Button
+            android:id="@+id/btn59"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:onClick="click_listener"
+            android:text="XListViewActivity" />
     </LinearLayout>
 
 </ScrollView>

@@ -29,33 +29,16 @@ public class SlidingPaneLayoutAct extends BaseActivity implements onLeftItemClic
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		requestWindowFeature(Window.FEATURE_CUSTOM_TITLE);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.sliding_panel_layout);
-		setCustomTitle("SlidingPaneLayout");
 		
 		slidingPaneLayout = (SlidingPaneLayout) findViewById(R.id.sliding_pane_lay);
-		
-		onItemClick("http://www.baidu.com");
-//		slidingPaneLayout.setPanelSlideListener(new PanelSlideListener() {
-//			@Override
-//			public void onPanelSlide(View arg0, float arg1) {
-//			}
-//			
-//			@Override
-//			public void onPanelOpened(View arg0) {
-//				SlidingPaneLayoutAct.this.getFragmentManager().findFragmentById(R.id.left_panelayout).setHasOptionsMenu(false);
-//			}
-//			
-//			@Override
-//			public void onPanelClosed(View arg0) {
-//				SlidingPaneLayoutAct.this.getFragmentManager().findFragmentById(R.id.left_panelayout).setHasOptionsMenu(true);
-//			}
-//		});
+
+		onItemClick("http://www.gfsoso.com");
 	}
 
 	@Override
 	public void onItemClick(String url) {
-		
 		SlidingPaneLayoutRightFragment sprf = (SlidingPaneLayoutRightFragment) SlidingPaneLayoutAct.this.getFragmentManager().findFragmentById(R.id.right_panelayout);
 		// ªÒ»°webview
 		WebView webView = sprf.getWebView();
@@ -68,7 +51,7 @@ public class SlidingPaneLayoutAct extends BaseActivity implements onLeftItemClic
         toggleSlidingPanel();
 	}
 
-	private void toggleSlidingPanel() {
+	public void toggleSlidingPanel() {
 		if (slidingPaneLayout.isOpen()) {
 			slidingPaneLayout.closePane();
 		}else {

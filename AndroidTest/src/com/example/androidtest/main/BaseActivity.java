@@ -23,6 +23,8 @@ public class BaseActivity extends Activity {
 	
 	private ProgressDialog progressDialog;
 	
+	public MyApplication myApplication;
+	
 	private Toast mToast;
 
 	private int time = 0;
@@ -34,6 +36,8 @@ public class BaseActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		mReceiver = new SimpleBroadcastReceiver();
+		
+		myApplication = (MyApplication) getApplication();
 	}
 	
 	protected void showShortToast(String msg){
@@ -120,18 +124,18 @@ public class BaseActivity extends Activity {
 
 	@Override
 	protected void onResume() {
-		Log.i("liuz", "onResume...");
+//		Log.i("liuz", "onResume...");
 		
 //		if (!MyApplication.getInstance().isStart()) {
 //			MyApplication.getInstance().startTimer();
 //		}
-		registerScreenBroadcastReceiver();
+//		registerScreenBroadcastReceiver();
 		super.onResume();
 	}
 	
 	@Override
 	protected void onStart() {
-		Log.i("liuz", "onStart...");
+//		Log.i("liuz", "onStart...");
 		
 //		if (!MyApplication.getInstance().isLock()) {
 ////			MyApplication.getInstance().startTimer();
@@ -156,14 +160,14 @@ public class BaseActivity extends Activity {
 	protected void onPause() {
 		// TODO Auto-generated method stub
 		super.onPause();
-		Log.i("liuz", "screenBroadcastReceiver反注册了");
+//		Log.i("liuz", "screenBroadcastReceiver反注册了");
 	}
 	
 	
 	@Override
 	protected void onDestroy() {
 		// TODO Auto-generated method stub
-		unregisterReceiver(mReceiver);
+//		unregisterReceiver(mReceiver);
 		super.onDestroy();
 	}
 	
@@ -172,8 +176,8 @@ public class BaseActivity extends Activity {
 		intentFilter.addAction(Intent.ACTION_SCREEN_OFF);// 当屏幕锁屏的时候触发
 		intentFilter.addAction(Intent.ACTION_SCREEN_ON);// 当屏幕解锁的时候触发
 //		intentFilter.addAction(Intent.ACTION_USER_PRESENT);// 当用户重新唤醒手持设备时触发
-		registerReceiver(mReceiver, intentFilter);
-		Log.i("liuz", "screenBroadcastReceiver注册了");
+//		registerReceiver(mReceiver, intentFilter);
+//		Log.i("liuz", "screenBroadcastReceiver注册了");
 	}
 	
 	class SimpleBroadcastReceiver extends BroadcastReceiver{

@@ -2,6 +2,11 @@ package com.example.androidtest.http;
 
 import java.util.ArrayList;
 
+import org.ksoap2.SoapEnvelope;
+import org.ksoap2.serialization.SoapObject;
+import org.ksoap2.serialization.SoapSerializationEnvelope;
+import org.ksoap2.transport.HttpTransportSE;
+
 import com.example.androidtest.R;
 
 import android.app.Activity;
@@ -9,16 +14,20 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ListView;
+import android.widget.TextView;
 
 public class HttpMainAct extends Activity {
 	
 	private ListView listView;
+	private TextView textView;
 	private ArrayList dataList = new ArrayList();
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.http_main_act);
+		
+		textView = (TextView) findViewById(R.id.webservice_text);
 	}
 
 	public void clickListener(View v) {
@@ -26,9 +35,43 @@ public class HttpMainAct extends Activity {
 		case R.id.http_post:
 	        new MyThread().start();
 			break;
+		case R.id.http_webservice:
+			doWebserviceRequest("³¤É³");
+			break;
 		}
 	}
 	
+	private void doWebserviceRequest(String cityName) {
+		String URL = "http://www.webxml.com.cn/webservices/weatherwebservice.asmx";
+		String NAME_SPACE = "http://WebXml.com.cn";
+		String METHOD_NAME = "getWeatherbyCityName";
+		String SOAP_ACTION = "http://WebXml.com.cn/getWeatherbyCityName";
+		
+		try {
+			SoapObject soapObject = new SoapObject(NAME_SPACE, METHOD_NAME);
+			soapObject.addProperty("theCityName", cityName);
+			
+			SoapSerializationEnvelope envelope = new SoapSerializationEnvelope(SoapEnvelope.VER11);
+			envelope.bodyOut = soapObject;
+			envelope.dotNet = true;
+			envelope.setOutputSoapObject(soapObject);
+			
+			HttpTransportSE htSe = new HttpTransportSE(URL);
+			htSe.debug = true;
+			htSe.call(SOAP_ACTION, envelope);
+			
+			SoapObject response = (SoapObject) envelope.getResponse();
+			doWebserviceResponse(response);
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	private void doWebserviceResponse(SoapObject response) {
+		System.out.println(response.toString());
+	}
+
 	class MyThread extends Thread{
 		@Override
 		public void run() {

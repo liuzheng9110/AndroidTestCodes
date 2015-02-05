@@ -6,4 +6,14 @@
         <attr name="precision" format="float" />
         <attr name="sizeToFit" format="boolean" />
     </declare-styleable>
+    
+    <declare-styleable name="PullRefreshLayout">
+        <attr name="type" format="enum">
+            <enum name="material" value="0" />
+            <enum name="circles" value="1" />
+            <enum name="water_drop" value="2" />
+            <enum name="ring" value="3" />
+        </attr>
+        <attr name="colors" format="reference"/>
+    </declare-styleable>
 </resources>
