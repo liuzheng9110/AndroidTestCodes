@@ -150,7 +150,6 @@
         <activity android:name=".htmlparse.HtmlParstAct"></activity>
         <!--  -->
         <activity android:name=".ActivityInLayoutAct"></activity>
-<<<<<<< HEAD
         <!--  -->
         <activity android:name=".MenuAct" android:theme="@style/AppBaseTheme"></activity>
         <!--  -->
@@ -166,7 +165,5 @@
         <activity android:name=".a_foresee.gridview.TaxperGridActivity"></activity>
         <!--  -->
         <activity android:name=".a_foresee.gridview.TaxperTableRowActivity"  android:screenOrientation="landscape" ></activity>
-=======
->>>>>>> e5cd185b03948bca73f0c3620744fe14e64ef5a1
 </application>
 </manifest>

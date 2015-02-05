@@ -221,7 +221,6 @@ public class MainActivity extends BaseActivity {
 		case R.id.btn50:
 			startActivity(new Intent(MainActivity.this, ActivityInLayoutAct.class));
 			break;
-<<<<<<< HEAD
 		case R.id.btn51:
 			startActivity(new Intent(MainActivity.this, MenuAct.class));
 			break;
@@ -247,11 +246,8 @@ public class MainActivity extends BaseActivity {
 			startActivity(new Intent(MainActivity.this, RadioButtonActivity.class));
 			break;
 		case R.id.btn59:
-			
 			startActivity(new Intent(MainActivity.this, SpannableActivity.class));
 			break;
-=======
->>>>>>> e5cd185b03948bca73f0c3620744fe14e64ef5a1
 		default:
 			break;
 		}
