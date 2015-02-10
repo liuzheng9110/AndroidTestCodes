@@ -3,6 +3,10 @@ package com.example.androidtest.main;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.FrameLayout;
+import android.widget.ScrollView;
+import android.widget.TextView;
 
 import com.example.androidtest.ActivityInLayoutAct;
 import com.example.androidtest.AndroidJs2JavaAct;
@@ -52,6 +56,7 @@ import com.example.androidtest.editlist.EditListAct;
 import com.example.androidtest.fragment.FragmentDemoAct;
 import com.example.androidtest.htmlparse.HtmlParstAct;
 import com.example.androidtest.http.HttpMainAct;
+import com.example.androidtest.notification.NotificationActivity;
 import com.example.androidtest.preference.MyPreferenceActivity;
 import com.example.androidtest.preference.MyPreferenceFragmentActivity;
 import com.example.androidtest.pullrefresh.PullRefreshActivity;
@@ -248,17 +253,33 @@ public class MainActivity extends BaseActivity {
 		case R.id.btn59:
 			startActivity(new Intent(MainActivity.this, SpannableActivity.class));
 			break;
+		case R.id.btn60:
+			startActivity(new Intent(MainActivity.this, NotificationActivity.class));
+			break;
 		default:
 			break;
 		}
 	}
+	
+	private ScrollView scrollView;
+	private FrameLayout tipsLayout;
+	private TextView tipsTextView;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
+		scrollView = (ScrollView) findViewById(R.id.main_layout);
+		tipsLayout = (FrameLayout) findViewById(R.id.tips_layout);
+		tipsTextView = (TextView) findViewById(R.id.tips_text);
 		
-//		((Button)findViewById(R.id.btn42)).performClick();
+		tipsLayout.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				scrollView.scrollTo(0, v.getScrollY());
+//				tipsTextView.setText("Top");
+			}
+		});
 	}
 }

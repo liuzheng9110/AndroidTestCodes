@@ -1,388 +1,455 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content" >
 
-    <LinearLayout
-        android:id="@+id/LinearLayout1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical" >
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
 
-        <Button
-            android:id="@+id/btn01"
-            android:layout_width="fill_parent"
+        <LinearLayout
+            android:id="@+id/LinearLayout1"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="click_listener"
-            android:text="btn pop" />
+            android:orientation="vertical" >
 
-        <Button
-            android:id="@+id/btn02"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:onClick="click_listener"
-            android:text="xzql detail" />
+            <Button
+                android:id="@+id/btn01"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="click_listener"
+                android:text="btn pop" />
 
-        <Button
-            android:id="@+id/btn03"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:onClick="click_listener"
-            android:text="动态add view" />
+            <Button
+                android:id="@+id/btn02"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="click_listener"
+                android:text="xzql detail" />
 
-        <Button
-            android:id="@+id/btn04"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:onClick="click_listener"
-            android:text="time picker" />
+            <Button
+                android:id="@+id/btn03"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="click_listener"
+                android:text="动态add view" />
 
-        <Button
-            android:id="@+id/btn05"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:onClick="click_listener"
-            android:text="spinner upd" />
+            <Button
+                android:id="@+id/btn04"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="click_listener"
+                android:text="time picker" />
 
-        <Button
-            android:id="@+id/btn06"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:onClick="click_listener"
-            android:text="long click copy" />
+            <Button
+                android:id="@+id/btn05"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="click_listener"
+                android:text="spinner upd" />
 
-        <Button
-            android:id="@+id/btn07"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:onClick="click_listener"
-            android:text="long click voice" />
+            <Button
+                android:id="@+id/btn06"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="click_listener"
+                android:text="long click copy" />
 
-        <Button
-            android:id="@+id/btn08"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:onClick="click_listener"
-            android:text="input face" />
+            <Button
+                android:id="@+id/btn07"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="click_listener"
+                android:text="long click voice" />
 
-        <Button
-            android:id="@+id/btn09"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:onClick="click_listener"
-            android:text="timer task" />
+            <Button
+                android:id="@+id/btn08"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="click_listener"
+                android:text="input face" />
 
-        <Button
-            android:id="@+id/btn10"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:onClick="click_listener"
-            android:text="edit list view" />
+            <Button
+                android:id="@+id/btn09"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="click_listener"
+                android:text="timer task" />
 
-        <Button
-            android:id="@+id/btn11"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:onClick="click_listener"
-            android:text="horizontal scroll view" />
+            <Button
+                android:id="@+id/btn10"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="click_listener"
+                android:text="edit list view" />
 
-        <Button
-            android:id="@+id/btn12"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:onClick="click_listener"
-            android:text="cus_dialog" />
+            <Button
+                android:id="@+id/btn11"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="click_listener"
+                android:text="horizontal scroll view" />
 
-        <Button
-            android:id="@+id/btn13"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:onClick="click_listener"
-            android:text="single_choice_listview" />
+            <Button
+                android:id="@+id/btn12"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="click_listener"
+                android:text="cus_dialog" />
 
-        <Button
-            android:id="@+id/btn14"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:onClick="click_listener"
-            android:text="cus_date_picker" />
+            <Button
+                android:id="@+id/btn13"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="click_listener"
+                android:text="single_choice_listview" />
 
-        <Button
-            android:id="@+id/btn15"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:onClick="click_listener"
-            android:text="html textview" />
+            <Button
+                android:id="@+id/btn14"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="click_listener"
+                android:text="cus_date_picker" />
 
-        <Button
-            android:id="@+id/btn16"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:onClick="click_listener"
-            android:text="simple json parse" />
+            <Button
+                android:id="@+id/btn15"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="click_listener"
+                android:text="html textview" />
 
-        <Button
-            android:id="@+id/btn17"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:onClick="click_listener"
-            android:text="alert window" />
+            <Button
+                android:id="@+id/btn16"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="click_listener"
+                android:text="simple json parse" />
 
-        <Button
-            android:id="@+id/btn18"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:onClick="click_listener"
-            android:text="service demo" />
+            <Button
+                android:id="@+id/btn17"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="click_listener"
+                android:text="alert window" />
 
-        <Button
-            android:id="@+id/btn19"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:onClick="click_listener"
-            android:text="simple shape" />
+            <Button
+                android:id="@+id/btn18"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="click_listener"
+                android:text="service demo" />
 
-        <Button
-            android:id="@+id/btn20"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:onClick="click_listener"
-            android:text="fix textview" />
+            <Button
+                android:id="@+id/btn19"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="click_listener"
+                android:text="simple shape" />
 
-        <Button
-            android:id="@+id/btn21"
-            android:layout_width="fill_parent"
+            <Button
+                android:id="@+id/btn20"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="click_listener"
+                android:text="fix textview" />
+
+            <Button
+                android:id="@+id/btn21"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="click_listener"
+                android:text="http post get" />
+
+            <Button
+                android:id="@+id/btn22"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="click_listener"
+                android:text="show dialog" />
+
+            <Button
+                android:id="@+id/btn23"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="click_listener"
+                android:text="Mult Marquee TextView" />
+
+            <Button
+                android:id="@+id/btn24"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="click_listener"
+                android:text="Mult Animate" />
+
+            <Button
+                android:id="@+id/btn25"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="click_listener"
+                android:text="Phone Infos" />
+
+            <Button
+                android:id="@+id/btn26"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="click_listener"
+                android:text="ActionBar Support Demo" />
+
+            <Button
+                android:id="@+id/btn34"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="click_listener"
+                android:text="ActionBar Android Demo" />
+
+            <Button
+                android:id="@+id/btn27"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="click_listener"
+                android:text="Android Volley Demo" />
+
+            <Button
+                android:id="@+id/btn28"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="click_listener"
+                android:text="DrawerLayout Demo" />
+
+            <Button
+                android:id="@+id/btn29"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="click_listener"
+                android:text="Fragment Demo" />
+
+            <Button
+                android:id="@+id/btn30"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="click_listener"
+                android:text="SlidingMenu Demo" />
+
+            <Button
+                android:id="@+id/btn31"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="click_listener"
+                android:text="CusEditText Demo" />
+
+            <Button
+                android:id="@+id/btn32"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="click_listener"
+                android:text="Vertical ViewPager" />
+
+            <Button
+                android:id="@+id/btn33"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="click_listener"
+                android:text="Nine GridView" />
+
+            <Button
+                android:id="@+id/btn35"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="click_listener"
+                android:text="Android Update" />
+
+            <Button
+                android:id="@+id/btn36"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="click_listener"
+                android:text="Android Notification" />
+
+            <Button
+                android:id="@+id/btn37"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="click_listener"
+                android:text="Android CusToast Time" />
+
+            <Button
+                android:id="@+id/btn38"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="click_listener"
+                android:text="WebView" />
+
+            <Button
+                android:id="@+id/btn39"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="click_listener"
+                android:text="Multi App Install" />
+
+            <Button
+                android:id="@+id/btn40"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="click_listener"
+                android:text="Last OnTouch Time" />
+
+            <Button
+                android:id="@+id/btn41"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="click_listener"
+                android:text="Screen On Off" />
+
+            <Button
+                android:id="@+id/btn42"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="click_listener"
+                android:text="Simple BroadcastReceiver " />
+
+            <Button
+                android:id="@+id/btn43"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="click_listener"
+                android:text="Android Js2Java" />
+
+            <Button
+                android:id="@+id/btn44"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="click_listener"
+                android:text="ImageTextAct" />
+
+            <Button
+                android:id="@+id/btn45"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="click_listener"
+                android:text="TextScaleAct" />
+
+            <Button
+                android:id="@+id/btn46"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="click_listener"
+                android:text="GestureDetectorAct" />
+
+            <Button
+                android:id="@+id/btn47"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="click_listener"
+                android:text="AutoFitTextViewAct" />
+
+            <Button
+                android:id="@+id/btn48"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="click_listener"
+                android:text="CusAnimationAct" />
+
+            <Button
+                android:id="@+id/btn49"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="click_listener"
+                android:text="HtmlParseAct" />
+
+            <Button
+                android:id="@+id/btn50"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="click_listener"
+                android:text="ActivityInLayoutAct" />
+
+            <Button
+                android:id="@+id/btn51"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="click_listener"
+                android:text="MenuAct" />
+
+            <Button
+                android:id="@+id/btn52"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="click_listener"
+                android:text="MyTextViewAct" />
+
+            <Button
+                android:id="@+id/btn53"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="click_listener"
+                android:text="PullRefreshAct" />
+
+            <Button
+                android:id="@+id/btn54"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="click_listener"
+                android:text="MyPreferenceActivity" />
+
+            <Button
+                android:id="@+id/btn55"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="click_listener"
+                android:text="MyPreferenceFragmentActivity" />
+
+            <Button
+                android:id="@+id/btn56"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="click_listener"
+                android:text="forsee_TaxperGridActivity" />
+
+            <Button
+                android:id="@+id/btn57"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="click_listener"
+                android:text="forsee_TaxperTableRowActivity" />
+
+            <Button
+                android:id="@+id/btn58"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="click_listener"
+                android:text="RadioButtonActivity" />
+
+            <Button
+                android:id="@+id/btn59"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="click_listener"
+                android:text="SpannableActivity" />
+
+            <Button
+                android:id="@+id/btn60"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="click_listener"
+                android:text="NotificationActivity" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/tips_layout"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="click_listener"
-            android:text="http post get" />
-        <Button
-            android:id="@+id/btn22"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:onClick="click_listener"
-            android:text="show dialog" />
-        <Button
-            android:id="@+id/btn23"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:onClick="click_listener"
-            android:text="Mult Marquee TextView" />
-        <Button
-            android:id="@+id/btn24"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:onClick="click_listener"
-            android:text="Mult Animate" />
-        <Button
-            android:id="@+id/btn25"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:onClick="click_listener"
-            android:text="Phone Infos" />
-        <Button
-            android:id="@+id/btn26"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:onClick="click_listener"
-            android:text="ActionBar Support Demo" />
-        <Button
-            android:id="@+id/btn34"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:onClick="click_listener"
-            android:text="ActionBar Android Demo" />
-        <Button
-            android:id="@+id/btn27"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:onClick="click_listener"
-            android:text="Android Volley Demo" />
-        <Button
-            android:id="@+id/btn28"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:onClick="click_listener"
-            android:text="DrawerLayout Demo" />
-        <Button
-            android:id="@+id/btn29"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:onClick="click_listener"
-            android:text="Fragment Demo" />
-        <Button
-            android:id="@+id/btn30"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:onClick="click_listener"
-            android:text="SlidingMenu Demo" />
-        <Button
-            android:id="@+id/btn31"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:onClick="click_listener"
-            android:text="CusEditText Demo" />
-        <Button
-            android:id="@+id/btn32"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:onClick="click_listener"
-            android:text="Vertical ViewPager" />
-        <Button
-            android:id="@+id/btn33"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:onClick="click_listener"
-            android:text="Nine GridView" />
-        <Button
-            android:id="@+id/btn35"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:onClick="click_listener"
-            android:text="Android Update" />
-        <Button
-            android:id="@+id/btn36"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:onClick="click_listener"
-            android:text="Android Notification" />
-        <Button
-            android:id="@+id/btn37"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:onClick="click_listener"
-            android:text="Android CusToast Time" />
-		<Button
-            android:id="@+id/btn38"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:onClick="click_listener"
-            android:text="WebView" />
-		<Button
-            android:id="@+id/btn39"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:onClick="click_listener"
-            android:text="Multi App Install" />
-		<Button
-            android:id="@+id/btn40"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:onClick="click_listener"
-            android:text="Last OnTouch Time" />
-		<Button
-            android:id="@+id/btn41"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:onClick="click_listener"
-            android:text="Screen On Off" />
-		<Button
-            android:id="@+id/btn42"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:onClick="click_listener"
-            android:text="Simple BroadcastReceiver " />
-		<Button
-            android:id="@+id/btn43"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:onClick="click_listener"
-            android:text="Android Js2Java" />
-		<Button
-            android:id="@+id/btn44"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:onClick="click_listener"
-            android:text="ImageTextAct" />
-		<Button
-            android:id="@+id/btn45"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:onClick="click_listener"
-            android:text="TextScaleAct" />
-		<Button
-            android:id="@+id/btn46"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:onClick="click_listener"
-            android:text="GestureDetectorAct" />
-		<Button
-            android:id="@+id/btn47"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:onClick="click_listener"
-            android:text="AutoFitTextViewAct" />
-		<Button
-            android:id="@+id/btn48"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:onClick="click_listener"
-            android:text="CusAnimationAct" />
-		<Button
-            android:id="@+id/btn49"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:onClick="click_listener"
-            android:text="HtmlParseAct" />
-		<Button
-            android:id="@+id/btn50"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:onClick="click_listener"
-            android:text="ActivityInLayoutAct" />
-		<Button
-            android:id="@+id/btn51"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:onClick="click_listener"
-            android:text="MenuAct" />
-		<Button
-            android:id="@+id/btn52"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:onClick="click_listener"
-            android:text="MyTextViewAct" />
-		<Button
-            android:id="@+id/btn53"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:onClick="click_listener"
-            android:text="PullRefreshAct" />
-		<Button
-            android:id="@+id/btn54"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:onClick="click_listener"
-            android:text="MyPreferenceActivity" />
-		<Button
-            android:id="@+id/btn55"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:onClick="click_listener"
-            android:text="MyPreferenceFragmentActivity" />
-		<Button
-            android:id="@+id/btn56"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:onClick="click_listener"
-            android:text="forsee_TaxperGridActivity" />
-		<Button
-            android:id="@+id/btn57"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:onClick="click_listener"
-            android:text="forsee_TaxperTableRowActivity" />
-		<Button
-            android:id="@+id/btn58"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:onClick="click_listener"
-            android:text="RadioButtonActivity" />
-		<Button
-            android:id="@+id/btn59"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:onClick="click_listener"
-            android:text="XListViewActivity" />
-    </LinearLayout>
+            android:layout_gravity="bottom" >
+
+            <TextView
+                android:id="@+id/tips_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@color/red"
+                android:padding="10dp"
+                android:text="Top" />
+        </FrameLayout>
+    </FrameLayout>
 
 </ScrollView>

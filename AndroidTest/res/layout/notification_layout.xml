@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <Button android:id="@+id/notification_simple" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="simple notifcation"/>
+    <Button android:id="@+id/notification_always_show" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="always show notifcation"/>
+    <Button android:id="@+id/notification_click_intent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="click intent notifcation"/>
+    <Button android:id="@+id/notification_clear_one" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="clear one notifcation"/>
+    <Button android:id="@+id/notification_clear_all" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="clear all notifcation"/>
+    
+    <Button android:id="@+id/notification_customer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="customer notifcation"/>
+    <Button android:id="@+id/notification_progress" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="progress notifcation"/>
+</LinearLayout>

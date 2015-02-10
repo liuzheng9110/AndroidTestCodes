@@ -3,6 +3,9 @@ package com.example.androidtest.main;
 import android.R.anim;
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.app.ProgressDialog;
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -14,6 +17,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.RemoteViews;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -32,12 +36,25 @@ public class BaseActivity extends Activity {
 	
 	private SimpleBroadcastReceiver mReceiver;
 	
+	//////////2015-02-10 18:13:04  notification ///////
+	public NotificationManager mNotificationManager;
+	public Notification mNotification;
+	public PendingIntent mPendingIntent;
+	public Intent mIntent;
+	public RemoteViews mRemoteViews;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		mReceiver = new SimpleBroadcastReceiver();
 		
 		myApplication = (MyApplication) getApplication();
+		
+		//////////2015-02-10 18:13:04  notification ///////
+		// 获取通知管理对象
+		mNotificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+		
+		
 	}
 	
 	protected void showShortToast(String msg){
