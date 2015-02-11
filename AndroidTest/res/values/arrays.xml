@@ -1,6 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <string-array name="main_list_array">
+        <item>btn pop</item>
+        <item>xzql detail</item>
+        <item>dynamic add view</item>
+        <item>time picker</item>
+        <item>spinner upd</item>
+        <item>long click copy</item>
+        <item>long click voice</item>
+        <item>input face</item>
+        <item>time task</item>
+        <item>edit listview</item>
+        <item>horizontal scrollview</item>
+        <item>cus dialog</item>
+        <item>single choice list</item>
+        <item>cus date picker</item>
+        <item>html textview</item>
+        <item>simple json parse</item>
+        <item>alert window</item>
+        <item>service demo</item>
+        <item>simple shape</item>
+        <item>fix textview</item>
+        <item>http post get</item>
+        <item>show dialog</item>
+        <item>mult marquee textview</item>
+        <item>mult animate</item>
+        <item>phone infos</item>
+        <item>actionbar support demo</item>
+        <item>actionbar android demo</item>
+        <item>android vollery demo</item>
+        <item>drawerLayou demo</item>
+        <item>fragment demo</item>
+        <item>slidingmenu demo</item>
+        <item>cusedittext demo</item>
+        <item>vertical viewpager</item>
+        <item>nine gridview</item>
+        <item>android update</item>
+        <item>android notification</item>
+        <item>android custoast time</item>
+        <item>webview</item>
+        <item>multi app install</item>
+        <item>last ontouch time</item>
+        <item>screen onoff</item>
+        <item>simple broadcastreceiver</item>
+        <item>android js2java</item>
+        <item>imagetext act</item>
+        <item>textscale act</item>
+        <item>gesturedetector act</item>
+        <item>autofittextview act</item>
+        <item>cus animation act</item>
+        <item>htmlparse act</item>
+        <item>activiti in layout act</item>
+        <item>menu act</item>
+        <item>mytextview act</item>
+        <item>pull refresh act</item>
+        <item>my preperence act</item>
+        <item>my preperence fragment act</item>
+        <item>radio button act</item>
+        <item>spannable act</item>
+        <item>notification act</item>
+        <item></item>
+    </string-array>
     <string-array name="icon_face">
         <item>f_static_000</item>
         <item>f_static_001</item>

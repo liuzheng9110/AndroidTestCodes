@@ -54,7 +54,6 @@ public class BaseActivity extends Activity {
 		// 获取通知管理对象
 		mNotificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
 		
-		
 	}
 	
 	protected void showShortToast(String msg){

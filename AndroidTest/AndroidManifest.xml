@@ -167,5 +167,7 @@
         <activity android:name=".a_foresee.gridview.TaxperTableRowActivity"  android:screenOrientation="landscape" ></activity>
         <!--  -->
         <activity android:name=".notification.NotificationActivity"></activity>
+        <activity android:name=".notification.NotificationCustomAct"></activity>
+        <activity android:name=".notification.NotificationProgressAct"></activity>
 </application>
 </manifest>

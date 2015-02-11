@@ -262,8 +262,7 @@ public class MainActivity extends BaseActivity {
 	}
 	
 	private ScrollView scrollView;
-	private FrameLayout tipsLayout;
-	private TextView tipsTextView;
+	private TextView tipsTopTextView, tipsBottomTextView;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -271,14 +270,20 @@ public class MainActivity extends BaseActivity {
 		setContentView(R.layout.activity_main);
 		
 		scrollView = (ScrollView) findViewById(R.id.main_layout);
-		tipsLayout = (FrameLayout) findViewById(R.id.tips_layout);
-		tipsTextView = (TextView) findViewById(R.id.tips_text);
+		tipsTopTextView = (TextView) findViewById(R.id.tips_top_text);
+		tipsBottomTextView = (TextView) findViewById(R.id.tips_bottom_text);
 		
-		tipsLayout.setOnClickListener(new OnClickListener() {
+		tipsTopTextView.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				scrollView.scrollTo(0, v.getScrollY());
-//				tipsTextView.setText("Top");
+				scrollView.fullScroll(ScrollView.FOCUS_UP);
+			}
+		});
+		
+		tipsBottomTextView.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				scrollView.fullScroll(ScrollView.FOCUS_DOWN);
 			}
 		});
 	}
