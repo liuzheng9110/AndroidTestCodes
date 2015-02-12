@@ -45,7 +45,7 @@ public class NotificationActivity extends BaseActivity implements OnClickListene
 		initView();
 	}
 
-	private void initView() {
+	protected void initView() {
 		for (int i = 0; i < notificationIds.length; i++) {
 			btns[i] = (Button) findViewById(notificationIds[i]);
 			btns[i].setOnClickListener(this);

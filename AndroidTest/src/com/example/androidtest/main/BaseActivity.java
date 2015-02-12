@@ -56,6 +56,10 @@ public class BaseActivity extends Activity {
 		
 	}
 	
+	protected void initView() {}
+	protected void getIntentData() {}
+	protected void click_listener(View v) {}
+	
 	protected void showShortToast(String msg){
 		showToast(msg, Toast.LENGTH_SHORT);
 	}

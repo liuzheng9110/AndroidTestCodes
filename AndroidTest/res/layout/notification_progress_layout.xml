@@ -5,14 +5,14 @@
     android:orientation="vertical" >
 
     <Button
-        android:id="@+id/notification_customer_btn_01"
+        android:id="@+id/notification_customer_progress_01"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:onClick="click_listener"
         android:text="show cus notify" />
 
     <Button
-        android:id="@+id/notification_customer_btn_02"
+        android:id="@+id/notification_customer_progress_02"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:onClick="click_listener"
