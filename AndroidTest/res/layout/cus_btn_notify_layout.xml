@@ -69,7 +69,7 @@
                 android:contentDescription="@string/app_name"
                 android:src="@drawable/note_btn_love" />
 
-            <View
+            <Button
                 android:layout_width="1dp"
                 android:layout_height="fill_parent"
                 android:background="@color/gray" />
@@ -82,7 +82,7 @@
                 android:contentDescription="@string/app_name"
                 android:src="@drawable/note_btn_pre" />
 
-            <View
+            <Button
                 android:layout_width="1dp"
                 android:layout_height="fill_parent"
                 android:background="@color/gray" />
@@ -96,7 +96,7 @@
                 android:src="@drawable/note_btn_play" 
                 />
 
-            <View
+            <Button
                 android:layout_width="1dp"
                 android:layout_height="fill_parent"
                 android:background="@color/gray" />

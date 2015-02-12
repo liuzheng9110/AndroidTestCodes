@@ -55,7 +55,7 @@
             android:layout_height="wrap_content"
             android:gravity="right"
             android:text="近日热门"
-            android:layout_marginStart="5dp"
+			android:layout_marginLeft="5dp"
             android:textColor="@color/gray"
             android:textSize="14sp" />
     </LinearLayout>

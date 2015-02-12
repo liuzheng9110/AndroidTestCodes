@@ -6,7 +6,7 @@
 
     <uses-sdk
         android:minSdkVersion="14"
-        android:targetSdkVersion="21" />
+        android:targetSdkVersion="14" />
 
     <supports-screens
         android:anyDensity="true"
@@ -84,12 +84,7 @@
         <activity android:name="com.example.androidtest.actionbar_support.ActionBarSupportAct" 
             android:theme="@style/Theme.AppCompat.Light" >
         </activity>
-        <activity android:name="com.example.androidtest.actionbar_android.ActionBarAndroidAct" 
-            android:logo="@drawable/ic_launcher_02"
-            android:label="ABA"
-            android:parentActivityName="com.example.androidtest.actionbar_android.ActionBarAndroidAct"
-            android:theme="@android:style/Theme.Holo.Light" >
-        </activity>
+       
         <!-- sliding start -->
         <activity android:name=".sliding.SlidingAct"></activity>
         <activity android:name=".sliding.SlidingMenuAct"></activity>

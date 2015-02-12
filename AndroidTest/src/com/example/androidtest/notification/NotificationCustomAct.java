@@ -25,6 +25,9 @@ import com.example.androidtest.main.BaseActivity;
  *  @version 1.0 
  *  @created 2015年2月11日 下午4:28:43
  *  @Copyright http://liuz.me
+ *  
+ *  http://blog.csdn.net/vipzjyno1/article/details/25248021
+ *  
  */
 public class NotificationCustomAct extends BaseActivity implements OnClickListener{
 	
@@ -38,7 +41,7 @@ public class NotificationCustomAct extends BaseActivity implements OnClickListen
 	private IntentFilter mIntentFilter;
 	
 	private BtnReceiver mBtnReceiver;
-	private boolean isPlay = false;
+	private boolean isPlaying = false;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -48,12 +51,10 @@ public class NotificationCustomAct extends BaseActivity implements OnClickListen
 
 		initView();
 		
-		registerReceiver();
+		doRegisterReceiver();
 	}
 	
 	protected void initView() {
-		mNotification = new Notification(R.drawable.ic_launcher_01, "...", System.currentTimeMillis());
-		
 		btn01 = (Button) findViewById(R.id.cus_notify_btn_01);
 		btn02 = (Button) findViewById(R.id.cus_notify_btn_02);
 		
@@ -73,11 +74,11 @@ public class NotificationCustomAct extends BaseActivity implements OnClickListen
 		}
 	}
 	
-	private void registerReceiver() {
+	private void doRegisterReceiver() {
 		mBtnReceiver = new BtnReceiver();
-		mIntentFilter = new IntentFilter(NotificationConst.CUSTOM_BTN_ACTION);
+		mIntentFilter = new IntentFilter();
+		mIntentFilter.addAction(NotificationConst.CUSTOM_BTN_ACTION);
 		registerReceiver(mBtnReceiver, mIntentFilter);
-		Log.i("liuz", "registerReceiver...");
 	}
 
 	/**
@@ -92,6 +93,7 @@ public class NotificationCustomAct extends BaseActivity implements OnClickListen
 		mRemoteViews.setTextViewText(R.id.textview_title, "今日头条");
 		mRemoteViews.setTextViewText(R.id.textview_content, "《刺杀金正恩》于app store正式上线");
 		
+		mNotification = new Notification(R.drawable.ic_launcher_01, "...", System.currentTimeMillis());
 		mNotification.contentView = mRemoteViews;
 		mNotification.defaults = Notification.DEFAULT_ALL;
 		mPendingIntent = PendingIntent.getActivity(this, 0, getIntent(), PendingIntent.FLAG_CANCEL_CURRENT);
@@ -112,8 +114,8 @@ public class NotificationCustomAct extends BaseActivity implements OnClickListen
 		mRemoteViews.setImageViewResource(R.id.cus_notify_image, R.drawable.eason);
 		mRemoteViews.setTextViewText(R.id.cus_notify_title, "十年");
 		mRemoteViews.setTextViewText(R.id.cus_notify_desc, "陈奕迅 - 黑白灰");
-		
-		if (isPlay) {
+        
+		if (isPlaying) {
 			mRemoteViews.setImageViewResource(R.id.cus_notify_play, R.drawable.note_btn_pause);
 		}else {
 			mRemoteViews.setImageViewResource(R.id.cus_notify_play, R.drawable.note_btn_play);
@@ -122,40 +124,33 @@ public class NotificationCustomAct extends BaseActivity implements OnClickListen
 		mIntent = new Intent(NotificationConst.CUSTOM_BTN_ACTION);
 		// 喜欢
 		mIntent.putExtra(NotificationConst.BTN_KEY, NotificationConst.BTN_ID_LIKE);
-		lovePendingIntent = PendingIntent.getBroadcast(this, 1000, mIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+		lovePendingIntent = PendingIntent.getBroadcast(this, 1001, mIntent, PendingIntent.FLAG_UPDATE_CURRENT);
 		mRemoteViews.setOnClickPendingIntent(R.id.cus_notify_love, lovePendingIntent);
 		// 上一首
 		mIntent.putExtra(NotificationConst.BTN_KEY, NotificationConst.BTN_ID_PREV);
-		prevPendingIntent = PendingIntent.getBroadcast(this, 1001, mIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+		prevPendingIntent = PendingIntent.getBroadcast(this, 1002, mIntent, PendingIntent.FLAG_UPDATE_CURRENT);
 		mRemoteViews.setOnClickPendingIntent(R.id.cus_notify_prev, prevPendingIntent);
 		// 暂停/播放
 		mIntent.putExtra(NotificationConst.BTN_KEY, NotificationConst.BTN_ID_PLAY);
-		playPendingIntent = PendingIntent.getBroadcast(this, 1002, mIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+		playPendingIntent = PendingIntent.getBroadcast(this, 1003, mIntent, PendingIntent.FLAG_UPDATE_CURRENT);
 		mRemoteViews.setOnClickPendingIntent(R.id.cus_notify_play, playPendingIntent);
 		// 下一首
 		mIntent.putExtra(NotificationConst.BTN_KEY, NotificationConst.BTN_ID_NEXT);
-		nextPendingIntent = PendingIntent.getBroadcast(this, 1003, mIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+		nextPendingIntent = PendingIntent.getBroadcast(this, 1004, mIntent, PendingIntent.FLAG_UPDATE_CURRENT);
 		mRemoteViews.setOnClickPendingIntent(R.id.cus_notify_next, nextPendingIntent);
 		// 取消
 		mIntent.putExtra(NotificationConst.BTN_KEY, NotificationConst.BTN_ID_CANCLE);
-		canclePendingIntent = PendingIntent.getBroadcast(this, 1004, mIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+		canclePendingIntent = PendingIntent.getBroadcast(this, 1005, mIntent, PendingIntent.FLAG_UPDATE_CURRENT);
 		mRemoteViews.setOnClickPendingIntent(R.id.cus_notify_cancle, canclePendingIntent);
 		
+		mNotification = new Notification(R.drawable.ic_launcher, "正在播放...", System.currentTimeMillis());
+		PendingIntent pendingIntent = PendingIntent.getActivity(this, 1111, new Intent(), PendingIntent.FLAG_CANCEL_CURRENT);
 		mNotification.contentView = mRemoteViews;
+		mNotification.contentIntent = pendingIntent;
 		mNotification.flags = Notification.FLAG_ONGOING_EVENT;// 
-		mNotification.defaults = Notification.DEFAULT_ALL;
-		mNotification.tickerText = "正在播放...";
 		mNotificationManager.notify(NotificationConst.MAIN_CUS_DEFAULT_ID, mNotification);
 	}
 
-	@Override
-	protected void onDestroy() {
-		if (mBtnReceiver != null) {
-			unregisterReceiver(mBtnReceiver);
-		}
-		super.onDestroy();
-	}
-	
 	/**
 	 * 
 	 *  Class Name: NotificationCustomAct.java
@@ -181,8 +176,8 @@ public class NotificationCustomAct extends BaseActivity implements OnClickListen
 					break;
 				case NotificationConst.BTN_ID_PLAY:
 					String playStatu = "";
-					isPlay = !isPlay;
-					if (isPlay) {
+					isPlaying = !isPlaying;
+					if (isPlaying) {
 						playStatu = "开始播放";
 					}else {
 						playStatu = "已暂停";
@@ -200,5 +195,13 @@ public class NotificationCustomAct extends BaseActivity implements OnClickListen
 				}
 			}
 		}
+	}
+	
+	@Override
+	protected void onDestroy() {
+		if (mBtnReceiver != null) {
+			unregisterReceiver(mBtnReceiver);
+		}
+		super.onDestroy();
 	}
 }
