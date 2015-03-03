@@ -9,13 +9,41 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:onClick="click_listener"
-        android:text="show cus notify" />
+        android:text="show default progress notify" />
 
     <Button
         android:id="@+id/notification_customer_progress_02"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:onClick="click_listener"
-        android:text="show cus btn notify" />
+        android:text="show non-default progress notify" />
+
+    <Button
+        android:id="@+id/notification_customer_progress_03"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="click_listener"
+        android:text="show cus progress notify" />
+
+    <Button
+        android:id="@+id/notification_customer_progress_04"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="click_listener"
+        android:text="start download notify" />
+
+    <Button
+        android:id="@+id/notification_customer_progress_05"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="click_listener"
+        android:text="pause download notify" />
+
+    <Button
+        android:id="@+id/notification_customer_progress_06"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="click_listener"
+        android:text="cancle download notify" />
 
 </LinearLayout>

@@ -6,6 +6,8 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -42,6 +44,7 @@ public class NotificationCustomAct extends BaseActivity implements OnClickListen
 	
 	private BtnReceiver mBtnReceiver;
 	private boolean isPlaying = false;
+	private boolean isLoveing = false;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -69,7 +72,12 @@ public class NotificationCustomAct extends BaseActivity implements OnClickListen
 			showCustomNotification();
 			break;
 		case R.id.cus_notify_btn_02:
-			showCustomBtnNotification();
+			// 不同版本 不同RemoteView 布局    
+			if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) { // >= 16 可以使用 bigContentView   可以自定义通知栏显示高度
+				showCustomBtnNotification();
+			}else { // < 16 只能使用 contentView 即系统默认通知栏显示高度 
+				showShortToast("SDK.Version < 16, 稍候完善......");
+			}
 			break;
 		}
 	}
@@ -100,8 +108,12 @@ public class NotificationCustomAct extends BaseActivity implements OnClickListen
 		mNotification.contentIntent = mPendingIntent;
 		mNotification.when = System.currentTimeMillis();
 		mNotificationManager.notify(NotificationConst.MAIN_CUS_DEFAULT_ID, mNotification);
-		
 	}
+	
+	
+	private int[] cusNotifyImages = {R.drawable.eason, R.drawable.wangfei, R.drawable.gem};
+	private String[] cusNotifyTitles = {"十年", "匆匆那年", "后会无期"};
+	private String[] cusNotifyDescs = {"陈奕迅 - 黑白灰", "王菲 - 匆匆那年", "G.E.M.邓紫棋 - 后会无期"};
 	
 	/**
 	 * 
@@ -111,16 +123,10 @@ public class NotificationCustomAct extends BaseActivity implements OnClickListen
 	 */
 	private void showCustomBtnNotification() {
 		mRemoteViews = new RemoteViews(getPackageName(), R.layout.cus_btn_notify_layout);
-		mRemoteViews.setImageViewResource(R.id.cus_notify_image, R.drawable.eason);
-		mRemoteViews.setTextViewText(R.id.cus_notify_title, "十年");
-		mRemoteViews.setTextViewText(R.id.cus_notify_desc, "陈奕迅 - 黑白灰");
-        
-		if (isPlaying) {
-			mRemoteViews.setImageViewResource(R.id.cus_notify_play, R.drawable.note_btn_pause);
-		}else {
-			mRemoteViews.setImageViewResource(R.id.cus_notify_play, R.drawable.note_btn_play);
-		}
 		
+		// 设置通知栏布局图文数据
+		setRemoteViewData(0);
+        
 		mIntent = new Intent(NotificationConst.CUSTOM_BTN_ACTION);
 		// 喜欢
 		mIntent.putExtra(NotificationConst.BTN_KEY, NotificationConst.BTN_ID_LIKE);
@@ -140,21 +146,45 @@ public class NotificationCustomAct extends BaseActivity implements OnClickListen
 		mRemoteViews.setOnClickPendingIntent(R.id.cus_notify_next, nextPendingIntent);
 		// 取消
 		mIntent.putExtra(NotificationConst.BTN_KEY, NotificationConst.BTN_ID_CANCLE);
-		canclePendingIntent = PendingIntent.getBroadcast(this, 1005, mIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+		canclePendingIntent = PendingIntent.getBroadcast(this, 1005, mIntent, PendingIntent.FLAG_CANCEL_CURRENT);
 		mRemoteViews.setOnClickPendingIntent(R.id.cus_notify_cancle, canclePendingIntent);
 		
 		mNotification = new Notification(R.drawable.ic_launcher, "正在播放...", System.currentTimeMillis());
 		PendingIntent pendingIntent = PendingIntent.getActivity(this, 1111, new Intent(), PendingIntent.FLAG_CANCEL_CURRENT);
-		mNotification.contentView = mRemoteViews;
+		mNotification.contentView = mRemoteViews;  	// 一行显示(必须)
+		mNotification.bigContentView = mRemoteViews;// 多行显示(API 16+ 非必须  如果未设置  则显示一行  设置则显示多行)
 		mNotification.contentIntent = pendingIntent;
-		mNotification.flags = Notification.FLAG_ONGOING_EVENT;// 
+		mNotification.flags = Notification.FLAG_ONGOING_EVENT;
 		mNotificationManager.notify(NotificationConst.MAIN_CUS_DEFAULT_ID, mNotification);
+		
+	}
+
+	/**
+	 * 
+	 *  Function:设置 RemoteView
+	 *  @author liuzheng
+	 *  @created 2015年3月2日 下午3:29:58 
+	 *  @param i 模拟数据数组下标
+	 */
+	private void setRemoteViewData(int i) {
+		if (i > cusNotifyTitles.length) { // 防止越界
+			return;
+		}
+		
+		mRemoteViews.setImageViewResource(R.id.cus_notify_image, cusNotifyImages[i]);
+		mRemoteViews.setTextViewText(R.id.cus_notify_title, cusNotifyTitles[i]);
+		mRemoteViews.setTextViewText(R.id.cus_notify_desc, cusNotifyDescs[i]);
+		
+		if (mNotification != null) { // 注意 mRemoteViews 修改  需要同步修改 mNotification.contentView/bigContentView
+			mNotification.contentView = mRemoteViews;  	// 一行显示(必须)
+			mNotification.bigContentView = mRemoteViews;// 多行显示(API 16+ 非必须  如果未设置  则显示一行  设置则显示多行)
+		}
 	}
 
 	/**
 	 * 
 	 *  Class Name: NotificationCustomAct.java
-	 *  Function:自定义广播接收器
+	 *  Function:自定义广播接收器  处理通知栏按钮点击事件
 	 *  
 	 *  @author liuzheng
 	 *  @version 1.0 
@@ -169,29 +199,55 @@ public class NotificationCustomAct extends BaseActivity implements OnClickListen
 				int btnId = intent.getIntExtra(NotificationConst.BTN_KEY, 0);
 				switch (btnId) {
 				case NotificationConst.BTN_ID_LIKE:
+					isLoveing = !isLoveing;
+					
+					if (isLoveing) {
+						mRemoteViews.setImageViewResource(R.id.cus_notify_love, R.drawable.note_btn_loved);
+					}else{
+						mRemoteViews.setImageViewResource(R.id.cus_notify_love, R.drawable.note_btn_love);
+					}
+					
 					showShortToast("喜欢");
 					break;
 				case NotificationConst.BTN_ID_PREV:
 					showShortToast("上一首");
+					
+					// 设置通知栏布局图文数据
+					setRemoteViewData(1);
+					
 					break;
 				case NotificationConst.BTN_ID_PLAY:
 					String playStatu = "";
 					isPlaying = !isPlaying;
-					if (isPlaying) {
+					
+					// 更新通知栏布局  
+					if (isPlaying) { 
 						playStatu = "开始播放";
+						mRemoteViews.setImageViewResource(R.id.cus_notify_play, R.drawable.note_btn_pause);
 					}else {
+						mRemoteViews.setImageViewResource(R.id.cus_notify_play, R.drawable.note_btn_play);
 						playStatu = "已暂停";
 					}
-					showCustomBtnNotification();
+					
 					showShortToast(playStatu);
 					break;
 				case NotificationConst.BTN_ID_NEXT:
 					showShortToast("下一首");
+					
+					// 设置通知栏布局图文数据
+					setRemoteViewData(2);
+					
 					break;
 				case NotificationConst.BTN_ID_CANCLE:
 					showShortToast("取消");
 					mNotificationManager.cancel(NotificationConst.MAIN_CUS_DEFAULT_ID);
 					break;
+				}
+				
+				// 除取消外   love pre pause/play next 操作都需要更新通知布局
+				if (btnId != NotificationConst.BTN_ID_CANCLE) {
+					// 通知更新  注意id统一
+					mNotificationManager.notify(NotificationConst.MAIN_CUS_DEFAULT_ID, mNotification);
 				}
 			}
 		}

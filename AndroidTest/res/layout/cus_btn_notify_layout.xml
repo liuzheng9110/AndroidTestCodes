@@ -2,12 +2,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:gravity="center_vertical"
     android:orientation="horizontal" >
 
     <ImageView
         android:id="@+id/cus_notify_image"
         android:layout_width="100dp"
         android:layout_height="100dp"
+        android:scaleType="fitXY"
         android:src="@drawable/ic_launcher_02" />
 
     <LinearLayout
@@ -66,7 +68,7 @@
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_weight="1"
-                android:contentDescription="@string/app_name"
+                android:contentDescription="已收藏"
                 android:src="@drawable/note_btn_love" />
 
             <Button
@@ -79,7 +81,7 @@
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_weight="1"
-                android:contentDescription="@string/app_name"
+                android:contentDescription="上一首"
                 android:src="@drawable/note_btn_pre" />
 
             <Button
@@ -92,7 +94,7 @@
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_weight="1"
-                android:contentDescription="@string/app_name"
+                android:contentDescription="暂停"
                 android:src="@drawable/note_btn_play" 
                 />
 
@@ -106,7 +108,7 @@
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_weight="1"
-                android:contentDescription="@string/app_name"
+                android:contentDescription="下一首"
                 android:src="@drawable/note_btn_next" />
         </LinearLayout>
     </LinearLayout>

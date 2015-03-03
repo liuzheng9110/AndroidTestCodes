@@ -4,7 +4,8 @@ package com.example.androidtest.notification;
 public class NotificationConst {
 	public static int MAIN_DEFAULT_ID = 1556;// 系统默认简单通知 
 	public static int MAIN_NO_CLEAR = 2;// 常驻通知
-	public static int MAIN_CUS_DEFAULT_ID = 1714;// 常驻通知
+	public static int MAIN_CUS_DEFAULT_ID = 1714;// 自定义通知栏自定义布局通知
+	public static int MAIN_PROGRESS_DEFAULT_ID = 1715;// 自定义通知栏进度条通知
 	
 	public final static String CUSTOM_BTN_ACTION = "com.example.androidtest.btn.click";
 	public final static String CLEAR_BROADCAST_ACTION = "com.example.androidtest.clear";
