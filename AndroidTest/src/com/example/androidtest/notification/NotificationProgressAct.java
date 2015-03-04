@@ -153,7 +153,7 @@ public class NotificationProgressAct extends BaseActivity {
 		mRemoteViews = new RemoteViews(getPackageName(), R.layout.notification_progress_cus_layout);
 		mRemoteViews.setTextViewText(R.id.notification_progress_cus_text, title);
 		
-		if (mCurrentProgress >= 100 || mDownloadThread == null) { // 下载完成
+		if (mCurrentProgress > 100 || mDownloadThread == null) { // 下载完成
 			mRemoteViews.setProgressBar(R.id.notification_progress_cus_progressbar, 0, 0, indeterminate);
 			mRemoteViews.setViewVisibility(R.id.notification_progress_cus_progressbar, View.GONE);
 		}else{ // 正在下载...
@@ -162,9 +162,11 @@ public class NotificationProgressAct extends BaseActivity {
 		}
 		
 		mNotification.contentView = mRemoteViews;
-		mNotification.defaults = Notification.DEFAULT_VIBRATE;
+		mNotification.defaults = Notification.DEFAULT_LIGHTS;
 		mNotification.icon = R.drawable.ic_launcher_02;
 		mNotification.tickerText = "downloading......";
+		
+		mNotification.contentIntent = PendingIntent.getActivity(this, 100, getIntent(), PendingIntent.FLAG_UPDATE_CURRENT);
 		
 		mNotificationManager.notify(NotificationConst.MAIN_PROGRESS_DEFAULT_ID, mNotification);
 		
@@ -183,8 +185,94 @@ public class NotificationProgressAct extends BaseActivity {
 	class DownloadThread extends Thread{
 		@Override
 		public void run() {
+			mCurrentProgress = 0;
+			// 模拟下载
+			while (mCurrentProgress <= 100) {
+				if (mDownloadThread == null) {
+					break;
+				}
+				
+				if (!mIsPause) {
+					mLastProgress = mCurrentProgress;
+					showCusProgressNotify(false, "start download......");
+					mCurrentProgress += 10;
+				}
+				try {
+					Thread.sleep(1000);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
 			
+			mCurrentProgress = 0;
+			if (mDownloadThread != null) {
+				mDownloadThread = null;
+				doneDownloadNotify("done download......");
+			}
 		}
+	}
+	
+	/**
+	 * 
+	 *  Function: 开始下载
+	 *  @author liuzheng
+	 *  @created 2015年3月4日 上午11:04:47 
+	 *  @param title
+	 */
+	private void startDownloadNotify(String title) {
+		mIsPause = false;
+		if (mDownloadThread == null) {
+			mDownloadThread = new DownloadThread();
+			mDownloadThread.start();
+		}
+	}
+	
+	/**
+	 * 
+	 *  Function: 暂停下载
+	 *  @author liuzheng
+	 *  @created 2015年3月4日 上午11:04:56 
+	 *  @param title
+	 */
+	private void pauseDownloadNotify(String title) {
+		mIsPause = true;
+		// 更新通知栏布局
+		mRemoteViews.setTextViewText(R.id.notification_progress_cus_text, title);
+		mNotificationManager.notify(NotificationConst.MAIN_PROGRESS_DEFAULT_ID, mNotification);
+	}
+	
+	/**
+	 * 
+	 *  Function: 取消下载
+	 *  @author liuzheng
+	 *  @created 2015年3月4日 上午11:05:09 
+	 *  @param title
+	 */
+	private void cancleDownloadNotify(String title) {
+		if (mDownloadThread != null) {
+			mDownloadThread.interrupt();
+		}
+		mDownloadThread = null;
+
+		mRemoteViews.setTextViewText(R.id.notification_progress_cus_text, title);
+		mRemoteViews.setViewVisibility(R.id.notification_progress_cus_progressbar, View.GONE);
+		
+		mNotificationManager.notify(NotificationConst.MAIN_PROGRESS_DEFAULT_ID, mNotification);
+	}
+	
+	/**
+	 * 
+	 *  Function: 完成下载
+	 *  @author liuzheng
+	 *  @created 2015年3月4日 上午11:15:54 
+	 *  @param title
+	 */
+	private void doneDownloadNotify(String title){
+		mIsPause = false;
+		// 更新通知栏布局
+		mRemoteViews.setTextViewText(R.id.notification_progress_cus_text, title);
+		mRemoteViews.setViewVisibility(R.id.notification_progress_cus_progressbar, View.GONE);
+		mNotificationManager.notify(NotificationConst.MAIN_PROGRESS_DEFAULT_ID, mNotification);
 	}
 	
 	/**
@@ -210,16 +298,20 @@ public class NotificationProgressAct extends BaseActivity {
 			break;
 		case R.id.notification_customer_progress_04:
 			showShortToast("start download notify");
+			startDownloadNotify("start download notify");
 			break;
 		case R.id.notification_customer_progress_05:
 			showShortToast("pause download notify");
+			pauseDownloadNotify("pause download notify");
 			break;
 		case R.id.notification_customer_progress_06:
 			showShortToast("cancle download notify");
+			cancleDownloadNotify("cancle download notify");
 			break;
 		default:
 			break;
 		}
 	}
+
 
 }
