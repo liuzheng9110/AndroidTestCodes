@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/simple_default_sqlite"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="simple default sqlite" 
+        android:onClick="click_listener" />
+
+    <Button
+        android:id="@+id/simple_use_ormlite"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="simple use ormite"
+        android:onClick="click_listener" />
+
+    <Button
+        android:id="@+id/simple_use_greendao"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="simple user greendao"
+        android:onClick="click_listener" />
+
+</LinearLayout>

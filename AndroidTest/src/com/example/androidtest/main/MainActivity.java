@@ -60,9 +60,11 @@ import com.example.androidtest.notification.NotificationActivity;
 import com.example.androidtest.preference.MyPreferenceActivity;
 import com.example.androidtest.preference.MyPreferenceFragmentActivity;
 import com.example.androidtest.pullrefresh.PullRefreshActivity;
+import com.example.androidtest.recycle_cardview.RecyclerCardViewActivity;
 import com.example.androidtest.screenonoff.ScreenOnOffAct;
 import com.example.androidtest.service.MyServiceAct;
 import com.example.androidtest.sliding.SlidingAct;
+import com.example.androidtest.sqlite.SqliteOperationActivity;
 import com.example.androidtest.textview.MyTextViewAct;
 import com.example.androidtest.toast.CusToastAct;
 import com.example.androidtest.update.AndroidUpdateAct;
@@ -255,6 +257,12 @@ public class MainActivity extends BaseActivity {
 			break;
 		case R.id.btn60:
 			startActivity(new Intent(MainActivity.this, NotificationActivity.class));
+			break;
+		case R.id.btn61:
+			startActivity(new Intent(MainActivity.this, SqliteOperationActivity.class));
+			break;
+		case R.id.btn62:
+			startActivity(new Intent(MainActivity.this, RecyclerCardViewActivity.class));
 			break;
 		default:
 			break;

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.example.androidtest"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:cardBackgroundColor="@color/cardview_dark_background"
+    app:cardCornerRadius="5dp" >
+	
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical">
+        <TextView android:id="@+id/title_tv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textStyle="bold" android:textSize="26sp" />
+        <View android:layout_width="fill_parent" android:layout_height="1dp" android:background="@color/blue"/>
+        <TextView android:id="@+id/desc_tv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="3" android:ellipsize="end"/>
+        <ImageView android:id="@+id/usrs_image" android:layout_width="fill_parent" android:layout_height="120dp" android:scaleType="fitXY" android:contentDescription="usr"/>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

@@ -433,6 +433,18 @@
                 android:layout_height="wrap_content"
                 android:onClick="click_listener"
                 android:text="NotificationActivity" />
+            <Button
+                android:id="@+id/btn61"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="click_listener"
+                android:text="SqliteOperationActivity" />
+            <Button
+                android:id="@+id/btn62"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="click_listener"
+                android:text="RecyclerCardViewActivity" />
         </LinearLayout>
 
         <TextView

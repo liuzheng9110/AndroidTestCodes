@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TableRow android:layout_width="fill_parent" android:layout_height="wrap_content" android:id="@+id/top_layout">
+    	<TextView android:layout_width="0dp" android:layout_height="wrap_content" android:text="id" android:layout_weight="1" android:gravity="center" android:paddingTop="5dp" android:paddingBottom="5dp"/>
+   		<View android:layout_width="1dp" android:layout_height="fill_parent" android:background="@android:color/holo_blue_light"/>
+  		<TextView android:layout_width="0dp" android:layout_height="wrap_content" android:text="name" android:layout_weight="1" android:gravity="center" android:paddingTop="5dp" android:paddingBottom="5dp"/>
+    	<View android:layout_width="1dp" android:layout_height="fill_parent" android:background="@android:color/holo_blue_light"/>
+    	<TextView android:layout_width="0dp" android:layout_height="wrap_content" android:text="sex" android:layout_weight="1" android:gravity="center" android:paddingTop="5dp" android:paddingBottom="5dp"/>
+   		<View android:layout_width="1dp" android:layout_height="fill_parent" android:background="@android:color/holo_blue_light"/>
+    	<TextView android:layout_width="0dp" android:layout_height="wrap_content" android:text="age" android:layout_weight="1" android:gravity="center" android:paddingTop="5dp" android:paddingBottom="5dp"/>
+	</TableRow>
+	<View android:id="@+id/view_line" android:layout_width="fill_parent" android:layout_height="1dp" android:background="@android:color/holo_blue_light" android:layout_below="@id/top_layout"/>
+	<ListView android:layout_width="fill_parent" android:layout_height="wrap_content" android:id="@+id/listView" android:layout_below="@id/view_line" android:layout_above="@id/add_btn"></ListView>
+	<Button
+        android:id="@+id/add_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:onClick="click_listener"
+        android:text="Add Item" />
+</RelativeLayout>
