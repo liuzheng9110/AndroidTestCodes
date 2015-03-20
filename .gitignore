@@ -3,4 +3,4 @@ bin/
 .settings
 liuz.me.epf
 
-*.jar
+*.class
