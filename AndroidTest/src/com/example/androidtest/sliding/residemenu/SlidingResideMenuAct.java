@@ -75,7 +75,7 @@ public class SlidingResideMenuAct extends FragmentActivity implements OnClickLis
 		findViewById(R.id.title_right_btn).setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				resideMenu.openMenu(ResideMenu.DIRECTION_RIGHT);
+				//resideMenu.openMenu(ResideMenu.DIRECTION_RIGHT);
 			}
 		});
 		

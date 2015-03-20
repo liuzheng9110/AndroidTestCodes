@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.FrameLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
@@ -54,6 +53,7 @@ import com.example.androidtest.alertwindow.FirstActivity;
 import com.example.androidtest.autofit.AutoFitTextViewAct;
 import com.example.androidtest.editlist.EditListAct;
 import com.example.androidtest.fragment.FragmentDemoAct;
+import com.example.androidtest.fragment.tabhost.TabHostActivity;
 import com.example.androidtest.htmlparse.HtmlParstAct;
 import com.example.androidtest.http.HttpMainAct;
 import com.example.androidtest.notification.NotificationActivity;
@@ -263,6 +263,9 @@ public class MainActivity extends BaseActivity {
 			break;
 		case R.id.btn62:
 			startActivity(new Intent(MainActivity.this, RecyclerCardViewActivity.class));
+			break;
+		case R.id.btn63:
+			startActivity(new Intent(MainActivity.this, TabHostActivity.class));
 			break;
 		default:
 			break;

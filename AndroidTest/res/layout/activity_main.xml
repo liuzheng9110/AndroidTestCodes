@@ -445,6 +445,12 @@
                 android:layout_height="wrap_content"
                 android:onClick="click_listener"
                 android:text="RecyclerCardViewActivity" />
+            <Button
+                android:id="@+id/btn63"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:onClick="click_listener"
+                android:text="FragmentTabHostActivity" />
         </LinearLayout>
 
         <TextView
