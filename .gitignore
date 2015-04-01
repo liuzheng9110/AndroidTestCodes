@@ -26,5 +26,5 @@ proguard/
 # Log Files
 *.log
 
-
+.settings
 liuz.me.epf
