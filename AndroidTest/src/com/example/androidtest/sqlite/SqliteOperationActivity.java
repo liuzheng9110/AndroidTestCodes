@@ -7,6 +7,8 @@ import android.view.View;
 
 import com.example.androidtest.R;
 import com.example.androidtest.main.BaseActivity;
+import com.example.androidtest.sqlite.greendao.SimpleUseGreendaoSqliteActivity;
+import com.example.androidtest.sqlite.ormlite.SimpleUseOrmliteSqliteActivity;
 
 /**
  * 
