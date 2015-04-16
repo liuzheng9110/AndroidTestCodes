@@ -42,21 +42,22 @@ public class OrmTest extends AndroidTestCase {
 	private List<UserData> userDatas;
 
 	public void testAdd(){
-		UserData data = null;
-		DatabaseHelper helper = DatabaseHelper.getInstance(getContext());
 		try {
+			UserData data = null;
+			DatabaseHelper helper = DatabaseHelper.getInstance(getContext());
+			Dao<UserData,Integer> userDao = helper.getUserDao();
 			data = new UserData("name1", "sex1", "age1");
-			helper.getUserDao().create(data);
+			userDao.create(data);
 			data = new UserData("name2", "sex2", "age2");
-			helper.getUserDao().create(data);
+			userDao.create(data);
 			data = new UserData("name3", "sex3", "age3");
-			helper.getUserDao().create(data);
+			userDao.create(data);
 			data = new UserData("name4", "sex4", "age4");
-			helper.getUserDao().create(data);
+			userDao.create(data);
 			data = new UserData("name5", "sex5", "age5");
-			helper.getUserDao().create(data);
+			userDao.create(data);
 			data = new UserData("name6", "sex6", "age6");
-			helper.getUserDao().create(data);
+			userDao.create(data);
 			
 //			testList();
 			

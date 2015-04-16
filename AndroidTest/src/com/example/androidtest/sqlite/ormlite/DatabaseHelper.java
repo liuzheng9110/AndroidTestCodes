@@ -72,7 +72,7 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
 	 *  @return
 	 *  @throws SQLException
 	 */
-	public Dao<UserData, Integer> getUserDao() throws SQLException{
+	public Dao<UserData, Integer> getUserDao() throws SQLException {
 		if (userDao == null) {
 			userDao = getDao(UserData.class);
 		}

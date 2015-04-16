@@ -15,15 +15,14 @@ import com.example.androidtest.main.BaseActivity;
  *  @Copyright http://liuz.me 
  *  @url http://ormlite.com/sqlite_java_android_orm.shtml 
  *  	 http://ormlite.com/android/examples/ 
- *  	 http://blog.csdn.net/lmj623565791/article/details/39121377
- *  	 http://blog.csdn.net/lmj623565791/article/details/39122981
+ *  	 http://blog.csdn.net/lmj623565791/article/details/39121377 简单使用
+ *  	 http://blog.csdn.net/lmj623565791/article/details/39122981 简单剖析
+ *  	 http://blog.csdn.net/acnt3w/article/details/7989114 事务管理
  */
 public class SimpleUseOrmliteSqliteActivity extends BaseActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		
-		
 		
 	}
 }

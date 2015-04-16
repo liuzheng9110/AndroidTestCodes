@@ -35,8 +35,9 @@
         
         <uses-library android:name="android.test.runner"/>
         
+        <!-- MainActivity -->
         <activity
-            android:name="com.example.androidtest.main.MainActivity"
+            android:name="com.example.androidtest.main.MainListActivity"
         android:theme="@style/Theme.AppCompat"
             android:label="@string/app_name" >
             <intent-filter>
@@ -180,6 +181,10 @@
         <activity android:name=".fragment.tabhost.TabHostActivity" ></activity>
         <activity android:name=".fragment.tabhost.FragmentTabHostActivity" ></activity>
         <activity android:name=".fragment.tabhost.QQZoneTabHostActivity" ></activity>
+        <!-- 注解 -->
+        <activity android:name="com.example.androidtest.annotation.ButterKnifeActivity" ></activity>
+        <!-- webservice -->
+        <activity android:name="com.example.androidtest.webservice.MainWebserviceActivity" ></activity>
         
 </application>
 	
