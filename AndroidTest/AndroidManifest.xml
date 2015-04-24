@@ -185,6 +185,12 @@
         <activity android:name="com.example.androidtest.annotation.ButterKnifeActivity" ></activity>
         <!-- webservice -->
         <activity android:name="com.example.androidtest.webservice.MainWebserviceActivity" ></activity>
+        <!-- DragListViewActivity -->
+        <activity android:name="com.example.androidtest.draglistview.DragListViewActivity" ></activity>
+        <!-- TagClickAnimActivity -->
+        <activity android:name="com.example.androidtest.tagclickanim.TagClickAnimActivity" ></activity>
+        <!-- LandProtraitActivity -->
+        <activity android:name="com.example.androidtest.landportrait.LandProtraitActivity" ></activity>
         
 </application>
 	
