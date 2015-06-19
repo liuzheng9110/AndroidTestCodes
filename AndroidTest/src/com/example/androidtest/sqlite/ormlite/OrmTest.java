@@ -29,7 +29,11 @@ import android.util.Log;
  *  @version 1.0 
  *  @created 2015年4月2日 上午8:54:09
  *  @Copyright http://liuz.me 
- *  @url
+ *  @url 
+ *  	http://www.cnblogs.com/vanezkw/archive/2012/07/31/2617210.html
+ *  	http://www.cnblogs.com/vanezkw/archive/2012/08/02/2619798.html
+ *  	http://www.cnblogs.com/vanezkw/archive/2012/08/03/2621770.html
+ *  	http://www.cnblogs.com/vanezkw/archive/2012/08/15/2640290.html
  *  
  *  注意两点：：
  *  1、必须在 <application /> 节点中添加  <uses-library android:name="android.test.runner"/>

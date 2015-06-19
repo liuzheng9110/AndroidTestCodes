@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/scan_barcode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="click_listener"
+        android:text="扫描二维码" />
+
+    <TextView
+        android:id="@+id/result_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText android:id="@+id/input" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="请输入要编码的内容"/>
+    
+    <Button
+        android:id="@+id/create_barcode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="click_listener"
+        android:text="生成二维码" />
+
+    <ImageView
+        android:id="@+id/barcode_imageview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_launcher" />
+
+</LinearLayout>

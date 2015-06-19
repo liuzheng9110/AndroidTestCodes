@@ -55,14 +55,18 @@ import com.example.androidtest.actionbar_support.ActionBarSupportAct;
 import com.example.androidtest.alertwindow.FirstActivity;
 import com.example.androidtest.annotation.ButterKnifeActivity;
 import com.example.androidtest.autofit.AutoFitTextViewAct;
+import com.example.androidtest.barcode.BarcodeZxingActivity;
+import com.example.androidtest.contact.ContactActivity;
 import com.example.androidtest.draglistview.DragListViewActivity;
 import com.example.androidtest.editlist.EditListAct;
 import com.example.androidtest.fragment.FragmentDemoAct;
 import com.example.androidtest.fragment.tabhost.TabHostActivity;
+import com.example.androidtest.fresco.FrescoMainActivity;
 import com.example.androidtest.htmlparse.HtmlParstAct;
 import com.example.androidtest.http.HttpMainAct;
 import com.example.androidtest.landportrait.LandProtraitActivity;
 import com.example.androidtest.notification.NotificationActivity;
+import com.example.androidtest.picasso.PicassoMainActivity;
 import com.example.androidtest.preference.MyPreferenceActivity;
 import com.example.androidtest.preference.MyPreferenceFragmentActivity;
 import com.example.androidtest.pullrefresh.PullRefreshActivity;
@@ -166,6 +170,10 @@ public class MainListActivity extends BaseActivity {
 		data.add("MainWebserviceActivity");
 		data.add("DragListViewActivity");
 		data.add("LandProtraitActivity");
+		data.add("PicassoMainActivity");
+		data.add("FrescoMainActivity");
+		data.add("BarcodeZxingActivity");
+		data.add("ContactActivity");
 		
 		//
 		activities.add(MoniPop.class);
@@ -235,6 +243,10 @@ public class MainListActivity extends BaseActivity {
 		activities.add(MainWebserviceActivity.class);
 		activities.add(DragListViewActivity.class);
 		activities.add(LandProtraitActivity.class);
+		activities.add(PicassoMainActivity.class);
+		activities.add(FrescoMainActivity.class);
+		activities.add(BarcodeZxingActivity.class);
+		activities.add(ContactActivity.class);
 	}
 	
 	@Override

@@ -75,6 +75,10 @@ public class AndroidVolleyAct extends Activity implements OnClickListener {
 				@Override
 				public void onResponse(String response) {
 					Log.i("liuz", response);
+
+					buttonImage.setVisibility(View.GONE);
+					buttonNetImage.setVisibility(View.GONE);
+					
 					resultTextView.setText(response);
 				}
 			}, new Response.ErrorListener() {
@@ -92,6 +96,10 @@ public class AndroidVolleyAct extends Activity implements OnClickListener {
 				@Override
 				public void onResponse(JSONObject jsonObject) {
 					Log.i("liuz", jsonObject.toString());
+					
+					buttonImage.setVisibility(View.GONE);
+					buttonNetImage.setVisibility(View.GONE);
+					
 					resultTextView.setText(jsonObject.toString());
 				}
 			}, new Response.ErrorListener() {
@@ -101,6 +109,7 @@ public class AndroidVolleyAct extends Activity implements OnClickListener {
 				}
 			});
 			requestQueue.add(jsonRequest);
+			
 			break;
 		case R.id.button_image:
 			final LruCache<String, Bitmap> lruCache = new LruCache<String, Bitmap>(20);
@@ -118,6 +127,9 @@ public class AndroidVolleyAct extends Activity implements OnClickListener {
 					return lruCache.get(arg0);
 				}
 			};
+			
+			resultTextView.setVisibility(View.GONE);
+			
 			ImageLoader imageLoader = new ImageLoader(requestQueue, imageCache);
 			ImageListener imageListener = ImageLoader.getImageListener(imageView, R.drawable.ic_launcher, R.drawable.ic_launcher_01);
 			imageLoader.get(REQ_URL_IMAGE, imageListener);
@@ -139,6 +151,9 @@ public class AndroidVolleyAct extends Activity implements OnClickListener {
 					return lruCache1.get(arg0);
 				}
 			};
+
+			resultTextView.setVisibility(View.GONE);
+			
 			ImageLoader netImageLoader = new ImageLoader(requestQueue, imageCache1);
 			networkImageView.setTag("url");
 			networkImageView.setImageUrl(REQ_URL_NET_IMAGE, netImageLoader);
