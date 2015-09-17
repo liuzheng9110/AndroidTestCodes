@@ -5,8 +5,8 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="16"
-        android:targetSdkVersion="19" />
+        android:minSdkVersion="15"
+        android:targetSdkVersion="22" />
 
     <supports-screens
         android:anyDensity="true"
@@ -14,32 +14,45 @@
         android:normalScreens="true"
         android:smallScreens="true"
         android:xlargeScreens="true" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+
+    <uses-feature android:name="android.hardware.camera" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.WAKE_LOCK"/>
-    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
-    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.RESTART_PACKAGES"/>  
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+
+    <permission android:name="android.permission.HARDWARE_TEST" />
 
     <application
         android:name="com.example.androidtest.main.MyApplication"
         android:allowBackup="true"
+        android:exported="false"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/Theme.AppCompat.Light"
-        android:exported="false" >
-        
-        <uses-library android:name="android.test.runner"/>
-        
+        android:theme="@style/Theme.AppCompat.Light" >
+        <uses-library android:name="android.test.runner" />
+
         <!-- MainActivity -->
         <activity
             android:name="com.example.androidtest.main.MainListActivity"
-        android:theme="@style/Theme.AppCompat"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:theme="@style/Theme.AppCompat" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -50,151 +63,331 @@
         </activity>
         <activity android:name="ZFCGDetail" >
         </activity>
-        <activity android:name="MoniPop" android:theme="@android:style/Theme.Dialog">
+        <activity
+            android:name="MoniPop"
+            android:theme="@android:style/Theme.Dialog" >
         </activity>
-        <activity android:name="DynamicAddView"></activity>
-        <activity android:name="Android_DateActivity"></activity>
-        <activity android:name="MyDatePickerDialogAct"></activity>
-        <activity android:name="MySpinnerAct"></activity>
-        <activity android:name="LongClickSelCopyAct"></activity>
-        <activity android:name=".voice.LongClickVoiceAct"></activity>
-        <activity android:name="InputFaceAct"></activity>
-        <activity android:name="TimerTaskAct"></activity>
-        <activity android:name=".editlist.EditListAct"></activity>
-        <activity android:name="HorizontalScrollViewAct"></activity>
-        <activity android:name="CusDialogAct"></activity>
-        <activity android:name="SingleChoiceAct"></activity>
-        <activity android:name="CusDatePickerAct"></activity>
-        <activity android:name="CusDatePickerShowAct" android:theme="@style/Cus_Theme_Dialog"></activity>
-        <activity android:name="HtmlTextViewAct"></activity>
-        <activity android:name="JsonParseAct"></activity>
-        <activity android:name="FixTextViewAct"></activity>
-        <activity android:name="ShowDialogAct"></activity>
-        <activity android:name="MyShapeAct"></activity>
-        <activity android:name="MultMarqueeTextViewAct"></activity>
-        <activity android:name="MultAnimateAct"></activity>
-        <activity android:name="PhoneInfoAct"></activity>
-        <activity android:name="DrawerLayoutAct"></activity>
-        <activity android:name="NineGridViewAct"></activity>
-		<activity android:name="WebViewAct"></activity>
-        <activity android:name="AndroidNotificationAct"></activity>
+        <activity android:name="DynamicAddView" >
+        </activity>
+        <activity android:name="Android_DateActivity" >
+        </activity>
+        <activity android:name="MyDatePickerDialogAct" >
+        </activity>
+        <activity android:name="MySpinnerAct" >
+        </activity>
+        <activity android:name="LongClickSelCopyAct" >
+        </activity>
+        <activity android:name=".voice.LongClickVoiceAct" >
+        </activity>
+        <activity android:name="InputFaceAct" >
+        </activity>
+        <activity android:name="TimerTaskAct" >
+        </activity>
+        <activity android:name=".editlist.EditListAct" >
+        </activity>
+        <activity android:name="HorizontalScrollViewAct" >
+        </activity>
+        <activity android:name="CusDialogAct" >
+        </activity>
+        <activity android:name="SingleChoiceAct" >
+        </activity>
+        <activity android:name="CusDatePickerAct" >
+        </activity>
+        <activity
+            android:name="CusDatePickerShowAct"
+            android:theme="@style/Cus_Theme_Dialog" >
+        </activity>
+        <activity android:name="HtmlTextViewAct" >
+        </activity>
+        <activity android:name="JsonParseAct" >
+        </activity>
+        <activity android:name="FixTextViewAct" >
+        </activity>
+        <activity android:name="ShowDialogAct" >
+        </activity>
+        <activity android:name="MyShapeAct" >
+        </activity>
+        <activity android:name="MultMarqueeTextViewAct" >
+        </activity>
+        <activity android:name="MultAnimateAct" >
+        </activity>
+        <activity android:name="PhoneInfoAct" >
+        </activity>
+        <activity android:name="DrawerLayoutAct" >
+        </activity>
+        <activity android:name="NineGridViewAct" >
+        </activity>
+        <activity android:name="WebViewAct" >
+        </activity>
+        <activity android:name="AndroidNotificationAct" >
+        </activity>
         <!-- android custom toast -->
-        <activity android:name=".toast.CusToastAct"></activity>
-        <activity android:name="CusEditTextAct" 
+        <activity android:name=".toast.CusToastAct" >
+        </activity>
+        <activity
+            android:name="CusEditTextAct"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:windowSoftInputMode="adjustResize"
-            android:screenOrientation="portrait" ></activity>
-        
-        <activity android:name="com.example.androidtest.actionbar_support.ActionBarSupportAct" 
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        <activity
+            android:name="com.example.androidtest.actionbar_support.ActionBarSupportAct"
             android:theme="@style/Theme.AppCompat.Light" >
         </activity>
-       
+
         <!-- sliding start -->
-        <activity android:name=".sliding.SlidingAct"></activity>
-        <activity android:name=".sliding.SlidingMenuAct"></activity>
-        <activity android:name=".sliding.SlidingDrawerAct"></activity>
-        <activity android:name=".sliding.SlidingPaneLayoutAct" android:theme="@style/android:Theme.Light" ></activity>
-        <activity android:name=".sliding.SlidingViewDragHelperAct"></activity>
-        <activity android:name=".sliding.residemenu.SlidingResideMenuAct"></activity>
+        <activity android:name=".sliding.SlidingAct" >
+        </activity>
+        <activity android:name=".sliding.SlidingMenuAct" >
+        </activity>
+        <activity android:name=".sliding.SlidingDrawerAct" >
+        </activity>
+        <activity
+            android:name=".sliding.SlidingPaneLayoutAct"
+            android:theme="@style/android:Theme.Light" >
+        </activity>
+        <activity android:name=".sliding.SlidingViewDragHelperAct" >
+        </activity>
+        <activity android:name=".sliding.residemenu.SlidingResideMenuAct" >
+        </activity>
         <!-- sliding end -->
-        
-        <activity android:name=".fragment.FragmentDemoAct"></activity>
-        
-        <activity android:name=".http.HttpMainAct"></activity>
 
-        <activity android:name=".volley.AndroidVolleyAct"></activity>
-        
-        <activity android:name=".alertwindow.FirstActivity"></activity>
-        <activity android:name=".alertwindow.LockAlertWindow" android:theme="@android:style/Theme.Dialog"></activity>
-        
-        <activity android:name=".service.MyServiceAct" ></activity>
-        
+        <activity android:name=".fragment.FragmentDemoAct" >
+        </activity>
+        <activity android:name=".http.HttpMainAct" >
+        </activity>
+        <activity android:name=".volley.AndroidVolleyAct" >
+        </activity>
+        <activity android:name=".alertwindow.FirstActivity" >
+        </activity>
+        <activity
+            android:name=".alertwindow.LockAlertWindow"
+            android:theme="@android:style/Theme.Dialog" >
+        </activity>
+        <activity android:name=".service.MyServiceAct" >
+        </activity>
+
         <!-- viewpager -->
-        <activity android:name=".viewpager.VerticalViewpagerAct" ></activity>
-    	<!-- android update -->    
-        <activity android:name=".update.AndroidUpdateAct" ></activity>
+        <activity android:name=".viewpager.VerticalViewpagerAct" >
+        </activity>
+        <!-- android update -->
+        <activity android:name=".update.AndroidUpdateAct" >
+        </activity>
         <!-- <service android:name="com.example.androidtest.update.AndroidUpdateService"></service> -->
-        
-        
-        <!-- multi app install -->
-        <activity android:name="MultiAppInstallAct" ></activity>
 
-        <activity android:name="LastOnTouchTimeAct" ></activity>
-        
-        <activity android:name="SimpleBroadcastReceiverAct" ></activity>
-        
-        <activity android:name=".screenonoff.ScreenOnOffAct" ></activity>
+
+        <!-- multi app install -->
+        <activity android:name="MultiAppInstallAct" >
+        </activity>
+        <activity android:name="LastOnTouchTimeAct" >
+        </activity>
+        <activity android:name="SimpleBroadcastReceiverAct" >
+        </activity>
+        <activity android:name=".screenonoff.ScreenOnOffAct" >
+        </activity>
         <activity
             android:name=".screenonoff.ScreenPwdAct"
             android:launchMode="singleTask"
             android:theme="@style/MyAlertDialog" >
         </activity>
-        
-        
+
         <!--  -->
-        <activity android:name=".SpannableActivity"></activity>
+        <activity android:name=".SpannableActivity" >
+        </activity>
         <!--  -->
-        <activity android:name=".RadioButtonActivity"></activity>
+        <activity android:name=".RadioButtonActivity" >
+        </activity>
         <!--  -->
-        <activity android:name=".AndroidJs2JavaAct"></activity>
+        <activity android:name=".AndroidJs2JavaAct" >
+        </activity>
         <!--  -->
-        <activity android:name=".ImageTextAct"></activity>
+        <activity android:name=".ImageTextAct" >
+        </activity>
         <!--  -->
-        <activity android:name=".TextScaleAct"></activity>
+        <activity android:name=".TextScaleAct" >
+        </activity>
         <!--  -->
-        <activity android:name=".CusAnimationAct"></activity>
+        <activity android:name=".CusAnimationAct" >
+        </activity>
         <!--  -->
-        <activity android:name=".autofit.AutoFitTextViewAct"></activity>
+        <activity android:name=".autofit.AutoFitTextViewAct" >
+        </activity>
         <!--  -->
-        <activity android:name=".htmlparse.HtmlParstAct"></activity>
+        <activity android:name=".htmlparse.HtmlParstAct" >
+        </activity>
         <!--  -->
-        <activity android:name=".ActivityInLayoutAct"></activity>
+        <activity android:name=".ActivityInLayoutAct" >
+        </activity>
         <!--  -->
-        <activity android:name=".MenuAct" android:theme="@style/AppBaseTheme"></activity>
+        <activity
+            android:name=".MenuAct"
+            android:theme="@style/AppBaseTheme" >
+        </activity>
         <!--  -->
-        <activity android:name=".textview.MyTextViewAct"></activity>
+        <activity android:name=".textview.MyTextViewAct" >
+        </activity>
         <!--  -->
-        <activity android:name=".pullrefresh.PullRefreshActivity"></activity>
+        <activity android:name=".pullrefresh.PullRefreshActivity" >
+        </activity>
         <!--  -->
-        <activity android:name=".preference.MyPreferenceActivity"></activity>
+        <activity android:name=".preference.MyPreferenceActivity" >
+        </activity>
         <!--  -->
-        <activity android:name=".preference.MyPreferenceFragmentActivity"></activity>
+        <activity android:name=".preference.MyPreferenceFragmentActivity" >
+        </activity>
         <!-- some forsee demo -->
         <!--  -->
-        <activity android:name=".a_foresee.gridview.TaxperGridActivity"></activity>
+        <activity android:name=".a_foresee.gridview.TaxperGridActivity" >
+        </activity>
         <!--  -->
-        <activity android:name=".a_foresee.gridview.TaxperTableRowActivity"  android:screenOrientation="landscape" ></activity>
+        <activity
+            android:name=".a_foresee.gridview.TaxperTableRowActivity"
+            android:screenOrientation="landscape" >
+        </activity>
         <!--  -->
-        <activity android:name=".notification.NotificationActivity"></activity>
-        <activity android:name=".notification.NotificationCustomAct"></activity>
-        <activity android:name=".notification.NotificationProgressAct"></activity>
+        <activity android:name=".notification.NotificationActivity" >
+        </activity>
+        <activity android:name=".notification.NotificationCustomAct" >
+        </activity>
+        <activity android:name=".notification.NotificationProgressAct" >
+        </activity>
         <!--  -->
-        <activity android:name=".sqlite.SqliteOperationActivity"></activity>
-        <activity android:name=".sqlite.SimpleDefaultSqliteActivity"></activity>
-        <activity android:name=".sqlite.ormlite.SimpleUseOrmliteSqliteActivity"></activity>
-        <activity android:name=".sqlite.greendao.SimpleUseGreendaoSqliteActivity"></activity>
-        
-        
+        <activity android:name=".sqlite.SqliteOperationActivity" >
+        </activity>
+        <activity android:name=".sqlite.SimpleDefaultSqliteActivity" >
+        </activity>
+        <activity android:name=".sqlite.ormlite.SimpleUseOrmliteSqliteActivity" >
+        </activity>
+        <activity android:name=".sqlite.greendao.SimpleUseGreendaoSqliteActivity" >
+        </activity>
+
         <!--  -->
-        <activity android:name=".recycle_cardview.RecyclerCardViewActivity" android:theme="@style/CardView.Light"></activity>
+        <activity
+            android:name=".recycle_cardview.RecyclerCardViewActivity"
+            android:theme="@style/CardView.Light" >
+        </activity>
         <!--  -->
-        <activity android:name=".fragment.tabhost.TabHostActivity" ></activity>
-        <activity android:name=".fragment.tabhost.FragmentTabHostActivity" ></activity>
-        <activity android:name=".fragment.tabhost.QQZoneTabHostActivity" ></activity>
+        <activity android:name=".fragment.tabhost.TabHostActivity" >
+        </activity>
+        <activity android:name=".fragment.tabhost.FragmentTabHostActivity" >
+        </activity>
+        <activity android:name=".fragment.tabhost.QQZoneTabHostActivity" >
+        </activity>
         <!-- 注解 -->
-        <activity android:name="com.example.androidtest.annotation.ButterKnifeActivity" ></activity>
+        <activity android:name="com.example.androidtest.annotation.ButterKnifeActivity" >
+        </activity>
         <!-- webservice -->
-        <activity android:name="com.example.androidtest.webservice.MainWebserviceActivity" ></activity>
+        <activity android:name="com.example.androidtest.webservice.MainWebserviceActivity" >
+        </activity>
         <!-- DragListViewActivity -->
-        <activity android:name="com.example.androidtest.draglistview.DragListViewActivity" ></activity>
+        <activity android:name="com.example.androidtest.draglistview.DragListViewActivity" >
+        </activity>
         <!-- TagClickAnimActivity -->
-        <activity android:name="com.example.androidtest.tagclickanim.TagClickAnimActivity" ></activity>
+        <activity android:name="com.example.androidtest.tagclickanim.TagClickAnimActivity" >
+        </activity>
         <!-- LandProtraitActivity -->
-        <activity android:name="com.example.androidtest.landportrait.LandProtraitActivity" ></activity>
-        
-</application>
-	
-	<instrumentation
+        <activity android:name="com.example.androidtest.landportrait.LandProtraitActivity" >
+        </activity>
+        <!-- FrescoMainActivity -->
+        <activity android:name="com.example.androidtest.fresco.FrescoMainActivity" >
+        </activity>
+        <!-- BarcodeZxingActivity -->
+        <activity android:name="com.example.androidtest.barcode.BarcodeZxingActivity" >
+        </activity>
+        <activity
+            android:name="com.zxing.activity.CaptureActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+        <!-- ContactActivity -->
+        <activity android:name="com.example.androidtest.contact.ContactActivity" >
+        </activity>
+        <!-- MaterialMainActivity -->
+        <activity
+            android:name="com.example.androidtest.material.MaterialMainActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" >
+        </activity>
+        <!-- PercentLayoutActivity -->
+        <activity android:name="com.example.androidtest.percentlayout.PercentLayoutActivity" >
+        </activity>
+        <!-- SinaTopicActivity -->
+        <activity android:name="com.example.androidtest.sinatopic.SinaTopicActivity" >
+        </activity>
+        <!-- SnackbarActivity -->
+        <activity android:name="com.example.androidtest.snackbar.SnackbarActivity" >
+        </activity>
+        <!-- SupportLibActivity -->
+        <activity
+            android:name="com.example.androidtest.supportlib.SupportLibActivity"
+            android:theme="@style/SupportLibThemeBlue" >
+        </activity>
+        <!-- ViewAnimActivity -->
+        <activity android:name="com.example.androidtest.viewanim.ViewAnimActivity" >
+        </activity>
+        <!-- MyMediaActivity -->
+        <activity android:name="com.example.androidtest.media.MyMediaActivity" >
+        </activity>
+        <!-- CameraSaveActivity -->
+        <activity android:name="com.example.androidtest.camera_save.CameraSaveActivity" >
+        </activity>
+        <!-- MultiJsonParseActivity -->
+        <activity android:name="com.example.androidtest.jsonparse.MultiJsonParseActivity" >
+        </activity>
+        <!-- AsyncTaskActivity -->
+        <activity android:name="com.example.androidtest.asynctask.AsyncTaskActivity" >
+        </activity>
+        <!-- TimePickerActivity -->
+        <activity android:name="com.example.androidtest.timepicker.TimePickerActivity" >
+        </activity>
+        <!-- DateTimePickerActivity -->
+        <activity android:name="com.example.androidtest.datetimepicker.DateTimePickerActivity" >
+        </activity>
+        <!-- HandleOOMActivity -->
+        <activity android:name="com.example.androidtest.handleoom.HandleOOMActivity" >
+        </activity>
+        <!-- LocationActivity -->
+        <activity android:name="com.example.androidtest.location.LocationActivity" >
+        </activity>
+        <!-- NetworkGPSLocationActivity -->
+        <activity android:name="com.example.androidtest.location.NetworkGPSLocationActivity" >
+        </activity>
+        <!-- WheelviewActivity -->
+        <activity android:name="com.example.androidtest.wheelview.WheelviewActivity" >
+        </activity>
+        <!-- NumberPickerActivity -->
+        <activity android:name="com.example.androidtest.numberpicker.NumberPickerActivity" >
+        </activity>
+        <!-- DataBaseActivity -->
+        <activity android:name="com.example.androidtest.database.DataBaseActivity" >
+        </activity>
+        <!-- HVListViewActivity -->
+        <activity android:name="com.example.androidtest.hvlistview.HVListViewActivity" >
+        </activity>
+        <!-- FragmentToogleActivity -->
+        <activity android:name="com.example.androidtest.fragment.toogle.FragmentToogleActivity" >
+        </activity>
+        <!-- ShareToWeixin -->
+        <activity android:name="com.example.androidtest.weixin.ShareToWeixin" >
+        </activity>
+        <!-- LstnAppUnInstall -->
+        <activity android:name="com.example.androidtest.lstn_app_uninstall.LstnAppUnInstall" >
+        </activity>
+
+        <receiver
+            android:name="com.example.androidtest.lstn_app_uninstall.BootReceiver"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+    <instrumentation
         android:name="android.test.InstrumentationTestRunner"
         android:label="tests label"
         android:targetPackage="com.example.androidtest" />
