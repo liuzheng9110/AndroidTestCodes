@@ -7,6 +7,10 @@ import android.widget.RadioButton;
 
 import com.example.androidtest.main.BaseActivity;
 
+/**
+*
+* http://www.cnblogs.com/wt616/archive/2011/06/20/2085531.html
+*/
 public class RadioButtonActivity extends BaseActivity implements OnClickListener {
 	
 	private RadioButton radioButton1, radioButton2;

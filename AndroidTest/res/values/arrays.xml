@@ -137,4 +137,12 @@
         <item>f142</item>
     </string-array>
 
+    <string-array name="tab_titles">
+        <item>垂直List</item>
+        <item>水平List</item>
+        <item>垂直Grid</item>
+        <item>水平Grid</item>
+        <item>瀑布Staggered</item>
+    </string-array>
+    
 </resources>

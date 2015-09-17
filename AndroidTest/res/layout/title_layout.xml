@@ -10,7 +10,7 @@
         android:id="@+id/title_left_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/abc_ic_clear_normal" />
+        android:background="@drawable/abc_ic_clear_mtrl_alpha" />
 
     <TextView
         android:id="@+id/title_textview"
@@ -24,6 +24,6 @@
         android:id="@+id/title_righkt_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/abc_ic_cab_done_holo_dark" />
+        android:background="@drawable/abc_ic_clear_mtrl_alpha" />
 
 </LinearLayout>

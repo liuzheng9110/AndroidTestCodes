@@ -6,16 +6,17 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
+import butterknife.Bind;
+import butterknife.BindString;
 import butterknife.ButterKnife;
-import butterknife.FindView;
 import butterknife.OnClick;
 import butterknife.OnItemClick;
 import butterknife.OnItemLongClick;
 import butterknife.OnLongClick;
-import butterknife.ResourceString;
 
 import com.example.androidtest.R;
 import com.example.androidtest.main.BaseActivity;
+
 
 /**
  * 
@@ -31,14 +32,15 @@ import com.example.androidtest.main.BaseActivity;
  *  	 http://jakewharton.github.io/butterknife/ide-eclipse.html ButterKnife eclipse 配置
  */
 public class ButterKnifeActivity extends BaseActivity {
+	
 	// 控件初始化
-	@FindView(R.id.text_view) TextView textView;
-	@FindView(R.id.editText) EditText editText;
-	@FindView(R.id.button) Button button;
-	@FindView(R.id.list_view) ListView listView;
+	@Bind(R.id.text_view) TextView textView;
+	@Bind(R.id.editText) EditText editText;
+	@Bind(R.id.button) Button button;
+	@Bind(R.id.list_view) ListView listView;
 	
 	// 资源初始化 
-	@ResourceString(R.string.app_name) String textString;
+	@BindString (R.string.app_name) String textString;
 	
 	private SimpleAdapter adapter;
 	

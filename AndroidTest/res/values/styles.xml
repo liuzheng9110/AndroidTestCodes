@@ -36,6 +36,18 @@
         <!-- <item name="android:background">#137DD8</item> -->
     </style>
 
+    <style name="table_heng_seperator_blue_light_line">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">1dip</item>
+        <item name="android:background">@android:color/holo_blue_light</item>
+    </style>
+
+    <style name="table_shu_seperator_blue_light_line">
+        <item name="android:layout_width">1dip</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:background">@android:color/holo_blue_light</item>
+    </style>
+
     <style name="table_heng_seperator_gray_line">
         <item name="android:layout_width">fill_parent</item>
         <item name="android:layout_height">1dip</item>
@@ -127,5 +139,23 @@
     <style name="MyAlertDialog.EditText" parent="@android:style/Widget.EditText">
         <item name="android:background">@drawable/edit_text_input_back</item>
     </style>
+    
+    <!-- SupportLib Theme -->
+    <style name="SupportLibThemeBlue" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/main_blue_light</item> <!-- ToolBar 背景颜色 -->
+        <item name="colorPrimaryDark">@color/main_blue_dark</item> <!-- 状态栏颜色 可实现沉浸效果 -->
+        <item name="colorAccent">@color/main_blue_light</item> <!--  -->
+        <item name="android:textColorPrimary">@color/main_white</item> <!-- ToolBar 文字颜色，Menu item 也会跟随 -->
+    </style>
+    
+    <!-- no border dialog -->
+    <style name="dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item><!--边框-->
+        <item name="android:windowIsFloating">true</item><!--是否浮现在activity之上-->
+        <item name="android:windowNoTitle">true</item><!--无标题-->
+        <item name="android:windowBackground">@android:color/transparent</item><!--背景透明 或者 #00000000-->
+        <item name="android:backgroundDimEnabled">false</item><!--模糊 Dialog本身清晰，Activity界面内容模糊 -->
+    </style>
+    
     
 </resources>

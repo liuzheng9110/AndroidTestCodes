@@ -1,57 +1,44 @@
 package com.example.androidtest.sqlite;
 
 import java.util.ArrayList;
-import java.util.Timer;
-import java.util.TimerTask;
 
 import android.app.AlertDialog;
-import android.app.Dialog;
-import android.content.Context;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
-import android.view.inputmethod.InputMethodManager;
-import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.RadioGroup.OnCheckedChangeListener;
-import android.widget.TextView;
 
 import com.example.androidtest.R;
 import com.example.androidtest.main.BaseActivity;
 
+// http://www.cnblogs.com/mengdd/archive/2013/04/23/3038234.html
 public class SimpleDefaultSqliteActivity extends BaseActivity {
 	
-	private LayoutInflater mInflater;
 	private ListView listView;
 	private MyAdapter adapter;
 	private Button addItemBtn;
-	
-//	private SimpleData simpleData;
-	private ArrayList<SimpleDefaultSqliteActivity.SimpleData> simpleDatas = new ArrayList<SimpleDefaultSqliteActivity.SimpleData>();
+	private ArrayList<SimpleData> simpleDatas = new ArrayList<SimpleData>();
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.simple_default_sqlite_layout);
+		setContentView(R.layout.simple_sqlite_layout);
 		setTitle("SimpleDefaultSqlite");
-		
-		mInflater = LayoutInflater.from(this);
 		
 		for (int i = 0; i < 10; i++) {
 			simpleDatas.add(new SimpleData("id_" + i, "name_" + i, "sex_" + i, "age_" + i));
 		}
 		
-		adapter = new MyAdapter();
+		adapter = new MyAdapter(this, simpleDatas);
 		listView = (ListView) findViewById(R.id.listView);
 		listView.setAdapter(adapter);
 		
@@ -144,101 +131,5 @@ public class SimpleDefaultSqliteActivity extends BaseActivity {
 //			inputManager.showSoftInput(editText, 0);
 //		}
 //	}
-	
 
-	class SimpleData{
-		private String id;
-		private String name;
-		private String sex;
-		private String age;
-		
-		public SimpleData(){};
-		
-		public SimpleData(String id, String name, String sex, String age) {
-			super();
-			this.id = id;
-			this.name = name;
-			this.sex = sex;
-			this.age = age;
-		}
-		public String getId() {
-			return id;
-		}
-		public void setId(String id) {
-			this.id = id;
-		}
-		public String getName() {
-			return name;
-		}
-		public void setName(String name) {
-			this.name = name;
-		}
-		public String getSex() {
-			return sex;
-		}
-		public void setSex(String sex) {
-			this.sex = sex;
-		}
-		public String getAge() {
-			return age;
-		}
-		public void setAge(String age) {
-			this.age = age;
-		}
-	}
-	
-	class MyAdapter extends BaseAdapter{
-
-		@Override
-		public int getCount() {
-			// TODO Auto-generated method stub
-			return simpleDatas.size();
-		}
-
-		@Override
-		public Object getItem(int position) {
-			// TODO Auto-generated method stub
-			return simpleDatas.get(position);
-		}
-
-		@Override
-		public long getItemId(int position) {
-			// TODO Auto-generated method stub
-			return position;
-		}
-
-		@Override
-		public View getView(int position, View convertView, ViewGroup parent) {
-			SimpleDataHolder holder;
-			if (convertView == null) {
-				holder = new SimpleDataHolder();
-//				convertView = mInflater.inflate(R.layout.simple_default_sqlite_layout_item, null, false);
-				convertView = mInflater.inflate(R.layout.simple_default_sqlite_layout_item, null);
-				
-				holder.idTv = (TextView) convertView.findViewById(R.id.id_text);
-				holder.nameTv = (TextView) convertView.findViewById(R.id.name_text);
-				holder.sexTv = (TextView) convertView.findViewById(R.id.sex_text);
-				holder.ageTv = (TextView) convertView.findViewById(R.id.age_text);
-				
-				convertView.setTag(holder);
-			}else {
-				holder = (SimpleDataHolder) convertView.getTag();
-			}
-			
-			SimpleData simpleData = simpleDatas.get(position);
-			holder.idTv.setText(simpleData.getId());
-			holder.nameTv.setText(simpleData.getName());
-			holder.sexTv.setText(simpleData.getSex());
-			holder.ageTv.setText(simpleData.getAge());
-			
-			return convertView;
-		}
-		
-		class SimpleDataHolder{
-			TextView idTv;
-			TextView nameTv;
-			TextView sexTv;
-			TextView ageTv;
-		}
-	}
 }

@@ -42,7 +42,7 @@ public class AndroidNotificationAct extends Activity {
 			// method 01  app.Notification
 			notification = new Notification(R.drawable.ic_launcher, "My Simple Notification Title", System.currentTimeMillis());
 			notification.flags |= Notification.FLAG_AUTO_CANCEL;
-			notification.setLatestEventInfo(AndroidNotificationAct.this, "...", "下载成功，点击打开", pendingIntent);
+//			notification.setLatestEventInfo(AndroidNotificationAct.this, "...", "下载成功，点击打开", pendingIntent);
 			notificationManager.notify("app_upd", notify_id, notification);
 			
 			break;

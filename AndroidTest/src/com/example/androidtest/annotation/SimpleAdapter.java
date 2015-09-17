@@ -6,8 +6,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
+import butterknife.Bind;
 import butterknife.ButterKnife;
-import butterknife.FindView;
 
 import com.example.androidtest.R;
 
@@ -41,7 +41,7 @@ public class SimpleAdapter extends BaseAdapter {
 		if (convertView != null) {
 			holder = (ViewHolder) convertView.getTag();
 		}else {
-			convertView = mInflater.inflate(R.layout.simple_default_sqlite_layout_item, parent, false);
+			convertView = mInflater.inflate(R.layout.simple_sqlite_layout_item, parent, false);
 			holder = new ViewHolder(convertView);
 			convertView.setTag(holder);
 		}
@@ -64,10 +64,10 @@ public class SimpleAdapter extends BaseAdapter {
 //		@InjectView(R.id.age_text) TextView ageTv;
 		
 		//7.x
-		@FindView(R.id.id_text) TextView idTv;
-		@FindView(R.id.name_text) TextView nameTv;
-		@FindView(R.id.sex_text) TextView sexTv;
-		@FindView(R.id.age_text) TextView ageTv;
+		@Bind(R.id.id_text) TextView idTv;
+		@Bind(R.id.name_text) TextView nameTv;
+		@Bind(R.id.sex_text) TextView sexTv;
+		@Bind(R.id.age_text) TextView ageTv;
 		
 		public ViewHolder(View view) {
 			// 6.1.0

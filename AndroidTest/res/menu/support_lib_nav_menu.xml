@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+	<group android:checkableBehavior="single">
+	    <item android:id="@+id/supprto_lib_menu_home"
+	        android:icon="@drawable/ic_home_white_48dp"
+	        android:title="@string/home" />
+	    
+	    <item android:id="@+id/supprto_lib_menu_catagories"
+	        android:icon="@drawable/ic_sort_by_alpha_white_48dp"
+	        android:title="@string/catagories" />
+	    
+	    <item android:id="@+id/supprto_lib_menu_feedback"
+	        android:icon="@drawable/ic_message_white_48dp"
+	        android:title="@string/feedback" />
+	    
+	    <item android:id="@+id/supprto_lib_menu_setting"
+	        android:icon="@drawable/ic_settings_white_48dp"
+	        android:title="@string/settings" />
+	    
+	</group>
+    
+</menu>

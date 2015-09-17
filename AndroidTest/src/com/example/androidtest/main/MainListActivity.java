@@ -54,18 +54,33 @@ import com.example.androidtest.actionbar_android.ActionBarAndroidAct;
 import com.example.androidtest.actionbar_support.ActionBarSupportAct;
 import com.example.androidtest.alertwindow.FirstActivity;
 import com.example.androidtest.annotation.ButterKnifeActivity;
+import com.example.androidtest.asynctask.AsyncTaskActivity;
 import com.example.androidtest.autofit.AutoFitTextViewAct;
 import com.example.androidtest.barcode.BarcodeZxingActivity;
+import com.example.androidtest.camera_save.CameraSaveActivity;
 import com.example.androidtest.contact.ContactActivity;
+import com.example.androidtest.database.DataBaseActivity;
+import com.example.androidtest.datetimepicker.DateTimePickerActivity;
 import com.example.androidtest.draglistview.DragListViewActivity;
 import com.example.androidtest.editlist.EditListAct;
 import com.example.androidtest.fragment.FragmentDemoAct;
 import com.example.androidtest.fragment.tabhost.TabHostActivity;
+import com.example.androidtest.fragment.toogle.FragmentToogleActivity;
 import com.example.androidtest.fresco.FrescoMainActivity;
+import com.example.androidtest.handleoom.HandleOOMActivity;
 import com.example.androidtest.htmlparse.HtmlParstAct;
 import com.example.androidtest.http.HttpMainAct;
+import com.example.androidtest.hvlistview.HVListViewActivity;
+import com.example.androidtest.jsonparse.MultiJsonParseActivity;
 import com.example.androidtest.landportrait.LandProtraitActivity;
+import com.example.androidtest.location.LocationActivity;
+import com.example.androidtest.location.NetworkGPSLocationActivity;
+import com.example.androidtest.lstn_app_uninstall.LstnAppUnInstall;
+import com.example.androidtest.material.MaterialMainActivity;
+import com.example.androidtest.media.MyMediaActivity;
 import com.example.androidtest.notification.NotificationActivity;
+import com.example.androidtest.numberpicker.NumberPickerActivity;
+import com.example.androidtest.percentlayout.PercentLayoutActivity;
 import com.example.androidtest.picasso.PicassoMainActivity;
 import com.example.androidtest.preference.MyPreferenceActivity;
 import com.example.androidtest.preference.MyPreferenceFragmentActivity;
@@ -73,15 +88,22 @@ import com.example.androidtest.pullrefresh.PullRefreshActivity;
 import com.example.androidtest.recycle_cardview.RecyclerCardViewActivity;
 import com.example.androidtest.screenonoff.ScreenOnOffAct;
 import com.example.androidtest.service.MyServiceAct;
+import com.example.androidtest.sinatopic.SinaTopicActivity;
 import com.example.androidtest.sliding.SlidingAct;
+import com.example.androidtest.snackbar.SnackbarActivity;
 import com.example.androidtest.sqlite.SqliteOperationActivity;
+import com.example.androidtest.supportlib.SupportLibActivity;
 import com.example.androidtest.textview.MyTextViewAct;
+import com.example.androidtest.timepicker.TimePickerActivity;
 import com.example.androidtest.toast.CusToastAct;
 import com.example.androidtest.update.AndroidUpdateAct;
+import com.example.androidtest.viewanim.ViewAnimActivity;
 import com.example.androidtest.viewpager.VerticalViewpagerAct;
 import com.example.androidtest.voice.LongClickVoiceAct;
 import com.example.androidtest.volley.AndroidVolleyAct;
 import com.example.androidtest.webservice.MainWebserviceActivity;
+import com.example.androidtest.weixin.ShareToWeixin;
+import com.example.androidtest.wheelview.WheelviewActivity;
 
 /**
  * 
@@ -174,8 +196,30 @@ public class MainListActivity extends BaseActivity {
 		data.add("FrescoMainActivity");
 		data.add("BarcodeZxingActivity");
 		data.add("ContactActivity");
+		data.add("MaterialMainActivity");
+		data.add("PercentLayoutActivity");
+		data.add("SinaTopicActivity");
+		data.add("SnackbarActivity");
+		data.add("SupportLibActivity");
+		data.add("ViewAnimActivity");
+		data.add("MyMediaActivity");
+		data.add("CameraSaveActivity");
+		data.add("MultiJsonParseActivity");
+		data.add("AsyncTaskActivity");
+		data.add("TimePickerActivity");
+		data.add("DateTimePickerActivity");
+		data.add("HandleOOMActivity");
+		data.add("LocationActivity");
+		data.add("NetworkGPSLocationActivity");
+		data.add("WheelviewActivity");
+		data.add("NumberPickerActivity");
+		data.add("DataBaseActivity");
+		data.add("HVListViewActivity");
+		data.add("FragmentToogleActivity");
+		data.add("ShareToWeixin");
+		data.add("LstnAppUnInstall");
 		
-		//
+		// TODO 
 		activities.add(MoniPop.class);
 		activities.add(XZQLDetail.class);
 		activities.add(DynamicAddView.class);
@@ -247,7 +291,29 @@ public class MainListActivity extends BaseActivity {
 		activities.add(FrescoMainActivity.class);
 		activities.add(BarcodeZxingActivity.class);
 		activities.add(ContactActivity.class);
-	}
+		activities.add(MaterialMainActivity.class);
+		activities.add(PercentLayoutActivity.class);
+		activities.add(SinaTopicActivity.class);
+		activities.add(SnackbarActivity.class);
+		activities.add(SupportLibActivity.class);
+		activities.add(ViewAnimActivity.class);
+		activities.add(MyMediaActivity.class);
+		activities.add(CameraSaveActivity.class);
+		activities.add(MultiJsonParseActivity.class);
+		activities.add(AsyncTaskActivity.class);
+		activities.add(TimePickerActivity.class);
+		activities.add(DateTimePickerActivity.class);
+		activities.add(HandleOOMActivity.class);
+		activities.add(LocationActivity.class);
+		activities.add(NetworkGPSLocationActivity.class);
+		activities.add(WheelviewActivity.class);
+		activities.add(NumberPickerActivity.class);
+		activities.add(DataBaseActivity.class);
+		activities.add(HVListViewActivity.class);
+		activities.add(FragmentToogleActivity.class);
+		activities.add(ShareToWeixin.class);
+		activities.add(LstnAppUnInstall.class);
+	}// TODO 
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

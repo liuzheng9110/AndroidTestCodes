@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView android:id="@+id/tips_text" android:layout_width="fill_parent" android:layout_height="wrap_content"/>
+    
+    <View style="@style/table_heng_seperator_blue_light_line" />
+    
+    <include layout="@layout/simple_sqlite_layout_item" />
+    
+    <ListView
+        android:id="@+id/jkxx_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="@color/transparent"
+        android:listSelector="@null" />
+    
+</LinearLayout>
