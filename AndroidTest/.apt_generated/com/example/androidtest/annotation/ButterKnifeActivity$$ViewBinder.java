@@ -9,10 +9,10 @@ import butterknife.ButterKnife.ViewBinder;
 public class ButterKnifeActivity$$ViewBinder<T extends com.example.androidtest.annotation.ButterKnifeActivity> implements ViewBinder<T> {
   @Override public void bind(final Finder finder, final T target, Object source) {
     View view;
-    view = finder.findRequiredView(source, 2131296411, "field 'textView'");
-    target.textView = finder.castView(view, 2131296411, "field 'textView'");
-    view = finder.findRequiredView(source, 2131296413, "field 'button', method 'btnClick', and method 'onLongClick'");
-    target.button = finder.castView(view, 2131296413, "field 'button'");
+    view = finder.findRequiredView(source, 2131558617, "field 'editText'");
+    target.editText = finder.castView(view, 2131558617, "field 'editText'");
+    view = finder.findRequiredView(source, 2131558618, "field 'button', method 'btnClick', and method 'onLongClick'");
+    target.button = finder.castView(view, 2131558618, "field 'button'");
     view.setOnClickListener(
       new butterknife.internal.DebouncingOnClickListener() {
         @Override public void doClick(
@@ -29,10 +29,10 @@ public class ButterKnifeActivity$$ViewBinder<T extends com.example.androidtest.a
           return target.onLongClick();
         }
       });
-    view = finder.findRequiredView(source, 2131296412, "field 'editText'");
-    target.editText = finder.castView(view, 2131296412, "field 'editText'");
-    view = finder.findRequiredView(source, 2131296414, "field 'listView', method 'onListItemClick', and method 'onListLongClick'");
-    target.listView = finder.castView(view, 2131296414, "field 'listView'");
+    view = finder.findRequiredView(source, 2131558616, "field 'textView'");
+    target.textView = finder.castView(view, 2131558616, "field 'textView'");
+    view = finder.findRequiredView(source, 2131558619, "field 'listView', method 'onListItemClick', and method 'onListLongClick'");
+    target.listView = finder.castView(view, 2131558619, "field 'listView'");
     ((android.widget.AdapterView<?>) view).setOnItemClickListener(
       new android.widget.AdapterView.OnItemClickListener() {
         @Override public void onItemClick(
@@ -56,13 +56,13 @@ public class ButterKnifeActivity$$ViewBinder<T extends com.example.androidtest.a
         }
       });
     Resources res = finder.getContext(source).getResources();
-    target.textString = res.getString(2131492877);
+    target.textString = res.getString(2131165184);
   }
 
   @Override public void unbind(T target) {
-    target.textView = null;
-    target.button = null;
     target.editText = null;
+    target.button = null;
+    target.textView = null;
     target.listView = null;
   }
 }
