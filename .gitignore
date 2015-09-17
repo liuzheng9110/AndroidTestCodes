@@ -28,3 +28,6 @@ proguard/
 
 .settings
 liuz.me.epf
+
+# ButterKnife 注解
+.apt_generated
